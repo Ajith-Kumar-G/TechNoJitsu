@@ -71,6 +71,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .background {
@@ -85,11 +86,14 @@ body {
     margin:130px;
     padding:0
 }
-.model-content{
-    background-color: #f7f7f7;
-    opacity: .8;
+.form-cont{
+  background: -webkit-gradient(linear, left top, right top, from(rgba(137, 189, 15, 0.678)), to(rgba(189, 146, 29, 0.589)));
+  background: -moz-gradient(linear, left top, right top, from(rgba(137, 189, 15, 0.678)), to(rgba(189, 146, 29, 0.589)));
+  background: gradient(linear, left top, right top, from(rgbrgba(137, 189, 15, 0.678)), to((rgbrgba(189, 146, 29, 0.589))));
     border-radius: 10px;
     padding:0 18px;
+    display: block;
+    
 
 }
 .user-img img{
@@ -105,16 +109,9 @@ body {
 }
 .form-group{
     margin-bottom: 25px;
+    
 }
-.form-group input{
 
-    height:42px;
-    border-radius: 5px;
-    font-size:18px;
-    letter-spacing: 2px;
-    padding-left: 30px;
-
-}
 .form-group::before{
     
 
@@ -132,3 +129,84 @@ body {
   right: 0;
   z-index: -1;
 }
+.btn-block{
+  width:25%!important;
+  align-self: auto;
+   margin-top: 10px;
+   margin-bottom: 6px!important;
+   align-items: center!important;
+   margin-left: 37%;
+}
+
+.footer-text{
+  font-family: 'Josefin Sans', sans-serif;
+  font-variant: small-caps;
+  font-weight: 300;
+ 
+ }
+ #footercontent{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+ }
+
+ .text-uppercase{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+ }
+a:hover {
+  color: #088723!important;
+  text-decoration: none!important;
+ }
+ 
+ #footer-img{
+   float: left;
+   width: 100px;
+   height: 100px;
+   padding: 10px;
+   transform: translateX(-5px);
+   border-radius: 30px;
+   
+   }
+
+  .footer-content>.jumbotron{
+    clear: both;
+    background:-webkit-gradient(linear, left top, right top, from(rgb(134 226 111)), to(rgb(221 206 106)));
+  }
+
+  .footer-content{
+    clear: both;
+    background:-webkit-gradient(linear, left top, right top, from(#27e055), to(#bff812));
+}
+#footert{
+border-left: solid;
+padding-left: 10px;
+}
+#name{
+  width: 100%;
+}
+#icon{
+float: right;
+transform: translate(-10px,-25px);
+}
+#name:hover #icon{
+color:rgb(34, 186, 247);
+}
+#email:hover #icon{
+  color:rgb(34, 186, 247);
+  }
+
+
+.form-control{
+  width: 60%;
+
+}
+#iconeye{
+  float: right;
+  cursor: pointer;
+  transform: translate(-10px,-25px);
+
+}
+#iconeye:hover,#iconeye:active{
+  color: #27e055;
+}
+
