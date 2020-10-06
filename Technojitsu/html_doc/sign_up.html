@@ -3,7 +3,8 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="Main.css" />
+  <link rel="stylesheet" href="Layout.css" />
+  <link rel="stylesheet" href="signUp.css" />
   <link rel="stylesheet" href="animations.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <link rel="icon" href="log2.png" type="image/x-icon" />
@@ -19,10 +20,8 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script>
-    src =
-      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
     integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
     crossorigin="anonymous"></script>
@@ -39,7 +38,7 @@
           <img class="img img-rounded imgstat" alt="Navbar_logo" src="Log.png" width="50" height="50"
             class="d-inline-block align-top" />
         </a>
-        <span><a id="head" href="# ">TechnoJitsu</a></span>
+        <span><a id="head" href="TechNoJitsu.html">TechnoJitsu</a></span>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li class="vline"><a href="#">PROJECTS</a></li>
@@ -56,7 +55,7 @@
         </li>
 
         <li class="vline">
-          <a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
         </li>
         <li>
           <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
@@ -65,102 +64,79 @@
     </div>
   </nav>
   <!-- horizontal navbar -->
-
-  <!--Upper contents Begin-->
-  <div class="modal-content" id="content">
-    <div class="row row-no-gutter">
-      <div class="col-sm-5 image" id="con_img">
-        <img class="ming" alt="content_logo" id="img " src="Logo.png" width="300" height="300" />
+<!-- Contents Begins-->
+<div class="container outerSign" >
+  <div class="signUpHeader  text-center">Register Now!</div>
+  <div class="modal-content innerSign" >
+    <form class="horizontal">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label for="firstName" >First Name: </label>
+        <input type="text"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" class="form-control" placeholder="Enter first name" required>
       </div>
-      <div class="col-sm-7 htext">
-        <div class="row row1"></div>
-        <h class="shimmer">Welcome to TechnoJitsu!</h>
+      <div class="col-md-4">
+        <label for="lastName" >Last Name: </label>
+        <input type="text"  pattern="^[a-zA-Z]{1,20}$"  class="form-control"  placeholder="Enter last name" >
       </div>
-      <div class="row-sm-8 row2"></div>
-      <h4 class="container-fluid hcontent">
-        <br /><br /><br /><br />Technojitsu is an open source code project for
-        beginners as well as experienced programmers meant to pick up as well
-        as cultivate interest in computers and its many major roles played in
-        present times.<br /><br /><br />
-        This platform provides a variety of features for related parties which
-        facilitates interaction between contemporary thinkers with
-        contemporary times so as to be kept well informed in a fast paced
-        world.
-      </h4>
+      <div class="col-md-4 profileUpload">
+        <img src="blankpicture-.png" class="modal-content" alt="profileUpload" id="profileUpload">
+          <label for="profilePic" ></label>
+          <input type="file" id="profilePic" name="profilePic" accept="image/png, image/jpeg"  >
+        </img>
+      </div>
+    </div>
+    <div class="form-group col-md-12 ">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder=" Enter Your Email Address "required>
+    </div>
+   <div class="form-row">
+    <div class="col-md-5">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control validate" id="password" placeholder=" Enter Your password here " minlength="8"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    </div>
+    <div class="col-md-5">
+      <label for="conPassword">Confrim Password:</label>
+      <input type="password" class="form-control validate" id="conPassword" placeholder=" Enter Your password here " minlength="8"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    </div>  
+   </div>
+   <div class="form-group col-md-2 ">
+     <label for="dOB">Date Of Birth:</label>
+     <input type="date" name="dOB" id="dOB" required>
+   </div>
+   <div class="form-group col-md-12 ">
+     <label for="contactNo">Contact Number:</label>
+     <input type="tel" id="contactNo" class="form-control" name="contactNo" placeholder="+XX XXXXX XXXXX" required >
+   </div>
+   
+   <div class="form-group col-md-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="Check" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      
     </div>
   </div>
 
-  <canvas class="header__background" width="1252" height="903" style="width: 100%; height: 100%">
-  </canvas>
-  <script src="main.js"></script>
-  <!--Upper contents END-->
-
-  <!--Lower Contents Begins-->
-  <div class="modal-center" id="content1">
-    <div class="row row-no-gutter">
-      <div class="col-sm-3">
-        <img id="imgs" alt="projects" src="PROJ2.png" width="300" height="300" />
-      </div>
-      <div class="col-sm-7 htext" id="content1col">
-        <div class="row-sm-4 row1"></div>
-        <h class="animated fadeInDown">Projects</h>
-        <div class="row-sm-4"></div>
-        <h4 class="row2">
-          A platform to upload projects with simple and precise animations on
-          real time electronic applications for a better learning and
-          understanding experience of the same and to be an inspiration for
-          better and more practical projects which can be used to ease our
-          everyday lives.
-        </h4>
-      </div>
-      <div class="col-sm-2"></div>
+   <div class="row submitLayout">
+    <div class="form-group col-md-3 ">
+    <a class="btn btn-primary btn-block "  title="Already have an account?" href="Form.html ">Login</a>
     </div>
-  </div>
-
-  <div class="modal-center" id="content2">
-    <div class="row row-no-gutter">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-7 htext" id="content2col">
-        <div class="row-sm-4 row1"></div>
-        <h class="animated fadeInDown">Articles</h>
-        <div class="row-sm-4"></div>
-        <h4 class="row2">
-          Articles of the contemporary discoveries and thoughts which decides
-          the path taken in future or the updates on tech or gizmos which
-          could make one have a head start in their professional lives or have
-          secure knowledge of one’s personal life’s privacy and security.
-        </h4>
-      </div>
-      <div class="col-sm-2">
-        <img id="imgsd" alt="Articles" src="PROJ3.png" width="300" height="300" />
-      </div>
+    <div class="form-group col-md-7">
+      <button type="submit" id="login" class="btn btn-success btn-block ">Register</button>
     </div>
-  </div>
+   </div>
+   
 
-  <div class="modal-center" id="content3">
-    <div class="row row-no-gutter">
-      <div class="col-sm-3">
-        <img id="imgs" alt="Lang-guide" src="PROJ2.png" width="300" height="300" />
-      </div>
-      <div class="col-sm-7 htext" id="content3col">
-        <div class="row-sm-4 row1"></div>
-        <h class="animated fadeInDown">Programming-Lang-Guide</h>
-        <div class="row-sm-4"></div>
-        <h4 class="row2">
-          A look into the workings of software/program languages, on the basic
-          but essential knowledge which one should know so as to enter the
-          world of data and applications on which we are deliberately
-          dependent upon in our day to day lives as ones sees through software
-          like google maps, notes, calendar etc.
-        </h4>
-      </div>
-      <div class="col-sm-2"></div>
-    </div>
-  </div>
+    
+  </form>
+   </div>
+</div>
 
-  <!--Lower Contents END-->
+
   <!--Footer-->
-
+  <canvas class="background"></canvas>
+  <script src="form.js"></script>
   <footer class="footer-content">
     <div class="jumbotron text-md-left">
       <div class="row">
@@ -209,6 +185,6 @@
  
   </footer>
   <!--Footer-->
-</body>
 
+</body>
 </html>
