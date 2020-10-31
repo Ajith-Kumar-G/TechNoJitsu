@@ -3,10 +3,8 @@ var particles = Particles.init({
   color: '#DA0463'
 });
 
-function passwordverify(){
-var pass=document.getElementById("password");
-var conpass=document.getElementById("conPassword");
-if(pass===conpass)
+function passwordVerify(){
+if(document.getElementById("password")===document.getElementById("conPassword"))
 {
   console.log("Correct");
 }
