@@ -3,11 +3,11 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="Layout.css" />
-  <link rel="stylesheet" href="signUp.css" />
+  <link rel="stylesheet" href="/Layout.css" />
+  <link rel="stylesheet" href="/css/FORMS/signUp.css" />
   <link rel="stylesheet" href="animations.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <link rel="icon" href="log2.png" type="image/x-icon" />
+  <link rel="icon" href="/img/icon/log2.png" type="image/x-icon" />
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -35,10 +35,10 @@
     <div class="container-fluid" id="navtop">
       <div class="navbar-header">
         <a id="txtdeco" href="#">
-          <img class="img img-rounded imgstat" alt="Navbar_logo" src="Log.png" width="50" height="50"
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../img/icon/Log.png" width="50" height="50"
             class="d-inline-block align-top" />
         </a>
-        <span><a id="head" href="TechNoJitsu.html">TechnoJitsu</a></span>
+        <span><a id="head" href="/html/TechNoJitsu.html">TechnoJitsu</a></span>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li class="vline"><a href="#">PROJECTS</a></li>
@@ -55,10 +55,10 @@
         </li>
 
         <li class="vline">
-          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+          <a href="/html/FORMS/sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
         </li>
         <li>
-          <a href="sign_In.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <a href="/html/FORMS/sign_in.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
       </ul>
     </div>
@@ -71,14 +71,14 @@
     <div class="form-row">
       <div class="col-md-4">
         <label for="firstName" >First Name: </label>
-        <input type="text"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" class="form-control" placeholder="Enter first name" required>
+        <input type="text"  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" class="form-control" title="Use only alphabets,digits and underscore" placeholder="Enter first name" required>
       </div>
       <div class="col-md-4">
         <label for="lastName" >Last Name: </label>
-        <input type="text"  pattern="^[a-zA-Z]{1,20}$"  class="form-control"  placeholder="Enter last name" >
+        <input type="text"  pattern="^[a-zA-Z]{1,20}$"  class="form-control"  title="Use only alphabets,digits and underscore"  placeholder="Enter last name" >
       </div>
       <div class="col-md-4 profileUpload">
-        <img src="blankpicture-.png" class="modal-content" alt="profileUpload" id="profileUpload">
+        <img src="/img/icon/blankpicture-.png" class="modal-content" alt="profileUpload" id="profileUpload">
           <label for="profilePic" ></label>
           <input type="file" id="profilePic"  name="profilePic" accept="image/png, image/jpeg"  >
         </img>
@@ -86,7 +86,7 @@
     </div>
     <div class="form-group col-md-12 ">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder=" Enter Your Email Address "required>
+      <input type="email" class="form-control " id="email" placeholder=" Enter Your Email Address "required>
     </div>
    <div class="form-row">
     <div class="col-md-5">
@@ -95,7 +95,7 @@
     </div>
     <div class="col-md-5">
       <label for="conPassword">Confrim Password:</label>
-      <input type="password" class="form-control validate" id="conPassword" placeholder=" Enter Your password here " minlength="8"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+      <input type="password" class="form-control validate" id="conPassword" placeholder=" Enter Your password here " minlength="8" on="passwordVerify()"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
     </div>  
    </div>
    <div class="form-group col-md-2 ">
@@ -118,8 +118,10 @@
   </div>
 
    <div class="row submitLayout">
+    <div class="form-group col-md-1 ">
+    </div>
     <div class="form-group col-md-3 ">
-    <a class="btn btn-primary btn-block "  title="Already have an account?" href="Form.html ">Login</a>
+    <a class="btn btn-primary btn-block "  title="Already have an account?" href="/html/FORMS/sign_up.html ">Login</a>
     </div>
     <div class="form-group col-md-7">
       <button type="submit" id="login" class="btn btn-success btn-block ">Register</button>
@@ -135,17 +137,18 @@
 
   <!--Footer-->
   <canvas class="background"></canvas>
-  <script src="form.js"></script>
+  <script src="/jscripts/Form-Login/form.js"></script>
   <footer class="footer-content">
     <div class="jumbotron text-md-left">
       <span class="ribbonfootz"><span class="ribbonfoot footer-text">Get In Touch!</span></span>
       <div class="row">
         <div class="col-md-5 " >
-          <img src="Log.png" alt="footer-img" id="footer-img">
+          <img src="/img/icon/Log.png" alt="footer-img" id="footer-img">
 
           <h3 class="footer-text text-left ">TechNoJitsu:</h3>
           <p id="footercontent">
-           Derek Content HERE.................................................
+            Technojitsu is an interactive, ever growing platform to design and develop projects, to acquire new and essential tech aspects without leaving behind the essential building blocks i.e. languages . All in all a tech pill to enhance and channel your creative & reasoning mind in the right output stream.
+      
           </p>
         </div>
       
@@ -180,7 +183,7 @@
 
     <div class="footer-copyright text-center" id="cpyrgt">
       © 2020 Copyright:
-      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+      <a href="/html/TechNoJitsu.html"> TechNoJitsu.com</a>
     </div>
  
   </footer>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/Layout.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="icon" href="../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <title>TechnoJitsu</title>
+    </head>
+
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default navbar-fixed">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="#">
+            <img
+              class="img img-rounded imgstat"
+              src="../../img/icon/Logo.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="# ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="glyphicon glyphicon-log-in"></span> Login</a
+            >
+          </li>
+          <li class="vline"><a href="#">PROJECTS</a></li>
+          <li><a href="#">ARTICLES</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              LANG-GUIDES</a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="#">C++</a></li>
+              <li><a href="#">C</a></li>
+              <li><a href="#">Python</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- horizontal navbar -->
+    <!--Continue here-->
+    <header>
+      <h1>MAC Address Changer</h1>
+  </header>
+  <div class="content">
+    <p>
+      This is a novice level UNIX project that changes the MAC address of the specified network interface. This tool was developed by B V Vineeth.
+    </p>
+    <p class="note" id="requirements">
+      To run this tool, you will need a Linux distro / Mac OS, or any UNIX Operating System as this tool calls certain system subprocesses specific to UNIX systems.
+      Along with a UNIX system, you will also need python pakages to compile and execute commands.
+    </p>
+    <p class="note" id="source_code">
+      You can find this project here: <a target="_blank" href="https://github.com/vinsdragonis/MAC-Address-Changer/blob/main/mac_changer.py">MAC address changer</a>.
+    </p>
+    <p class="note" id="basics">
+      The MAC address changer is a simple tool that calls certain system subroutines to change the MAC address of the given network adapter. In order to use this tool, you need to know a few basic Linux shell commands.
+      Here's what you will need to know to use this tool:
+      <ul>
+        <li><strong>cd</strong> file_path / directory_path - <em>Used to navigte to different directories</em></li>
+        <li><strong>pwd</strong> - <em>Returns the presently working directory</em></li>
+        <li><strong>ls</strong> - <em>Lists all files and subdirectories in the present directory</em></li>
+        <li><strong>mkdir</strong> [option] dir_name - <em>Creates a new directory</em></li>
+        <li><strong>python3</strong> file_name.py - <em>Used to execute a python3/python file</em></li>
+        <li><strong>python</strong> file_name.py - <em>Used to execute a python file</em></li>
+      </ul>
+      Please note that the tool has support for both python and python3, so any of the 2 commands above can be used.
+    </p>
+    <p>
+      To use this tool, first navigate to the directory where the tool exists. Then run the script mac_changer.py in that directory. But before simply trying to run it, you must mention certain parameters to make the tool actually
+      change the MAC address. These parameters are <strong>-i</strong> for interface, and <strong>-m</strong> for the new MAC address.
+      <br><br>
+      Two sample scenarios are shown below:
+      <ul>
+        <li>python3 mac_changer.py <strong>-i eth0 -m <abbr title="MAC address will be set to this value">00:11:22:33:44:55</abbr></strong></li>
+        <li>python mac_changer.py <strong>-i wlan0 -m <abbr title="MAC address will be set to this value">0a:1b:2c:3d:4e:5f</abbr></strong></li>
+      </ul>
+      Note that eth0 is the interface name in the first case, and wlan0 is the interface in the second case.
+      The MAC addresses are mentioned after <strong>-m</strong>. They don't have to be the same as mentioned here, you can always modify it as you wish, but they must
+      always be <em>alphanumeric</em>, and should be of <em>12 characters</em> with every 2 characters seperated by a colon '<strong>:</strong>'.
+      Use <strong>-help</strong> for more details on commands.
+    </p>
+  </div>
+  </body>
+</html>

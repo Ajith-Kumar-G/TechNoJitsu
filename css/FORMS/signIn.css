@@ -64,7 +64,21 @@ body {
     padding-top: 4px;
     columns: #555e60;
 }
+#login{
+  padding: 5px;
+}
+#signUp:hover{
+  color:white!important;
+  
+}
+#signUp{
+ 
+  padding: 5px;
+}
 
+.forgot{
+  padding: 5px;
+}
 .background {
   position: absolute;
   top: 0;
@@ -74,10 +88,7 @@ body {
   z-index: -1;
 }
 .btn-block{
-  width:25%!important;
-  align-self: auto;
    margin-top: 10px;
-   margin-bottom: 6px!important;
    align-items: center!important;
    margin-left: 37%;
 }

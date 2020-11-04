@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<h2 class="hd2" id="union"> C Unions</h2>
+<div class="cont">
+    <p>A union is a special data type available in C that enables you to store different data
+        types in the same memory location. You can define a union with many members, but only
+        one member can contain a value at any given time. Unions provide an efficient way of
+        using the same memory location for multi-purpose.</p></div>
+    <h3 id="uniondefine">Defining a Union</h3>
+    <div class="cont">
+        To define a union, you must use the union statement in very similar was as you did while
+    defining structure. The union statement defines a new data type, with more than one
+    member for your program. The format of the union statement is as follows:
+    </div>
+</div>
+<div class="code">
+<pre>
+union [union tag]
+{
+ member definition;
+ member definition;
+ ...
+ member definition;
+} [one or more union variables];
+</pre>
+</div>
+<div class="cont">
+The union tag is optional and each member definition is a normal variable definition, such
+as int i; or float f; or any other valid variable definition. At the end of the union's definition,
+before the final semicolon, you can specify one or more union variables but it is optional.
+Here is the way you would define a union type named Data which has the three members i,
+f, and str:
+</div>
+<div class="code">
+<pre>
+union Data
+{
+ int i;
+ float f;
+ char str[20];
+} data;
+</pre>
+</div> 
+<div class="cont">
+<p>A variable of Data type can store an integer, a floating-point number, or a string of
+    characters. This means that a single variable i.e. same memory location can be used to
+    store multiple types of data. You can use any built-in or user defined data types inside a
+    union based on your requirement.</p>
+<p>The memory occupied by a union will be large enough to hold the largest member of the
+    union. For example, in above example Data type will occupy 20 bytes of memory space
+    because this is the maximum space which can be occupied by character string.<br><b>Example:</b></p>
+</div>
+<div class="code">
+<pre>
+#include <stdio.h>
+#include <string.h>
+union Data
+{
+ int i;
+ float f;
+ char str[20];
+};
+int main( )
+{
+ union Data data;
+ printf( "Memory size occupied by data : %d\n", sizeof(data));
+ return 0;
+}
+</pre>
+</div>
+<div class="cont">
+    <b>Output:</b>
+    <br>Memory size occupied by data : 20
+</div>
+<h3 id="accessunion">Accessing Union Members</h3>
+<div class="cont">
+    To access any member of a union, we use the member access operator <strong>(.)</strong>. <strong>The member
+    access operator is coded as a period between the union variable name and the union
+    member that we wish to access</strong>. You would use union keyword to define variables of union
+    type. The following program  explains usage of union:
+</div>
+<div class="code">
+<pre>
+#include <stdio.h>
+#include <string.h>
+union Data
+{
+ int i;
+ float f;
+ char str[20];
+};
+int main( )
+{
+ union Data data;
+ data.i = 10;
+ data.f = 220.5;
+ strcpy( data.str, "C Programming");
+ printf( "data.i : %d\n", data.i);
+ printf( "data.f : %f\n", data.f);
+ printf( "data.str : %s\n", data.str);
+ return 0;
+}
+</pre>
+</div>
+<div class="cont">
+    Output:<br>
+<pre>
+data.i : 1917853763
+data.f : 4122360580327794860452759994368.000000
+data.str : C Programming
+</pre><br>
+<p>Here, we can see that values of i and f members of union got corrupted because final value
+    assigned to the variable has occupied the memory location and this is the reason that the
+    value if str member is getting printed very well. Now let's look into the same example once
+    again where we will use one variable at a time which is the main purpose of having union:</p>
+</div>
+<div class="code">
+<pre>
+#include <stdio.h>
+#include <string.h>
+union Data
+{
+ int i;
+ float f;
+ char str[20];
+};
+int main( )
+{
+ union Data data;
+ data.i = 10;
+ printf( "data.i : %d\n", data.i);
+
+ data.f = 220.5;
+ printf( "data.f : %f\n", data.f);
+
+ strcpy( data.str, "C Programming");
+ printf( "data.str : %s\n", data.str);
+ return 0;
+}
+</pre>
+</div>
+<div class="cont"> Output:<br>
+<pre>
+data.i : 10
+data.f : 220.500000
+data.str : C Programming
+</pre>
+</div>
+
+<h2 class="hd2" id="typedef">Typedef</h2>
+<div class="cont">
+The C programming language provides a keyword called typedef, which you can use
+to give a type a new name. Following is an example to define a term BYTE for one-byte
+numbers:
+</div>
+<div class="code">typedef unsigned char BYTE;</div>
+<div class="cont">
+After this type definitions, the identifier BYTE can be used as an abbreviation for the
+type unsigned char, for example:
+</div>
+<div class="code">BYTE b1, b2;</div>
+<div class="cont">
+    You can use typedef to give a name to user defined data type as well. For example you can
+    use typedef with structure to define a new data type and then use that data type to define
+    structure variables directly as follows:
+</div>
+<div class="code">
+<pre>
+#include <stdio.h>
+#include <string.h>
+typedef struct Books
+{
+ char title[50];
+ char author[50];
+ char subject[100];
+ int book_id;
+} Book;
+int main( )
+{
+ Book book;
+ strcpy( book.title, "C Programming");
+ strcpy( book.author, "Nuha Ali");
+ strcpy( book.subject, "C Programming Tutorial");
+ book.book_id = 6495407;
+ printf( "Book title : %s\n", book.title);
+ printf( "Book author : %s\n", book.author);
+ printf( "Book subject : %s\n", book.subject);
+ printf( "Book book_id : %d\n", book.book_id);
+ return 0;
+}
+</pre>
+</div>
+<div class="cont">
+    Output:
+<pre>
+Book title : C Programming
+Book author : Nuha Ali
+Book subject : C Programming Tutorial
+Book book_id : 6495407
+</pre>
+</div>
+<footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <div class="row">
+        <div class="col-md-5 " >
+          <img src="../../../Log.png" alt="footer-img" id="footer-img">
+          
+          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+          <p id="footercontent">
+           Derek Content HERE.................................................
+          </p>
+        </div>
+      
+        <div class="col-md-2" id="footert">
+          <h4 class="text-uppercase  ">Projects</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Articles</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Language Guides</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+
+
+    <div class="footer-copyright text-center">
+      © 2020 Copyright:
+      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+ 
+  </footer>
+  <!--Footer-->
+</body>
+
+</html>
+

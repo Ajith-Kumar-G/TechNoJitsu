@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <h2 class="hd2" id="datatype">DATA TYPES</h2>
+    <div class="cont">
+    <p>Data types refer to an extensive system used for <em> variables or functions of different types</em>. The type of a variable determines how
+    much space it occupies in storage and how the bit pattern stored is interpreted.<br>
+    Types of Data Types are :<br>
+    <strong>Basic Types:</strong><br>
+    They are arithmetic types and consists of the two types: (a) integer types and (b) floatingpoint types.<br>
+    <strong>Enumerated types:</strong><br>
+    They are again arithmetic types and they are used to define variables that can only be
+    assigned certain discrete integer values throughout the program.<br>
+    <strong>Derived types:</strong><br>
+    They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and
+    (e) Function types.<br>
+    We will see basic types in the following section.<br>
+    </p></div>
+    <h3>Integer Types</h3>
+    <div class="cont"><p>
+    Integer Type deals with those numeric values as the name says which are inetegers. The range of numbers depend upon the data type used as shown below:
+    <table>
+    <tr>
+    <th>DATA TYPE</th><th>BYTES</th><th>MIN</th><th>MAX</th>
+    <tr>
+    <td>int</td> <td>2</td> <td>-32,768</td><td>32,767</td>
+    </tr>
+    <tr>
+    <td>unsigned int</td><td> 2</td><td>0</td><td>65,535</td>
+    </tr>
+    <tr>
+    <td>Short</td><td> 2</td><td>-32,768</td><td>32,767</td></tr>
+    <tr>
+    <td>Long</td><td>4</td><td>-2,147,483,648</td><td>2,147,483,647</td></tr>
+    <tr>
+    <td>unsigned long</td><td>4</td><td>0</td><td>4,294,967,295</td>
+    </tr>
+    </table>
+    <p>An example for variable initialization:</p></div>
+    <div class="code">
+    <pre>
+    #include <stdio.h>
+    #include <limits.h>
+    int main()
+    {
+     printf("Storage size for int : %d \n", sizeof(int));
+    
+     return 0;
+    }</pre>
+    </div>
+    <div class="cont">
+    <p>OUTPUT: <br>Storage size for int : 2<br><br><br>Here <strong>sizeof()</strong> is an already existing function which accepts a data type as its input and 
+    shows the size of the data type in terms of bytes.</p> </div>
+    <h3 id="char">Character type</h3>
+    <div class="cont">
+        <p>The character is a single byte data variable which contains a character which could be any alphanumeric value or special characters.<br><strong>Example :</strong></p>
+    </div>
+    <div class="code">
+    char c ;
+    </div>
+    <h3>Float Types</h3>
+    <table>
+    <tr>
+    <th>TYPE</th><th> STORAGE SIZE</th><th> VALUE RANGE</th><th> PRECISION</th></tr>
+    <tr>
+    <td>float </td><td>4 byte </td><td>1.2E-38 to 3.4E+38</td><td> 6 decimal places</td></tr>
+    <tr>
+    <td>double </td><td>8 byte </td><td>2.3E-308 to 1.7E+308 </td><td>15 decimal places</td></tr>
+    <tr>
+    <td>long double </td><td>10 byte</td><td> 3.4E-4932 to 1.1E+4932</td><td> 19 decimal places</td></tr>
+    </table>
+    <footer class="footer-content">
+        <div class="jumbotron text-md-left">
+          <div class="row">
+            <div class="col-md-5 " >
+              <img src="../../../Log.png" alt="footer-img" id="footer-img">
+              
+              <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+              <p id="footercontent">
+               Derek Content HERE.................................................
+              </p>
+            </div>
+          
+            <div class="col-md-2" id="footert">
+              <h4 class="text-uppercase  ">Projects</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h4 class="text-uppercase ">Articles</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h4 class="text-uppercase ">Language Guides</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">C</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">Java</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     
+    
+    
+        <div class="footer-copyright text-center">
+          © 2020 Copyright:
+          <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+        </div>
+     
+      </footer>
+      <!--Footer-->
+    </body>
+    
+    </html>
+    

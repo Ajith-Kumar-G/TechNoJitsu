@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>fundamental types</title>
+    </head>
+    <body>
+        <div class="intro"><p>A program can use several data to solve a given problem, for example, characters, integers, or floating-point numbers. Since a computer uses different methods for processing
+            and saving data, the data type must be known. The type defines</p></div>
+        <div class="unl">
+            <ul>
+                <li>the internal representation of the data, </li>
+                <li>the amount of memory to allocate.</li>
+            </ul>
+        </div>
+        <h3 id="bool">The Type bool</h3>  
+        <div class="cont">
+            <p>The result of a comparison or a logical association using AND or OR is a boolean value,
+                which can be true or false. C++ uses the bool type to represent boolean values. An
+                expression of the type bool can either be true or false, where the internal value for
+                true will be represented as the numerical value 1 and false by a zero.</p>
+        </div>
+        <h3 id="char">Char type</h3> 
+        <div class="cont">
+            <p>These types are used for saving character codes. A character code is an integer associated
+                with each character. The letter A is represented by code 65, for example. The character
+                set defines which code represents a certain character. When displaying characters on
+                screen, the applicable character codes are transmitted and the “receiver,” that is the
+                screen, is responsible for correctly interpreting the codes.<br>The <i>char</i>(character) type is used to store character codes in one byte (8 bits). This
+                amount of storage is sufficient for extended character sets, for example, the ANSI character set that contains the ASCII codes and additional characters such as German
+                umlauts.<br>The <i>wchar_t</i> (wide character type) type comprises at least 2 bytes (16 bits) and is
+                thus capable of storing modern Unicode characters.<i>Unicode</i> is a 16-bit code also used in
+                Windows NT and containing codes for approximately 35,000 characters in 24 languages.</p>
+        </div>
+        <h3 id="int">Integral types</h3>
+        <div class="cont">
+            <p>The types <i>short, int,</i> and<i> long</i> are available for operations with integers. These types
+                are distinguished by their ranges of values. The table on the opposite page shows the
+                integer types, which are also referred to as integral types, with their typical storage
+                requirements and ranges of values.<br>The int (integer) type is tailor-made for computers and adapts to the length of a register on the computer. For 16-bit computers, <i>int</i> is thus equivalent to <i>short</i>, whereas
+                for 32-bit computers <i>int</i> will be equivalent to <i>long</i>.</p>
+        </div>
+        <h3 id="float">Floating-point types</h3>
+        <div class="cont">
+            <p>Numbers with a fraction part are indicated by a decimal point in C++ and are referred to
+                as floating-point numbers. In contrast to integers, floating-point numbers must be stored
+                to a preset accuracy. The following three types are available for calculations involving
+                floating-point numbers:</p>
+        </div>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><pre>float</pre></td><td> for simple accuracy</td> 
+                </tr>
+                <tr>
+                    <td><pre>double</pre></td><td> for double accuracy</td> 
+                </tr>
+                <tr>
+                    <td><pre>long double</pre></td><td>for high accuracy</td> 
+                </tr>
+            </table> 
+        </div>
+        <div class="cont">
+            <p>The value range and accuracy of a type are derived from the amount of memory allocated
+                and the internal representation of the type.<br><i>Accuracy</i> is expressed in decimal places. This means that “six decimal places” allows a
+                programmer to store two floating-point numbers that differ within the first six decimal
+                places as separate numbers.<br><br>The fundamental types in C++ are integer types, floating-point types, and the void type.
+                The types used for integers and floating-point numbers are collectively referred to as
+                arithmetic types, as arithmetic operators are defined for them.<br>
+                The void type is used for expressions that do not represent a value. A function call
+                can thus take a void type.</p>
+        </div>
+        <h2 id="constant">CONSTANTS</h2>
+        <div class="cont">
+            <p>The boolean keywords true and false, a number, a character, or a character sequence
+                (string) are all constants, which are also referred to as a literals. Constants can thus be
+                subdivided into</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>boolean constants</li>
+                <li>numerical constants</li>
+                <li>character constants</li>
+                <li>string constants</li>
+            </ul>
+        </div>
+        <h3 id="Boolean Constants">Boolean Constants</h3>
+        <div class="cont"><p>A boolean expression can have two values that are identified by the keywords true and
+            false. Both constants are of the bool type. They can be used, for example, to set flags
+            representing just two states.</p>
+        </div>
+        <h3 id="Integral Constants">Integral Constants</h3>
+        <div class="cont"> 
+        <p>Integral numerical constants can be represented as simple decimal numbers, octals, or
+            hexadecimals<br>Integral constants are normally of type int. If the value of the constant is too large
+            for the int type, a type capable of representing larger values will be applied. The ranking
+            for decimal constants is as follows:
+            <pre><b>Example</b>
+        int, long, unsigned long </pre>You can designate the type of a constant by adding the letter L or l (for long), or U
+            or u (for unsigned).</p>
+        </div>
+        <div class="orl">
+            <ol>
+                <li><b>12L</b> and <b>12l</b> correspond to the type long</li>
+                <li><b>12U</b> and <b>12u</b> correspond to the type unsigned int</li>
+                <li><b>12UL</b> and <b>12ul</b> correspond to the type unsigned long</li>
+            </ol>
+            
+        </div>
+        <div class="unl">
+            <ul>
+                <li>a <i>decimal constant</i> (base 10) begins with a decimal number other than zero, such as 109 or 987650</li>
+                <li>an <i>octal constant</i> (base 8) begins with a leading 0, for example 077 or 01234567</li>
+                <li>a <i>hexadecimal constant</i> (base 16) begins with the character pair 0x or 0X, for example 0x2A0 or 0X4b1C. Hexadecimal numbers can be capitalized or noncapitalized</li>
+            </ul>
+        </div>
+        <h3 id="Floating-Point Constants">Floating-Point Constants</h3>
+        <div class="cont">
+            <p>Floating-point numbers are always represented as decimals, a decimal point being used to
+                distinguish the fraction part from the integer part. However, exponential notation is also
+                permissible.<br>
+            <pre><b>Example</b>
+        27.1 1.8E–2          // <i>Type:double</i></pre> </p>    
+        </div>
+        <h3 id="Character Constants">Character Constants</h3>
+        <div class="cont">
+            <p>A character constant is a character enclosed in single quotes. Character constants take
+                the type char:<br>
+            <pre><b>Example</b>
+        'A'  // <i>Type:char</i></pre> The numerical value is the character code representing the character. The constant 'A'
+                thus has a value of 65 in ASCII code. </p>    
+        </div>
+        <h3 id="String Constants">String Constants</h3>
+        <div class="cont">
+            <p>A string constant is stored internally without the quotes but terminated with a<i> null character</i>, \0, represented by a byte with a numerical value of 0 — that is, all the bits in this
+                byte are set to 0. Thus, a string occupies one byte more in memory than the number of
+                characters it contains. An empty string, "", therefore occupies a single byte.<br>
+            <pre><b>Example</b>
+        "Today is a beautiful day!"</pre></p>    
+        </div>
+        <h2 id="valid names">Valid Names</h2>
+        <div class="unl">
+            <ul>
+                <li>a name contains a series of letters, numbers, or underscore characters ( _ ). German umlauts and accented letters are invalid. C++ is case sensitive; that is,
+                    upper- and lowercase letters are different.</li>
+                <lI>the first character must be a letter or underscore</lI>
+                <li>there are no restrictions on the length of a name and all the characters in the
+                    name are significant</li>
+                <li>C++ keywords are reserved and cannot be used as names.</li>
+            </ul>
+        </div>
+        <h2 id="variables">variables</h2>
+        <div class="cont">
+            <p>Data such as numbers, characters, or even complete records are stored in variables to
+                enable their processing by a program. Variables are also referred to as objects, particularly
+                if they belong to a class.</p>
+        </div>
+        <h3 id="define">Definig Variable</h3>
+        <div class="cont">
+            <p>A variable must be defined before you can use it in a program. When you define a variable the type is specified and an appropriate amount of memory reserved. This memory
+                space is addressed by reference to the name of the variable. A simple definition has the following syntax:
+            <pre><b>SYNTAX:</b> typ name1 [name2 ... ];</pre> <br>
+        <pre><b>Example</b>
+        char c;
+        int i, counter;
+        double x, y, size;</pre> </p> 
+        </div>
+        <h3 id="Initialization">Initialization</h3>
+        <div class="cont">
+            <p>A variable can be initialized, i.e. a value can be assigned to the variable, during its definition. Initialization is achieved by placing the following immediately after the name of
+                the variable:<br>an equals sign ( = ) and an initial value for the variable or
+                 round brackets containing the value of the variable.<br>
+            </p>
+        </div>
+        <div class="cont">
+            <pre>
+<b>Example</b>
+        char c = 'a';
+        float x(1.875);    
+            </pre>
+        </div>
+    </body>
+</html>

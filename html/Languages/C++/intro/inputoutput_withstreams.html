@@ -1,0 +1,253 @@
+<html>
+    <head>
+        <title>Input and Output with Streams</title>
+    </head>
+    <body>
+        <h2 id="STREAMS">Streams</h2>
+        <h3 id="standard">The four standard streams</h3>
+        <div class="unl">
+            <ul>
+                <li><b>cin</b> Object of class istream to control standard input</li>
+                <li><b>cout</b> Object of class ostream to control standard output</li>
+                <li><b>cerr</b> Object of class ostream to control unbuffered error output</li>
+                <li><b>clog</b> Object of class ostream to control buffered error output</li>
+            </ul>
+        </div>
+        <h3 id="iostream">I/O Stream Classes</h3>
+        <div class="cont">
+            <p>During the development of C++ a new class-based input/output system was implemented. This gave rise to the <i>I/O stream classes</i>, which are now available in a library of
+                their own, the so-called <i>iostream library</i>.<br>The istream and ostream classes derived from ios form a user-friendly interface
+                for stream manipulation. The istream class is used for reading streams and the
+                ostream class is used for writing to streams. The operator >> is defined in istream
+                and << is defined in ostream.</p>
+        </div>
+        <h3 id="standard">Standard Streams</h3>
+        <div class="cont">
+         <p>The streams <i>cin</i> and<i> cout</i>, which were mentioned earlier, are instances of the
+            istream or ostream classes. When a program is launched these objects are automatically created to read <i>standard input</i> or write to <i>standard output</i>.<br>
+            Standard input is normally the keyboard and standard output the screen. However,
+            standard input and output can be redirected to files. In this case, data is not read from
+            the keyboard but from a file, or data is not displayed on screen but written to a file.<br>The other two standard streams cerr and clog are used to display messages when
+            errors occur. Error messages are displayed on screen even if standard output has been
+            redirected to a file.</p>   
+        </div>
+        <h2 id="formatting">Formatting and Manipulators</h2>
+        <div class="cont">
+        <pre>
+        cout << showpos << 123; <i>// Output: +123</i></pre>
+        The above statement is equivalent to
+        <pre>        cout.setf( ios::showpos);
+        cout << 123;    
+            </pre>
+        </div>
+        <h3 id="formatting">Formattimg</h3>
+        <div class="cont">
+            <p>When reading keyboard input, a valid input format must be used to determine how input
+                is to be interpreted. Similarly, screen output adheres to set of rules governing how, for
+                example, floating-point numbers are displayed.<br>
+                The stream classes istream and ostream offer various options for performing these
+                tasks. For example, you can display a table of numeric values in a simple way.
+                </p>
+        </div>
+        <div class="code">
+            <pre>
+        <i>// Reads integral decimal values and
+        // generates octal, decimal, and hexadecimal output.</i>
+        #include < iostream.h >   <i>// Declarations of cin, cout and</i>
+        using namespace std;   <i>// manipulators oct, hex, ...</i>
+        int main()
+        {
+        int number;
+        cout << "Please enter an integer: ";
+        cin >> number;
+        cout << uppercase   <i>// for hex-digits</i>
+        << " octal \t decimal \t hexadecimal\n "
+        << oct << number << " \t "
+        << dec << number << " \t "
+        << hex << number << endl;
+        return 0;
+        }
+            </pre>
+        </div>
+        <h3 id="field">Field Width</h3>
+        <div class="cont">
+            <p>The field width is the number of characters that can be written to a field. If the output
+                string is larger than the field width, the output is not truncated but the field is extended.
+                The output will always contain at least the number of digits specified as the field width.
+                You can either use the width() method or the setw() manipulator to define field
+                width
+                <pre><b>Example</b>
+        cout.width(6); 
+                </pre></p>
+        </div>
+        <h3 id="filecharacter">Fill Characters and Alignment</h3>
+        <div class="cont">
+            <p>If a field is larger than the string you need to output, blanks are used by default to fill the
+                field. You can either use the fill() method or the setfill() manipulator to specify
+                another fill character.
+            <pre><b>Example</b>
+        cout << setfill('*') << setw(5) << 12;   <i>// Output: ***12</i>
+        </pre></p>
+        </div>
+        <h2 id="OUTPUT OF CHARACTERS">Output Of Characters,Strings,And Boolean Values</h2>
+        <div class="code">
+            <pre><b>Sample program</b>
+        <i>// Enters a character and outputs its
+        // octal, decimal, and hexadecimal code.</i>
+        #include < iostream.h >  <i> // Declaration of cin, cout</i>
+        #include < iomanip.h >  <i> // For manipulators being called</i>
+        <i>// with arguments.</i>
+        #include <string>
+        using namespace std;
+        int main()
+        {
+        int number = ' ';
+        cout << "The white space code is as follows: "
+        << number << endl;
+        char ch;
+        string prompt =
+        "\nPlease enter a character followed by "
+        " <return>: ";
+        cout << prompt;
+        cin >> ch;  <i> // Read a character</i>
+        number = ch;
+        cout << "The character " << ch
+        << " has code" << number << endl;
+        cout << uppercase  <i> // For hex-digits</i>
+        << " octal decimal hexadecimal\n "
+        << oct << setw(8) << number
+        << dec << setw(8) << number
+        << hex << setw(8) << number << endl;
+        return 0;
+        }
+        </pre></div>
+        <h3 id="Outputting Characters">Outputting Characters</h3>
+        <div class="cont">
+            <p>The >> operator interprets a number of type char as the character code and outputs the
+                corresponding character:
+            <pre><b>Example</b>
+        char ch = '0';
+        cout << ch << ' ' << 'A';  <i>// Outputs three characters: 0 A</i>
+        </pre></p>
+        </div>
+        <h3 id="Outputting Strings">Outputting Strings</h3>
+        <div class="cont">
+            <p>You can use the >> operator both to output string literals, such as "Hello", and string
+                variables, as was illustrated in previous examples. As in the case of other types, strings
+                can be positioned within output fields.
+            <pre><b>Example</b>
+        string s("spring flowers ");
+        cout << left  <i>       // Left-aligned</i>
+        << setfill('?')  <i>    // Fill character ?</i>
+        << setw(20) << s ;  <i> // Field width 20</i>
+        </pre></p>
+        </div>
+        <h3 id="Outputting Boolean Values">Outputting Boolean Values</h3>
+        <div class="cont">
+            <p>By default the << operator outputs boolean values as integers, with the value 0 representing false and 1 true. If you need to output the strings true or false instead, the
+                flag ios::boolalpha must be set. To do so, use either the setf() method or the
+                manipulator boolalpha.
+            <pre><b>Example</b>
+        bool ok = true;
+        cout << ok << endl           <i>// 1</i>
+        << boolalpha << ok << endl;  <i>// true</i>
+        </pre></p>
+        </div>
+        <h2 id="FORMATTED INPUT OF NUMBERS">Formatting Input Of Number</h2>
+        <div class="code">
+            <pre><b>Example</b>
+        <i>// Enter hexadecimal digits and a floating-point number
+        //</i>
+        #include < iostream.h >
+        #include < iomanip.h >
+        using namespace std;
+        int main()
+        {
+        int number = 0;
+        cout << "\nEnter a hexadecimal number: "
+        << endl;
+        cin >> hex >> number;  <i> // Input hex-number</i>
+        cout << "Your decimal input: " << number << endl;
+        <i>// If an invalid input occurred:</i>
+        cin.sync();  <i> // Clears the buffer</i>
+        cin.clear();  <i>// Reset error flags</i>
+        double x1 = 0.0, x2 = 0.0;
+        cout << "\nNow enter two floating-point values: "
+        << endl;
+        cout << "1. number: ";
+        cin >> x1;  <i>  // Read first number</i>
+        cout << "2. number: ";
+        cin >> x2;    // Read second number
+        cout << fixed << setprecision(2)
+        << "\nThe sum of both numbers: "
+        << setw(10) << x1 + x2 << endl;
+        cout << "\nThe product of both numbers: "
+        << setw(10) << x1 * x2 << endl;
+        return 0;
+        }        
+        </pre>
+        </div>
+        <h3 id="Inputting Integers">Inputting Integers</h3>
+        <div class="cont">
+            <p>You can use the hex, oct, and dec manipulators to stipulate that any character
+                sequence input is to processed as a hexadecimal, octal, or decimal number.
+            <pre><b>Example</b>
+        int n;
+        cin >> oct >> n;
+
+            </pre></p>
+        </div>
+        <h3 id="Inputting Floating-Point Numbers">Inputting Floating-Point Numbers</h3>
+        <div class="cont">
+            <p>The >> operator interprets any input as a decimal floating-point number if the variable is
+                a floating-point type, i.e. float, double, or long double. The floating-point number can be entered in fixed point or exponential notation.
+            <pre><b>Example</b>
+            double x;
+            cin >> x;
+            </pre></p>
+        </div>
+        <h3 id="Input Errors">Input Errors</h3>
+        <div class="cont">
+            <p>But what happens if the input does not match the type of variable defined?
+            <pre><b>Example</b>
+        int i, j; cin >> i >> j;
+            </pre></p>
+        </div>
+        <h2 id="FORMATTED INPUT">Formatted Input/Outout</h2>
+        <div class="code">
+            <pre><b>Example</b>
+        <i>// Inputs an article label and a price</i>
+        #include < iostream.h >    <i>// Declarations of cin, cout,...</i>      
+        #include < iomanip.h >     <i>// Manipulator setw()</i>
+        #include < string.h >
+        using namespace std;
+        int main()
+        {
+        string label;
+        double price;
+        cont << "\nPlease enter an article label: ";
+        <i>// Input the label (15 characters maximum):</i>
+        cin >> setw(16);  <i> // or: cin.width(16);</i>
+        cin >> label;
+        cin.sync();  <i> // Clears the buffer and resets</i>
+        cin.clear();  <i> // any error flags that may be set</i>
+        cout << "\nEnter the price of the article: ";
+        cin >> price;  <i> // Input the price</i>
+        <i>// Controlling output:</i>
+        cout << fixed << setprecision(2)
+        << "\nArticle:"
+        << "\n Label: " << label
+        << "\n Price: " << price << endl;
+        <i>// ... The program to be continued</i>
+        return 0;
+        }        
+        </pre>
+        </div>
+        <div class="cont">
+            <p>Unformatted input and output does not use fields, and any formatting flags that have
+                been set are ignored. The bytes read from a stream are passed to the program “as is.”
+                More specifically, you should be aware that any white space characters preceding the
+                input will be processed.
+                </p></div>
+    </body>
+</html>    

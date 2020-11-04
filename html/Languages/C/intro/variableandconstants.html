@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href=".html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <h2 class="hd2" id="variable">VARIABLES</h2>
+<div class="cont">
+    <p>A variable is nothing but a name given to a storage area that our programs can
+        manipulate. Each variable in C has a specific type, which determines the size and layout of
+        the variable's memory; the range of values that can be stored within that memory; and the
+        set of operations that can be applied to the variable.<br>
+       Variable names can contain alphabets numbers and underscore. Variable name never starts with a 
+       number and its case sensitive also. These are the predefined types :</p>
+</div>
+<div>
+<table>
+    <tr><th>TYPE</th><th>DESCRIPTION</th></tr>
+    <tr><td>Char</td><td> Typically a single octet(one byte). This is an integer type.</td></tr>
+    <tr><td>Int</td><td> The most natural size of integer for the machine.</td></tr>
+    <tr><td>Float</td><td> A single-precision floating point value.</td></tr>
+    <tr><td>Double</td><td> A double-precision floating point value.</td></tr>
+    <tr><td>Void</td><td> Represents the absence of type.</td></tr>
+
+</table>
+</div>
+<h3>DECLARATION</h3>
+<div class="cont">
+    <p>A variable declaration provides assurance to the compiler that there is one variable existing with
+       the given type and name. A variable declaration has its meaning at the time of
+       compilation only, compiler needs actual variable declaration at the time of linking of the program.<br>
+       The syntax for declaration is:
+       <pre> data_type  variable_name ;</pre>
+        </p></div>
+<div class="code"><p><pre>
+    #include<stdio.h>
+    // Variable definition:
+    extern int a, b;
+    extern int c;
+    extern float f;
+    int main ()
+    {
+    // Variable definition:
+    int a, b;
+    int c;
+    float f;
+    // actual initialization
+     a =10;</pre></p></div>
+
+<h3 >L AND R VALUE</h3>
+<div class="cont"><p>
+    <strong>lvalue:</strong> An expression that is an lvalue may appear as either the left-hand or right-hand
+    side of an assignment.<br>
+    <strong>rvalue:</strong> An expression that is an rvalue may appear on the right- but not left-hand side
+    of an assignment.<br>
+    In an assignment the lvalue comes at the left side and rvalue at the right side.<br>
+    Ex: <span class="code"> int g=20 ;</span><br>
+    Here <strong>r value</strong> is <strong>20</strong> and the <strong>l value</strong> is the <strong>memory location/address value</strong> 
+    of the variable.</p>
+</div>
+<h2 class="hd2" id="constant">CONSTANTS</h2>
+<div class="cont">
+    <p>The constants refer to fixed values that the program may not alter during its
+       execution. These fixed values are also called literals.<br>
+       Constants can be defined by two methods:
+       <ul class="unl">
+           <li>Variable constant with help of <strong>const</strong> keyword</li>
+           <li>Constants with <strong>#define</strong> preprocessor</li>
+       </ul></div>
+    <h3 >const</h3>
+    <div class="cont">
+        Variable basic data types like an <strong>integer</strong> constant, a <strong>floating</strong>
+        constant, a <strong>character</strong> constant, or a string literal can be declared with the help of beow mentioned syntax.<br>
+        Syntax : <span class="code"> const data_type variable_name;</span></p>
+    </div>
+    <div class="code">
+        <pre>#include <stdio.h>
+int main()
+{
+const int LENGTH = 10;
+const int WIDTH = 5;
+const char NEWLINE = '\n';
+int area;
+           
+area = LENGTH * WIDTH;
+printf("value of area : %d", area);
+printf("%c", NEWLINE);
+return 0;
+}</pre>
+    </div><span class="cont">Output: value of area : 50</span>
+    <h3 >#define</h3>
+        <p>This is used in code for making general constant value where the value assigned to the quantity which could be anything.<br></p>
+        <span class="code">#define pi 3.14159</span>
+    </div>
+    <footer class="footer-content">
+        <div class="jumbotron text-md-left">
+          <div class="row">
+            <div class="col-md-5 " >
+              <img src="../../../Log.png" alt="footer-img" id="footer-img">
+              
+              <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+              <p id="footercontent">
+               Derek Content HERE.................................................
+              </p>
+            </div>
+          
+            <div class="col-md-2" id="footert">
+              <h4 class="text-uppercase  ">Projects</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h4 class="text-uppercase ">Articles</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+                <li><a href="#">########</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <h4 class="text-uppercase ">Language Guides</h4>
+              <ul class="list-unstyled text-center">
+                <li><a href="#">C</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">Java</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     
+    
+    
+        <div class="footer-copyright text-center">
+          © 2020 Copyright:
+          <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+        </div>
+     
+      </footer>
+      <!--Footer-->
+    </body>
+    
+    </html>
+    

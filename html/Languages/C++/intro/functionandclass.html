@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>function and class</title>
+    </head>
+    <body>
+        <h2 id="function">Function</h2>
+        <h3 id="Declarations">Declarations</h3>
+        <div class="cont">
+            <p>Each name (<i>identifier</i>) occurring in a program must be known to the compiler or it will
+                cause an error message. That means any names apart from keywords must be <i>declared</i>, i.e.
+                introduced to the compiler, before they are used.<br>
+                Each time a variable or a function is defined it is also declared. But conversely, not
+                every declaration needs to be a definition. If you need to use a function that has already
+                been introduced in a library, you must declare the function but you do not need to redefine it.</p>
+        </div>
+        <h2 id="Declaring Functions">Declaring Functions</h2>
+        <div class="cont">
+            <p>A function has a name and a type, much like a variable. The function’s type is defined by
+                its return value, that is, the value the function passes back to the program. In addition,
+                the type of arguments required by a function is important.
+            <pre><b>Examples:</b> 
+        int toupper(int);
+        double pow(double, double);</pre></p>
+        </div>
+        <div class="code">
+            <pre><b>simple program</b>
+        <i>// Calculating powers with
+            // the standard function pow()</i>
+        #include < iostream.h > // Declaration of cout
+        #include < cmath.h > // Prototype of pow(), thus:
+        <i>// double pow( double, double);</i>
+        using namespace std;
+        int main()
+        {
+        double x = 2.5, y;
+        <i>// By means of a prototype, the compiler generates
+        // the correct call or an error message!
+        // Computes x raised to the power 3:</i>
+        y = pow("x", 3.0); // Error! String is not a number
+        y = pow(x + 3.0); // Error! Just one argument
+        y = pow(x, 3.0); // ok!
+        y = pow(x, 3); // ok! The compiler converts the
+        // int value 3 to double.
+        cout << "2.5 raised to 3 yields: "
+        << y << endl;
+        <i>// Calculating with pow() is possible:</i>
+        cout << "2 + (5 raised to the power 2.5) yields: "
+        << 2.0 + pow(5.0, x) << endl;
+        return 0;
+        }        
+            </pre>
+        </div>
+        <h2 id="Function Calls">Function Calls</h2>
+        <div class="cont">
+            <p>A function call is an expression of the same type as the function and whose value corresponds to the return value. The return value is commonly passed to a suitable variable.
+            <pre><b>Example:</b>
+        y = pow( x, 3.0); 
+        cout << 2.0 + pow( 5.0, x);  </pre></p>
+        </div>
+        <div class="code">
+            <pre><b>simple program</b>
+        <i>// Outputs three random numbers</i>
+        #include < iostream.h >  <i> // Declaration of cin and cout</i>
+        #include < cstdlib.h >  <i> // Prototypes of srand(), rand():</i>
+        <i>// void srand( unsigned int seed );
+        // int rand( void );</i>
+        using namespace std;
+        int main()
+        {
+        unsigned int seed;
+        int z1, z2, z3;
+        cout << " --- Random Numbers --- \n" << endl;
+        cout << "To initialize the random number generator, "
+        << "\n please enter an integer value: ";
+        cin >> seed; // Input an integer
+        srand( seed); // and use it as argument for a
+        <i>// new sequence of random numbers.</i>
+        z1 = rand();  <i>// Compute three random numbers</i>
+        z2 = rand();
+        z3 = rand();
+        cout << "\nThree random numbers: "
+        << z1 << " " << z2 << " " << z3 << endl;
+        return 0;
+        }    </pre>
+        </div>
+        <h3 id="Return Value">Functions without Return Value</h3>
+        <div class="cont">
+            <p>You can also write functions that perform a certain action but do not return a value to
+                the function that called them. The type void is available for functions of this type,
+                which are also referred to as procedures in other programming languages.
+            <pre><b>Example:</b>
+        void srand( unsigned int seed );
+            </pre></p>
+        </div>
+        <h3 id="Functions without Arguments">Functions without Arguments</h3>
+        <div class="cont">
+            <p>If a function does not expect an argument, the function prototype must be declared as
+                void or the braces following the function name must be left empty.
+            <pre><b>Example:</b>
+        int rand( void ); <i>// or</i> int rand();
+            </pre></p>
+        </div> 
+        <h2 id="HEADER FILES">HEADER FILES</h2> 
+        <div class="cont">
+            <p>Header files are text files containing declarations and macros. By using #include directive these declarations and macros can be made available to any other source file,
+                even in other header files.<br>Pay attention to the following points when using header files:</p>
+        </div> 
+        <div class="unl">
+            <ul>
+                <li>header files should generally be included at the start of a program before any
+                    other declarations</li>
+                <li>you can only name one header file per #include directive</li>
+                <li>the file name must be enclosed in angled brackets < ... > or double quotes
+                    " ... ".</li>
+            </ul>
+        </div>
+        <h3 id="STANDARD HEADER FILES">STANDARD HEADER FILES</h3> 
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td>algorithm</td> <td>ios</td> <td>map</td> <td>stack</td>
+                </tr>
+                <tr>
+                    <td>bitset</td> <td>iosfwd</td> <td>memory</td> <td>stdexcept</td>
+                </tr>
+                <tr>
+                    <td>complex</td> <td>iostream</td> <td>new</td> <td>streambuf</td>
+                </tr>
+                <tr>
+                    <td>dequeue</td> <td>istream</td> <td>numeric</td> <td>string</td>
+                </tr>
+                <tr>
+                    <td>exception</td> <td>list</td> <td>set</td> <td>locale</td>
+                </tr>
+            </table>
+        </div>
+        <h3 id="USING STANDARD CLASSES">USING STANDARD CLASSES</h3>
+        <div class="code">
+            <pre><b>Sample program using class string</b>
+        <i>// To use strings.</i>
+        #include < iostream.h >  <i> // Declaration of cin, cout</i>
+        #include < string.h >  <i> // Declaration of class string</i>
+        using namespace std;
+        int main()
+        {
+        <i>// Defines four strings:</i>
+        string prompt("What is your name: "),
+        name,  <i> // An empty</i>
+        line( 40, '-'),  <i> // string with 40 '-'</i>
+        total = "Hello ";<i> // is possible!</i>
+        cout << prompt;  <i> // Request for input.</i>
+        getline( cin, name); // Inputs a name in one line
+        total = total + name; // Concatenates and
+        <i>// assigns strings.</i>
+        cout << line << endl <i> // Outputs line and name</i>
+        << total << endl;
+        cout << " Your name is ";  <i>// Outputs length</i>
+        << name.length() << " characters long!" << endl;
+        cout << line << endl;
+        return 0;
+        }    
+            </pre>
+        </div>
+        <h3 id="Creating Objects">Creating Objects</h3>
+        <div class="cont">
+            <p>An object is a variable of a class type, also referred to as an instance of the class. When an
+                object is created, memory is allocated to the data members and initialized with suitable
+                values.
+                <pre><b>Example:</b>
+        string s("I am a string");
+                </pre></p>
+        </div>
+        <h3 id="Calling Methods">Calling Methods</h3>
+        <div class="cont">
+            <p>All the methods defined as public within the corresponding class can be called for an
+                object. In contrast to calling a global function, a method is always called for one particular
+                object. The name of the object precedes the method and is separated from the method by
+                a period.                
+                <pre><b>Example:</b>
+        s.length();  <i>// object.method();</i>
+                </pre></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<h2 class="hd2" id="operator"> C OPERATOR</h2>
+<div class="cont">	<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C language is rich in built-in operators and provides the following types of operators:</p></div>
+<div class="unl">
+<ul >
+<li>Arithmetic Operators </li>
+<li>Relational Operators </li> 
+<li>Logical Operators </li> 
+<li>Bitwise Operators </li> 
+<li>Assignment Operators </li> 
+<li>Misc Operators </li> 
+</ul>
+<p>This tutorial will explain the arithmetic, relational, logical, bitwise, assignment and other operators one by one. </p></div><br>
+<h3 class="Aoperator">Arithmetic Operators</h2>
+<div class="cont">
+<p>Following table shows all the arithmetic operators supported by C language. Assume variable A holds 10 and variable B holds 20, then:</p></div>
+<div><table>
+<tr>
+<td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<tr><td>+</td> <td>Adds two operands</td> <td>A + B will give 30 </td></tr>
+<tr><td>-</td> <td>Subtracts second operand from the first</td> <td>A - B will give -10 </td></tr>
+<tr><td>*</td> <td>Multiplies both operands</td> <td>A * B will give 200 </td></tr>
+<tr><td>/</td> <td>Divides numerator by de-numerator </td> <td>B / A will give 2 </td></tr>
+<tr><td>%</td> <td>Modulus Operator and remainder of after an integer division</td> <td>B % A will give 0 
+CHAPTER</td></tr>
+<tr><td>%</td> <td>Decrements operator decreases integer value by one</td> <td>B % A will give 0 </td></tr></table></div>
+<div class="cont"><p>Try the following example to understand all the arithmetic operators available in C programming language: </p></div>
+<div class="code"><pre>
+#include <stdio.h> 
+main()
+{
+   int a = 21;    int b = 10;    int c ; 
+    c = a + b;
+    printf("Line 1 - Value of c is %d\n",c);
+    c = a - b;
+    printf("Line 2 - Value of c is %d\n",c);
+    c = a * b;
+    printf("Line 3 - Value of c is %d\n",c);
+    c = a / b;
+    printf("Line 4 - Value of c is %d\n",c);
+    c = a % b;
+    printf("Line 5 - Value of c is %d\n",c);
+    c = a++;
+    printf("Line 6 - Value of c is %d\n",c);
+    c = a--;
+    printf("Line 7 - Value of c is %d\n",c); 
+    }
+</pre></div>
+<div class="cont" ><p>When you compile and execute the above program, it produces the following result:</p>
+<p>Line 1 - Value of c is 31<br>Line 2 - Value of c is 11 <br>Line 3 - Value of c is 210 <br>Line 4 - Value of c is 2 <br>Line 5 - Value of c is 1 
+    <br>Line 6 - Value of c is 21 <br>Line 7 - Value of c is 22</p><br></div> 
+<h2 class="hd2" id="Roperator">Relational Operator</h2>
+<div class="cont">
+<p>Following table shows all the relational operators supported by C language. Assume variable A holds 10 and variable B holds 20, then:</p></div>
+<div><table>
+<tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<td>==</td> <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td> <td>(A == B) is not true.</td></tr>
+<tr>
+<td>!=</td> <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td> <td>(A != B) is true.</td></tr>
+<tr>
+<td>></td> <td>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true. </td> <td>(A > B) is not true.</td></tr>
+<tr>
+<td><</td> <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td> <td>(A < B) is true.</td></tr>
+<tr><td>>=</td> <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td> <td>(A >= B) is not true.</td></tr>
+<tr>
+<td><=</td> <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</td> <td>(A <= B) is true.</td></tr></table></div>
+<div class="code"><pre>
+#include <stdio.h> 
+ 
+main()
+{
+int a = 21;    int b = 10;    int c ; 
+if( a == b )
+{
+printf("Line 1 - a is equal to b\n");
+}
+else
+{
+printf("Line 1 - a is not equal to b\n");
+}
+if ( a < b )
+{
+printf("Line 2 - a is less than b\n");
+}
+else
+{
+printf("Line 2 - a is not less than b\n");
+}
+if ( a > b )
+{
+printf("Line 3 - a is greater than b\n");
+}
+else
+{
+printf("Line 3 - a is not greater than b\n");
+}
+<p>/* Lets change value of a and b */</p>
+a = 5;
+b = 20;
+if ( a <= b ) 
+{
+printf("Line 4 - a is either less than or equal to  b\n");
+}
+if ( b >= a )
+{
+printf("Line 5 - b is either greater than  or equal to b\n");
+}
+}</pre></div> 
+<div class="cont">
+<p>When you compile and execute the above program, it produces the following result:</p>
+<p> Line 1 - a is not equal to b <br>Line 2 - a is not less than b <br>Line 3 - a is greater than b <br>Line 4 - a is either less than or equal to  b <br>Line 5 - b is either greater than  or equal to b </p></div>
+<h2 class="hd2" id="Loperator">Logical Operators </h2>
+<div class="cont"></div>
+<p>Following table shows all the logical operators supported by C language. Assume variable A holds 1 and variable B holds 0, then: </p></div>
+<div></div><table>
+<tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<tr><td>&&</td> <td>Called Logical AND operator. If both the operands are non-zero, then condition becomes true. </td> <td>(A && B) is false. </td></tr>
+<tr><td>||</td><td>Called Logical OR Operator. If any of the two operands is nonzero, then condition becomes true.</td><td>(A || B) is true</td></tr>
+<tr><td>!</td><td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false</td><td>!(A && B) is true.</td> </tr></table></div>
+<p>Try the following example to understand all the logical operators available in C programming language: </p>
+<div class="code"><pre>
+#include <stdio.h> 
+ 
+main()
+{
+int a = 5;
+int b = 20;
+int c ;
+if ( a && b )
+{
+printf("Line 1 - Condition is true\n");
+}
+if ( a || b )
+{
+printf("Line 2 - Condition is true\n");
+}
+<i>/* lets change the value of  a and b */</i>
+a = 0;b = 10;
+if ( a && b )
+{
+printf("Line 3 - Condition is true\n");
+}
+else
+{
+printf("Line 3 - Condition is not true\n");
+}
+if ( !(a && b) )
+{
+printf("Line 4 - Condition is true\n");
+}
+}
+</pre></div>
+<p>When you compile and execute the above program, it produces the following result:</p>
+<div class="cont"><p> Line 1 - Condition is true <br>Line 2 - Condition is true <br>Line 3 - Condition is not true <br>Line 4 - Condition is true</p></div>
+
+</pre></div>
+<p>When you compile and execute the above program, it produces the following result: </p> 
+<div ><p>Line 1 - Value of c is 12<br>Line 2 - Value of c is 61 <br>Line 3 - Value of c is 49 <br>Line 4 - Value of c is -61 <br>Line 5 - Value of c is 240 <br>Line 6 - Value of c is 15</p> </div>
+<h2 class="hd2" id="Assignoperator">Assignment Operators </h2>
+<div class="cont"></div>
+<p>There are following assignment operators supported by C language: </p></div>
+<div><table >
+<tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<tr><td>=</td> <td>Simple assignment operator, Assigns values from right side operands to left side operand </td> <td>C = A + B will assign value of A + B into C </td></tr>
+<tr><td>+=</td> <td>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand </td> <td>C += A is equivalent to C = C + A </td></tr>
+<tr><td>-=</td> <td>Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand </td> <td>C -=A is equivalent to C = C - A</td></tr>
+<tr><td>*=</td> <td>Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand </td> <td>C *= A is equivalent to C = C * A</td></tr>
+<tr><td>/=</td> <td>Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand </td> <td>C /= A is equivalent to C = C / A</td></tr>
+<tr><td>%=</td> <td>Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand </td> <td>C %= A is equivalent to C = C % A</td></tr>
+<tr><td><<=</td> <td>Left shift AND assignment operator </td> <td>C <<= 2 is same as C = C << 2 </td></tr>
+<tr><td>>>=</td> <td>Right shift AND assignment operator </td> <td>C >>= 2 is same as C = C << 2 </td></tr>
+<tr><td>&=</td> <td>Bitwise AND assignment operator </td> <td>C &= 2 is same as C = C & 2 </td></tr>
+<tr><td>^=</td> <td>bitwise exclusive OR and assignment operator </td> <td>C ^= 2 is same as C = C ^ 2 </td></tr>
+<tr><td>|=</td> <td>bitwise inclusive OR and assignment operator </td> <td>C |= 2 is same as C = C | 2 </td></tr>
+</table></div>
+<p>Try the following example to understand all the assignment operators available in C programming language: </p>
+<div class="code"><pre>
+#include <stdio.h> 
+ 
+main() 
+{
+    int a = 21;    
+    int c ; 
+ 
+   c =  a;    
+   printf("Line 1 - =  Operator Example, Value of c = %d\n",c); 
+   c +=  a;    
+   printf("Line 2 - += Operator Example, Value of c = %d\n",c);  
+   c -=  a;    
+   printf("Line 3 - -= Operator Example, Value of c = %d\n",c); 
+   c *=  a;    
+   printf("Line 4 - *= Operator Example, Value of c = %d\n",c); 
+   c /=  a;    
+   printf("Line 5 - /= Operator Example, Value of c = %d\n",c); 
+   c  = 200;    
+   c %=  a;    
+   printf("Line 6 - %= Operator Example, Value of c = %d\n",c); 
+   c <<=  2;    
+   printf("Line 7 - <<= Operator Example, Value of c = %d\n",c);  
+   c >>=  2;    
+   printf("Line 8 - >>= Operator Example, Value of c = %d\n",c); 
+   c &=  2;    
+   printf("Line 9 - &= Operator Example, Value of c = %d\n",c); 
+   c ^=  2;    
+   printf("Line 10 - ^= Operator Example, Value of c = %d\n",c); 
+   c |=  2;    
+   printf("Line 11 - |= Operator Example, Value of c = %d\n",c); 
+ 
+}
+</pre></div>
+<p>When you compile and execute the above program, it produces the following result:</p>
+<div ><p>Line 1 - =  Operator Example, Value of c = 21<br> Line 2 - += Operator Example, Value of c = 42<br> Line 3 - -= Operator Example, Value of c = 21<br> Line 4 - *= Operator Example, Value of c = 441<br> Line 5 - /= Operator Example, Value of c = 21<br> Line 6 - %= Operator Example, Value of c = 11<br> Line 7 - <<= Operator Example, Value of c = 44<br> Line 8 - >>= Operator Example, Value of c = 11<br>Line 9 - &= Operator Example, Value of c = 2<br> Line 10 - ^= Operator Example, Value of c = 0<br> Line 11 - |= Operator Example, Value of c = 2 </p></div>
+<h2 class="hd2" id="miscoperator">Misc Operators >> sizeof & ternary </h2>
+<div class="cont">
+<p>There are few other important operators including sizeof and ? : supported by C Language. </p></div>
+<div><table border="2">
+<tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<tr><td>sizeof()</td> <td>Returns the size of an variable. </td> <td>sizeof(a), where a is integer, will return 4. </td></tr>
+<tr><td>&</td> <td>Returns the address of an variable. </td> <td>&a; will give actual address of the variable.</td></tr>
+<tr><td>*</td> <td>Pointer to a variable</td> <td>*a; will pointer to a variable. </td></tr>
+<tr><td>?:</td> <td>Conditional Expression</td> <td>If Condition is true ? Then value X : Otherwise value Y </td></tr></table></div>
+<h2 class="hd2" id="opprecedence">Operators Precedence in C</h2>
+<p>Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator.<br> For example, x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.<br> Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.</p>
+<div ><table>
+<tr><td><strong>category</strong></td> <td><strong>Operator</strong></td> <td><strong>associativity</strong></td></tr>
+<tr><td>postfix</td> <td>() [] -> ++ --</td> <td>Left to right</td></tr>
+<tr><td>unary</td> <td>+ - ! ~ ++ -- (type)*& sizeof</td> <td>right to left</td></tr>
+<tr><td>multiplicative</td> <td>* / %</td> <td>Left to right</td></tr>
+<tr><td>additive</td> <td>+ -</td> <td>Left to right</td></tr>
+<tr><td>shift</td> <td><< >></td> <td>Left to right</td></tr>
+<tr><td>relational</td> <td>< <= > >==</td> <td>Left to right</td></tr>
+<tr><td>equality</td> <td>== !=</td> <td>Left to right</td></tr>
+<tr><td>bitwise AND</td> <td>&</td> <td>Left to right</td></tr>
+<tr><td>bitwise XOR</td> <td>^</td> <td>Left to right</td></tr>
+<tr><td>bitwise OR</td> <td>|</td> <td>Left to right</td></tr>
+<tr><td>logical AND</td> <td>&&</td> <td>Left to right </td></tr>
+<tr><td>logical OR</td> <td>||</td> <td>Left to right </td></tr>
+<tr><td>conditional</td> <td>?:</td> <td>Right to left </td></tr>
+<tr><td>assignment</td> <td>= += -= *= /= >>= <<= &= ^= |=</td> <td>Right to left </td></tr>
+<tr><td>comma</td> <td>,</td> <td>Left to right </td></tr></table></div>
+<p>Try the following example to understand the operator precedence available in C programming language: </p>
+<div class="code"><pre>
+#include <stdio.h> 
+ 
+main()
+{
+    int a = 20;    
+    int b = 10;    
+    int c = 15;    
+    int d = 5;    
+    int e;      
+    e = (a + b) * c / d;     <i> // ( 30 * 15 ) / 5</i>    
+    printf("Value of (a + b) * c / d is : %d\n",  e ); 
+ 
+   e = ((a + b) * c) / d;   <p> // (30 * 15 ) / 5</p>    
+   printf("Value of ((a + b) * c) / d is  : %d\n" ,e); 
+   e = (a + b) * (c / d);   <p>// (30) * (15/5)</p>    
+   printf("Value of (a + b) * (c / d) is  : %d\n",e); 
+   e = a + (b * c) / d;    <p> //  20 + (150/5)</p>    
+   printf("Value of a + (b * c) / d is  : %d\n" ,e);
+   return 0; 
+}
+</pre></div>
+<p>When you compile and execute the above program, it produces the following result: </p>
+<div><p>Value of (a + b) * c / d is : 90<br> Value of ((a + b) * c) / d is  : 90<br> Value of (a + b) * (c / d) is  : 90<br> Value of a + (b * c) / d is  : 50 </p></div>
+
+  <!--Footer-->
+
+  <footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <div class="row">
+        <div class="col-md-5 " >
+          <img src="Log.png" alt="footer-img" id="footer-img">
+          
+          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+          <p id="footercontent">
+           Derek Content HERE.................................................
+          </p>
+        </div>
+      
+        <div class="col-md-2" id="footert">
+          <h4 class="text-uppercase  ">Projects</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Articles</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Language Guides</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+
+
+    <div class="footer-copyright text-center">
+      © 2020 Copyright:
+      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+ 
+  </footer>
+  <!--Footer-->
+</body>
+
+</html>

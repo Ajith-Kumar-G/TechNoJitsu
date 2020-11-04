@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>opeerator</title>
+    </head>
+    <body>
+        <h2 id="binary">BINARY ARITHMETIC OPERATORS</h2>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>operator</b></td> <td><b>significance</b></td>
+                </tr>
+                <tr>
+                    <td>+</td> <td>Addition</td>
+                </tr>
+                <tr>
+                    <td>-</td> <td>Subtraction</td>
+                </tr>
+                <tr>
+                    <td>*</td> <td>Multiplication</td>
+                </tr>
+                <tr>
+                    <td>/</td> <td>Division</td>
+                </tr>
+                <tr>
+                    <td>%</td> <td>Remainder</td>
+                </tr>
+            </table>
+        </div>
+        <div class="code">
+            <pre><b>sample program</b>
+        #include < iostream.h >
+        using namespace std;
+        int main()
+        {
+        double x, y;
+        cout << "\nEnter two floating-point values: ";
+        cin >> x >> y;
+        cout << "The average of the two numbers is: "
+        << (x + y)/2.0 << endl;
+        return 0;
+        }        
+            </pre>
+        </div>
+        <div class="cont">
+            <p>If a program is to be able to process the data input it receives, you must define the operations to be performed for that data. The operations being executed will depend on the
+                type of data — you could add, multiply, or compare numbers, for example. However, it
+                would make no sense at all to multiply strings.<br>
+                The following sections introduce you to the most important operators that can be
+                used for arithmetic types. A distinction is made between unary and binary operators. A
+                unary operator has only one operand, whereas a binary operator has two.</p>
+        </div>
+        <div class="cont">
+            <p><i>Arithmetic operators</i> are used to perform calculations. The opposite page shows an
+                overview. You should be aware of the following:</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li><i>Divisions</i> performed with integral operands will produce integral results; for example, 7/2 computes to 3. If at least one of the operands is a floating-point number,
+                    the result will also be a floating-point number; e.g., the division 7.0/2 produces
+                    an exact result of 3.5.</li>
+                <li><i>Remainder division</i> is only applicable to integral operands and returns the remainder of an integral division. For example, 7%2 computes to 1.</li>
+            </ul>
+        </div>
+        <h3 id="expression">Expression</h3>
+        <div class="cont">
+            <p>In its simplest form an expression consists of only one constant, one variable, or one
+                function call. Expressions can be used as the operands of operators to form more complex
+                expressions. An expression will generally tend to be a combination of operators and
+                operands.
+            <pre><b>Example</b>
+            int a(4); double x(7.9);
+            a * 512      <i>// Type int</i>
+            1.0 + sin(x) <i>// Type double</i>
+            x – 3        <i>// Type double, since one</i>
+            <i>// operand is of type double</i></pre></p>
+        </div>
+        <h2 id="unary">UNARY ARITHMETIC OPERATORS</h2>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>operator</b></td> <td><b>significance</b></td>
+                </tr>
+                <tr>
+                    <td>+  -</td> <td>Unary sign operators</td>
+                </tr>
+                <tr>
+                    <td>++</td> <td>Increment operator</td>
+                </tr>
+                <tr>
+                    <td>--</td> <td>Decrement operator</td>
+                </tr>
+            </table>
+        </div>
+        <div class="code">
+            <pre><b>sample program</b>
+            #include < iostream.h >
+            using namespace std;
+            int main()
+            {
+            int i(2), j(8);
+            cout << i++ << endl;  <i> // Output: 2</i>
+            cout << i << endl;    <i> // Output: 3</i>
+            cout << j-- << endl;  <i> // Output: 8</i>
+            cout << --j << endl;  <i> // Output: 6</i>
+            return 0;
+            }    </pre>
+        </div>
+        <h3 id="sign">Sign Operators</h3>
+        <div class="cont">
+            <p>The sign operator – returns the value of the operand but inverts the sign.
+            <pre><b>Example</b>
+            int n = –5; cout << -n;<i> // Output: 5</i></pre>
+            </p>
+        </div>
+        <h3 id="inc/dec">Increment / Decrement Operators</h3>
+        <div class="cont">
+            <p>The increment operator ++ modifies the operand by adding 1 to its value and cannot be
+                used with constants for this reason<br>Given that i is a variable, both i++ (postfix notation) and ++i (prefix notation) raise
+                the value of i by 1. In both cases the operation i=i+1 is performed.<br><i>++i</i>-    i is incremented first and the new value of i is then applied,<br>
+                <i>i++</i> -  the original value of i is applied before i is incremented.</p>
+        </div>
+        <h3 id="Precedence">Precedence</h3>
+        <div class="cont">
+            <p><pre><b>Example</b>
+        float val(5.0); cout << val++ – 7.0/2.0;</pre><i>Operator</i> precedence determines the order of evaluation, i.e. how operators and
+            operands are grouped. As you can see from the table opposite, ++ has the highest precedence and / has a higher precedence than -. The example is evaluated as follows:
+            (val++) – (7.0/2.0). The result is 1.5, as val is incremented later.</p>
+        </div>
+        <h2 id="assignment">ASSIGNMENTS</h2>
+        <div class="code">
+            <pre><b>sample program</b>
+        <i>// Demonstration of compound assignments</i>
+        #include < iostream.h >
+        #include < iomanip.h >
+        using namespace std;
+        int main()
+        {
+        float x, y;
+        cout << "\n Please enter a starting value: ";
+        cin >> x;
+        cout << "\n Please enter the increment value: ";
+        cin >> y;
+        x += y;
+        cout << "\n And now multiplication! ";
+        cout << "\n Please enter a factor: ";
+        cin >> y;
+        x *= y;
+        cout << "\n Finally division.";
+        cout << "\n Please supply a divisor: ";
+        cin >> y;
+        x /= y;
+        cout << "\n And this is "
+        << "your current lucky number: "
+        <i>// without digits after
+        // the decimal point:</i>
+        << fixed << setprecision(0)
+        << x << endl;
+        return 0;
+        }</pre>
+        </div>
+        <h3 id="simple">Simple Assignments</h3>
+        <div class="cont">
+            <p>A <i>simple</i> assignment uses the assignment operator = to assign the value of a variable to an
+                expression. In expressions of this type the variable must be placed on the left and the
+                assigned value on the right of the assignment operator.
+            <pre><b>Example</b>
+        z = 7.5;
+        y = z;
+        x = 2.0 + 4.2 * z;</pre></p>
+        </div>
+        <h3 id="Compound">Compound Assignments</h3>
+        <div class="cont">
+            <p>In addition to simple assignment operators there are also compound assignment operators that simultaneously perform an arithmetic operation and an assignment.
+            <pre><b>Example</b>
+        i += 3;      <i>is equivalent to i = i + 3;</i>
+        i *= j + 2;  <i>is equivalent to i = i * (j+2);</pre></p></i>
+        </div>
+        <h2 id="relational">RELATIONAL OPERATORS</h2>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>operator</b></td> <td><b>significance</b></td>
+                </tr>
+                <tr>
+                    <td><</td> <td>less than</td>
+                </tr>
+                <tr>
+                    <td><=</td> <td>less than or equal to</td>
+                </tr>
+                <tr>
+                    <td>></td> <td>greater than</td>
+                </tr>
+                <tr>
+                    <td>>=</td> <td>greater than or equal to</td>
+                </tr>
+                <tr>
+                    <td>==</td> <td>equal</td>
+                </tr>
+                <tr>
+                    <td>!=</td> <td>unequal</td>
+                </tr>
+            </table>
+        </div>
+        <h3 id="result">The Result of Comparisons</h3>     
+        <div class="cont">
+            <p>Each comparison in C++ is a bool type expression with a value of true or false,
+                where true means that the comparison is correct and false means that the comparison is incorrect.
+            <pre><b>Example</b>
+        length == circuit   <i>// false or true</i>
+
+        'A' < 'a'           <i>// true, since 65 < 97</i></pre></p>
+        </div> 
+        <h3 id="precedence">Precedence of Relational Operators</h3>     
+        <div class="cont">
+            <p>Relational operators have lower precedence than arithmetic operators but higher precedence than assignment operators.
+            <pre><b>Example</b>
+        bool flag = index < max – 1;
+
+        (result = length + 1) == limit</pre></p>
+        </div>  
+        <h2 id="logical">LOGICAL OPERATORS</h2> 
+        <h3 id="truth table">ruth table for logical operators</h3>   
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>A</b></td> <td><b>B</b></td> <td><b>A&&B</b></td> <td><b>A||B</b></td> <td><b>C</b></td> <td><b>!C</b></td>
+                </tr>
+                <tr>
+                    <td>true</td> <td>true</td> <td>true</td> <td>true</td> <td rowspan=2>true</td> <td rowspan=2>false</td>
+                </tr>
+                <tr>
+                    <td>true</td> <td>false</td>  <td>false</td>  <td>true</td> 
+                </tr>
+                <tr>
+                    <td>false</td> <td>true</td><td>false</td> <td>true</td> <td rowspan=2>false</td> <td rowspan=2>true</td>
+                </tr>
+                <tr>
+                    <td>false</td> <td>false</td> <td>false</td> <td>false</td> 
+                </tr>
+            </table>
+        </div> 
+        <h3 id="order">Operands and Order of Evaluation</h3>
+        <div class="cont">
+            <p>The operands for boolean type operators are of the bool type. However, operands of any
+                type that can be converted to bool can also be used, including any arithmetic types. In
+                this case the operand is interpreted as false, or converted to false, if it has a value of
+                0. Any other value than 0 is interpreted as true.<br>
+                The <b>OR</b> operator <b>||</b> will return true only if at least one operand is true, so the value
+                of the expression
+            <pre><b>Example</b>
+        (length < 0.2) || (length > 9.8)</pre>
+        is true if length is less than 0.2 or greater than 9.8.<br>
+        The <b>AND</b> operator <b>&&</b> will return true only if both operands are true, so the logical
+        expression
+        <pre><b>Example</b>
+        (index < max) && (cin >> number)</pre>is true, provided index is less than max and a number is successfully input. If the condition index < max is not met, the program will not attempt to read a number! One
+        important feature of the logical operators && and || is the fact that there is a fixed order
+        of evaluation. </p>
+        </div>
+        <h3 id="booloperator">Precedence of Boolean Operators</h3>
+        <div class="cont">
+            <p>The && operator has higher precedence than ||. The precedence of both these operators
+                is higher than the precedence of an assignment operator, but lower than the precedence
+                of all previously used operators. <br>The ! operator is a unary operator and thus has higher precedence.</p>
+        </div>
+    </body>
+</html>

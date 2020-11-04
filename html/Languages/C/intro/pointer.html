@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<h1 class="hd1" id="pointer">C Pointers</h1 >
+<div class="cont"><p>Pointers in C are easy and fun to learn. Some C programming tasks are performed
+more easily with pointers, and other tasks, such as dynamic memory allocation, cannot be
+performed without using pointers. So it becomes necessary to learn pointers to become a
+perfect C programmer. Let's start learning them in simple and easy steps.
+As you know, every variable is a memory location and every memory location has its
+address defined which can be accessed using ampersand (&) operator, which denotes an
+address in memory.</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+int main ()
+{
+    int var1;
+    char var2[10];
+    printf("Address of var1 variable: %x\n", &var1 );
+    printf("Address of var2 variable: %x\n", &var2 );
+    return 0;
+}       
+</pre></div>
+<div class="cont">
+<p>When the above code is compiled and executed, it produces result something as follows:<br><em>Address of var1 variable: bff5a400<br>
+Address of var2 variable: bff5a3f6</em></p></div>
+
+<h2 class="hd2" >What Are Pointers?</h2>
+<div class="cont"><p>A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location<br><pre>type *var-name;</pre>
+Here, type is the pointer's base type; it must be a valid C data type and var-name is the
+name of the pointer variable. The asterisk * you used to declare a pointer is the same
+asterisk that you use for multiplication</p></div>
+<div class="code">
+<pre>
+    int    *ip;     /* pointer to an integer */
+    double *dp;     /* pointer to a double */
+    float  *fp;     /* pointer to a float */
+    char   *ch      /* pointer to a character */
+</pre> 
+</div>                        
+<h2 class="hd2" id="puse">How to use Pointers?</h2>
+<div classs="cont">
+<p>There are few important operations, which we will do with the help of pointers very frequently. (a) we define a pointer variable 
+(b) assign the address of a variable to a pointer and (c) finally access the value at the address available in the pointer variable. This is done by using unary operator * that returns the value of the variable located at the address specified by its operand.</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+int main ()
+{
+    int var = 20;                                          <i>/* actual variable declaration */</i>
+    int *ip;                                                <i>/* pointer variable declaration */</i>
+    ip = &var;                                              <i>/* store address of var in pointer variable*/</i>
+    printf("Address of var variable: %x\n", &var );         <i>/* address stored in pointer variable */</i>
+    printf("Address stored in ip variable: %x\n", ip );     <i>/* access the value using the pointer */</i>
+    printf("Value of *ip variable: %d\n", *ip );
+    return 0;
+}
+</pre>
+</div>
+<h2 class="hd2" id="pnull">NULL Pointers in C</h2>
+<div class="cont">
+<p>It is always a good practice to assign a NULL value to a pointer variable in case you do not have exact address to be assigned. 
+This is done at the time of variable declaration. A pointer that is assigned NULL is called a null pointer.</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+int main ()
+{
+    int *ptr = NULL;
+    printf("The value of ptr is : %x\n", &ptr );
+    return 0;
+}
+</pre>
+</div>
+<h2 class="hd2" id="parithematic">Pointer arithmetic</h2>
+<div class="cont">
+<p> C pointer is an address, which is a numeric value. Therefore,you can perform arithmetic operations on a pointer just as you can 
+a numeric value. There are four arithmetic operators that can be used on pointers: ++, --, +, and -</p>
+</div>
+<h2 class="hd2" id="pinc">Incrementing a Pointer</h2>
+<div class="cont">
+<p>We prefer using a pointer in our program instead of an array because the variable pointer can be incremented, unlike the 
+array name which cannot be incremented because it is constant pointer. The following program increments the variable pointer to 
+access each succeeding element of the array:</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+const int MAX = 3;
+int main ()
+{
+    int var[] = {10, 100, 200};
+    int i, *ptr;
+    <i>/* let us have array address in pointer */</i>
+    ptr = var;
+for ( i = 0; i < MAX; i++)
+{
+     printf("Address of var[%d] = %x\n", i, ptr );
+     printf("Value of var[%d] = %d\n", i, *ptr );
+    <i>/* move to the next location */</i>
+     ptr++;
+}
+return 0;
+}
+</pre>
+</div>
+<h2 class="hd2" id="pdec">Decrementing a Pointer</h2>
+<div class="cont">
+<p>The same considerations apply to decrementing a pointer, which decreases its value by the number of bytes of its data type as shown below:</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+const int MAX = 3;
+int main ()
+{
+    int var[] = {10, 100, 200};
+    int i, *ptr;
+    <i>/* let us have array address in pointer */</i>
+    ptr = &var[MAX-1];
+for ( i = MAX; i > 0; i--)
+{
+    printf("Address of var[%d] = %x\n", i, ptr );
+    printf("Value of var[%d] = %d\n", i, *ptr );
+    <i>/* move to the previous location */</i>
+    ptr--;
+}
+return 0;
+}
+
+</pre></div>
+<h2 class="hd2" id="pcomparison">Pointer comparisons</h2>
+<div class="cont">
+<p>Pointers may be compared by using relational operators, such as ==, <, and >. If p1 and p2 point to variables that are related to each other, such as elements of the same array, then p1 and p2 can be meaningfully compared.
+The following program modifies the previous example one by incrementing the variable pointer so long as  the address to which it points is either less than or equal to the address
+of the last element of the array, which is &var[MAX - 1]:
+</p></div>
+<b>Example:</b>
+<div class="code">
+<pre>
+#include <stdio.h>
+const int MAX = 3;
+int main ()
+{
+    int var[] = {10, 100, 200};
+    int i, *ptr;
+    <i>/* let us have address of the first element in pointer */</i>
+    ptr = var;
+    i = 0;
+while ( ptr <= &var[MAX - 1] )
+{
+    printf("Address of var[%d] = %x\n", i, ptr );
+    printf("Value of var[%d] = %d\n", i, *ptr );
+    <i> /* point to the previous location */</i>
+    ptr++;
+    i++;
+}
+return 0;
+}
+</pre>
+</div>
+<h2 class="hd2" id="parray">Array of pointers</h2>
+<div class="cont">
+<p>Before we understand the concept of arrays of pointers, let us consider the following example, which makes use of an array of 3 integers: </p></div>
+<div class="code">
+<pre>
+#include <stdio.h>
+const int MAX = 3;
+int main ()
+{
+    int var[] = {10, 100, 200};
+    int i;
+for (i = 0; i < MAX; i++)
+{
+    printf("Value of var[%d] = %d\n", i, var[i] );
+}
+return 0;
+}
+</pre>
+</div>
+<div class="cont">
+<p>There may be a situation when we want to maintain an array, which can store pointers to an int or char or any other data type available. Following is the declaration of an array of pointers to an integer:<br><pre>int *ptr[MAX];</pre><br>This declares ptr as an array of MAX integer pointers.</p></div>
+<div class="code"><pre>
+#include <stdio.h>
+const int MAX = 3;
+int main ()
+{
+    int var[] = {10, 100, 200};
+    int i, *ptr[MAX];
+for ( i = 0; i < MAX; i++)
+{
+    ptr[i] = &var[i]; /* assign the address of integer. */
+}
+for ( i = 0; i < MAX; i++)
+{
+    printf("Value of var[%d] = %d\n", i, *ptr[i] );
+}
+return 0;
+}       
+</pre></div>
+<div class="cont"><p>You can also use an array of pointers to character to store a list of strings as follows:</p></div>
+<div class="code"><pre>
+#include <stdio.h>
+const int MAX = 4;
+int main ()
+{
+    char *names[] = {
+        "Zara Ali",
+        "Hina Ali",
+        "Nuha Ali",
+        "Sara Ali",
+        };
+    int i = 0;
+for ( i = 0; i < MAX; i++)
+{
+    printf("Value of names[%d] = %s\n", i, names[i] );
+}
+return 0;
+}            
+</pre></div>
+<h2 class="hd2" class="cont">Pointer to Pointer</h2>
+<div class="cont"><p>A pointer to a pointer is a form of multiple indirection, or a chain of pointers. Normally, a pointer contains 
+    the address of a variable. When we define a pointer to a pointer, the first pointer contains the address of the second pointer, 
+    which points to the location that contains the actual value following is the declaration to declare a pointer to a pointer of type 
+    int:<br>
+<pre>int **var;</pre>
+</p></div>
+<div class="code"><pre>
+#include <stdio.h>
+int main ()
+{
+    int var;
+    int *ptr;
+    int **pptr;
+    var = 3000;
+    <i>/* take the address of var */</i>
+    ptr = &var;
+    <i>/* take the address of ptr using address of operator & */</i>
+    pptr = &ptr;
+    <i>/* take the value using pptr */</i>
+    printf("Value of var = %d\n", var );
+    printf("Value available at *ptr = %d\n", *ptr );
+    printf("Value available at **pptr = %d\n", **pptr);
+    return 0;
+}
+</pre></div>
+<h2 class="hd2" id="ppfunction">Passing pointers to functions</h2>
+<div class="cont">
+<p>C programming language allows you to pass a pointer to a function. To do so, simply declare the function parameter as a pointer type.</p></div>
+<div class="code"><pre>
+#include <stdio.h>
+#include <time.h>
+void getSeconds(unsigned long *par);
+int main ()
+{
+    unsigned long sec;
+    getSeconds( &sec );
+    <i>/* print the actual value */</i>
+    printf("Number of seconds: %ld\n", sec );
+    return 0;
+}
+void getSeconds(unsigned long *par)
+{
+    <i>/* get the current number of seconds */</i>
+    *par = time( NULL );
+    return;
+}
+</pre></div>
+<div class="cont"><p>The function, which can accept a pointer, can also accept an array as shown in the following example:</p></div>
+<div class="code"><pre>
+#include <stdio.h>
+/* function declaration */
+double getAverage(int *arr, int size);
+int main ()
+{
+    /* an int array with 5 elements */
+    int balance[5] = {1000, 2, 3, 17, 50};
+    double avg;
+    /* pass pointer to the array as an argument */
+    avg = getAverage( balance, 5 ) ;
+    /* output the returned value */
+    printf("Average value is: %f\n", avg );
+    return 0;
+}
+double getAverage(int *arr, int size)
+{
+    int i, sum = 0;
+    double avg;
+for (i = 0; i < size; ++i)
+    {
+    sum += arr[i];
+    }
+    avg = (double)sum / size;
+    return avg;
+}
+</pre></div>
+<h2 class="hd2" id="rpfunction">Return pointer from functions</h2>
+<div class="cont"><p> C allows you to return a pointer from a function. To do so, you would have to declare a function returning a pointer as in the following example:<br>
+<div class="code"><pre>
+int * myFunction()
+{
+.   
+.
+}
+</pre>
+</div>
+Now, consider the following function, which will generate 10 random numbers and returns them using an array name which represents a pointer, i.e., address of first array element. </p></div>
+<div class="code"><pre>
+#include <stdio.h>
+#include <time.h>
+<i>/* function to generate and retrun random numbers. */</i>
+int * getRandom( )
+{
+    static int r[10];
+    int i;
+    <i>/* set the seed */</i>
+    srand( (unsigned)time( NULL ) );
+for ( i = 0; i < 10; ++i)
+{
+    r[i] = rand();
+    printf("%d\n", r[i] );
+    }
+    return r;
+}
+<i>/* main function to call above defined function */</i>
+int main ()
+{
+/* a pointer to an int */
+    int *p;
+    int i;
+    p = getRandom();
+for ( i = 0; i < 10; i++ )
+{
+    printf("*(p + [%d]) : %d\n", i, *(p + i) );
+}
+return 0;
+}
+</pre></div>
+  <!--Footer-->
+
+  <footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <div class="row">
+        <div class="col-md-5 " >
+          <img src="Log.png" alt="footer-img" id="footer-img">
+          
+          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+          <p id="footercontent">
+           Derek Content HERE.................................................
+          </p>
+        </div>
+      
+        <div class="col-md-2" id="footert">
+          <h4 class="text-uppercase  ">Projects</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Articles</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Language Guides</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+
+
+    <div class="footer-copyright text-center">
+      © 2020 Copyright:
+      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+ 
+  </footer>
+  <!--Footer-->
+</body>
+
+</html>

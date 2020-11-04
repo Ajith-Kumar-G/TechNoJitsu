@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="../../../css/Layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../../img/icon/log2.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default navbar-fixed">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="#">
+            <img
+              class="img img-rounded imgstat"
+              src="../../../img/icon/Logo.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="# ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="glyphicon glyphicon-log-in"></span> Login</a
+            >
+          </li>
+          <li class="vline"><a href="#">PROJECTS</a></li>
+          <li><a href="#">ARTICLES</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              LANG-GUIDES</a
+            >
+            <ul class="dropdown-menu">
+              <li><a href="#">C++</a></li>
+              <li><a href="#">C</a></li>
+              <li><a href="#">Python</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- horizontal navbar -->
+    <!--Continue here-->
+    <header>
+      <h1>LCD Display</h1>
+  </header>
+  <div class="content">
+    <p>
+      This is an intermediate level project to demonstrate the usage of a 16x2 LCD display with an Arduino. The project is meant to display
+      the given text on the display.
+      <em>Please do not try this project straightaway if you don't have any prior experience with Arduino or don't know how to read schematic diagrams.</em>
+    </p>
+    <p class="note" id="components">
+      For this project, you will need :
+      <ul>
+        <li><a target="_blank" href="https://www.amazon.in/Silicon-TechnoLabs-Alphanumeric-Display-JHD162A/dp/B00XT53RI0/ref=sr_1_1?crid=38VVD0NZOMNMJ&dchild=1&keywords=16x2+lcd+display&qid=1603599704&sprefix=16x2%2Caps%2C326&sr=8-1">16x2 LCD display</a></li>
+        <li><a target="_blank" href="https://www.amazon.in/Jumper-Wires-Male-female-Pieces/dp/B00ZYFX6A2/ref=sr_1_1?crid=36VGPLP1T49V9&dchild=1&keywords=jumper+cable+arduino&qid=1600740077&sprefix=jumper+cable+a%2Caps%2C270&sr=8-1">Jumper cables</a></li>
+        <li><a target="_blank" href="https://store.arduino.cc/usa/arduino-uno-smd-rev3">Arduino UNO R3</a></li>
+        <li><a target="_blank" href="https://www.amazon.in/Generic-Elementz-Solderless-Piecesb-Circuit/dp/B00MC1CCZQ/ref=sr_1_5?crid=LKFWD96NA6SJ&dchild=1&keywords=breadboard&qid=1603601594&sprefix=breadb%2Caps%2C383&sr=8-5">Breadboard</a></li>
+        <li><a target="_blank" href="https://www.amazon.in/pack-potentiometer-single-variable-resistor/dp/B07L3ZBV29/ref=sr_1_2?crid=1DE1FR8CRV4D0&dchild=1&keywords=potentiometer&qid=1603600018&sprefix=potent%2Caps%2C-1&sr=8-2">Potentiometer</a></li>
+        <li><a target="_blank" href="https://www.amazon.in/Electrobot-EBRTH02-Value-Resistor-Pack/dp/B0716CR5JL/ref=sr_1_2?dchild=1&keywords=resistors&qid=1603600133&sr=8-2">Resistor</a></li>
+      </ul>
+      Please note that we have only recomended the above components based on reviews and pricing, and we do not expect you to stick to these components strictly.
+    </p>
+
+    <p class="note">
+      To demonstrate this project our team has experimented using a 16x2 LCD display module <em>(particularly JHD162A, though the variants have little or no difference in operations)</em>
+    </p>
+    <p class="note" id="connections">
+        To start off with, a 16x2 LCD display consists Vss, Vcc, VEE, RS, R/W, E, DB0, DB1, ..., DB7 pins. So our connection diagram for this project with an Arduino (UNO in particular)
+        goes as follows:
+        <img src="../../../img/Projects/Arduino/interfacing-LCD-to-arduino.jpg" alt="../../../img/Projects/Arduino/JHD162A-LCD-module.png"> <br>
+        <em>The following connections can be made only if you have a breadboard.</em><br>
+        The potentiometer is used to adjust the contrast of the display. We have experimented using a 10k Ohm potentiometer, but 5k Ohm and 1k Ohm also work fine. Just adjust the contrast according to your convenience based on what you use by simply turning the knob.
+    </p>
+    <p class="note" id="startersGuide">
+      In order to program this board after making the necessary connections, you will need the <a target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>. If this is your first time using the IDE, then you will need to set up your board on the IDE.
+      Please follow this link to set up your board if it is your first time using an Arduino : <a target="_blank" href="https://www.arduino.cc/en/main/howto">How to set up Arduino board</a>.
+      Once you have set up your Arduino board, you must include the necessary libraries for that particular project. In this case, you need <a target="_blank" href="https://github.com/wayoda/LedControl">LedControl</a> library for this project. Download the file and extract it to the same
+      directory as your Arduino directory (By default C:\Users\usr\Documents\Arduino\libraries).
+    </p>
+    <p>
+      Now that we have everything set up, we can start programming our Arduino. You can find the code in our developer's GitHub repository: <a target="_blank" href="https://github.com/vinsdragonis/LCD-Display/blob/main/HelloWorld.ino">LCD Module</a>
+      Once entered, feel free to make any changes you wish while giving credits to the author for his contributions. After you made any / no changes to the code, save the file and keep in mind the file extension must be .imo as it is meant to be imported to your Arduino board.
+      After compiling and uploading the file to your Arduino, you can notice a message shown on your LCD display. And successfully completes this project.
+    </p>
+  </div>
+  </body>
+</html>

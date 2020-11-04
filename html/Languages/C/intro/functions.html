@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Main.css" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script
+    src =
+      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="#">
+          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../Log.png" width="50" height="50"
+            class="d-inline-block align-top" />
+        </a>
+        <span><a id="head" href="# ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline"><a href="#">PROJECTS</a></li>
+        <li><a href="#">ARTICLES</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            LANG-GUIDES</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C++</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </li>
+
+        <li class="vline">
+          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <h2 class="hd2" id="function">C FUNCTIONS</h2>
+<div class="cont">
+<p>Function is a <strong>group of statements</strong> that together perform a task. Every C program has at least
+one function, which is <strong>main()</strong>, and all the most trivial programs can define additional
+functions.<br>
+You can <strong>divide up your code</strong> into separate <strong>functions</strong> How you divide up your code among
+different functions is up to you, but logically the <strong>division usually is so each function performs a specific task</strong>.<br>
+A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides
+the actual body of the function.
+The C standard library provides numerous built-in functions that your program can call. For
+example, function strcat() to concatenate two strings, function memcpy() to copy one
+memory location to another location and many more functions.<br>
+A function is known with various names like a method or a sub-routine or a procedure, etc.</p>
+</div>
+<h3 id="fdefining">Defining a Function</h3>
+<div class="code"><pre>
+return_type function_name( parameter list )
+{
+ body of the function
+}</pre>>
+</div>
+<div class="cont">
+    <p>As per the synatx there are four parts in a function which are:</p>
+    <ul>
+        <li><strong>Return Type</strong> A function may return a value. The return_type is the data type of the
+            value the function returns. Some functions perform the desired operations without
+            returning a value. In this case, the return_type is the keyword void.</li>
+        <li><strong>Function Name:</strong> This is the actual name of the function. The function name and the
+            parameter list together constitute the function signature.</li>
+        <li><strong>Parameters:</strong> A parameter is like a placeholder. When a function is invoked, you pass a
+            value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function.
+            Parameters are optional; that is, a function may contain no parameters.</li>
+        <li><strong>Function Body</strong> The function body contains a collection of statements that define what
+            the function does.</li>
+    </ul>
+</div>
+<p>Example:<br> This function is to find the max between the two numbers.</p>
+<div class="code">
+<pre>
+/* function returning the max between two numbers */
+int max(int num1, int num2)
+{
+ /* local variable declaration */
+ int result;
+ if (num1 > num2)
+ result = num1;
+ else
+ result = num2;
+ return result;
+}
+</pre>
+</div>
+<h3 id="fdeclaration">FUNCTION DECLARATION</h3>
+<div class="cont">
+    <p>A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.
+       A function declaration has the following parts:
+    </p>
+
+<div class="code">
+    return_type function_name( parameter list );
+</div>
+<p>For the above defined function max(), following is the function declaration:</p>
+<div class="code">int max(int num1, int num2);</div>
+<p>Parameter names are not important in function declaration only their type is required, so
+    following is also valid declaration:</p>
+    <div class="code">int max(int, int);</div>
+    <p>Function declaration is required when you define a function in one source file and you call that function in another file. In such case you should declare the function at the top of the
+        file calling the function.</p>
+</div>
+<h3 id="callingf">Calling A Function</h3>
+<div class="cont">
+<p>While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task.</p>
+<p>When a program calls a function, program control is transferred to the called function. A called function performs defined task, and when its return statement is executed or when
+    its function-ending closing brace is reached, it returns program control back to the main program.</p>
+<p>To call a function, you simply need to pass the required parameters along with function name, and if function returns a value, then you can store returned value. For example:</p>
+</div>
+<div class="code">
+    <pre>#include <stdio.h>
+        /* function declaration */
+        int max(int num1, int num2);
+        int main ()
+        {
+         /* local variable definition */
+         int a = 100;
+         int b = 200;
+         int ret;
+         /* calling a function to get max value */
+         ret = max(a, b);
+         printf( "Max value is : %d\n", ret );
+         return 0;
+        }
+        /* function returning the max between two numbers */
+        int max(int num1, int num2)
+        {
+         /* local variable declaration */
+         int result;
+         if (num1 > num2)
+         result = num1;
+         else
+         result = num2;
+         return result;
+        }
+</pre>
+</div>
+<p>Ouput:<br>Max value is : 200</p>
+<h3 id="farguments">FUNCTION ARGUMENTS</h3>
+<div class="cont">
+    <p>If a function is to use arguments, it must declare variables that accept the values of the arguments. These variables are called the formal parameters of the function.
+        The formal parameters behave like other local variables inside the function and are created upon entry into the function and destroyed upon exit. 
+        While calling a function, there are two ways that arguments can be passed to a function:</p>
+</div>
+<dl>
+<dt>Function call by value </dt>
+<dd>
+The call by value method of passing arguments to a function copies the actual value of an
+argument into the formal parameter of the function. In this case, changes made to the
+parameter inside the function have no effect on the argument.
+By default, C programming language uses call by value method to pass arguments.
+<div class="code">
+<pre>
+#include <stdio.h>
+
+/* function definition to swap the values */
+void swap(int x, int y)
+{
+ int temp;
+ temp = x; /* save the value of x */
+ x = y; /* put y into x */
+ y = temp; /* put x into y */
+
+ return;
+}
+int main ()
+{
+ /* local variable definition */
+ int a = 100;
+ int b = 200;
+ printf("Before swap, value of a : %d\n", a );
+ printf("Before swap, value of b : %d\n", b );
+ /* calling a function to swap the values */
+ swap(a, b);
+ printf("After swap, value of a : %d\n", a );
+ printf("After swap, value of b : %d\n", b );
+ return 0;
+}
+</pre>
+</div>
+<p>Output:</p>
+<pre>
+After swap, value of a :100
+After swap, value of b :200
+</pre>
+</dd>
+<dd>
+<dt>Function call by reference</dt>
+<dd>
+<p>The call by reference method of passing arguments to a function copies the address of an argument into the formal parameter. Inside the function, the address is used to access the
+actual argument used in the call. This means that changes made to the parameter affect the passed argument.<br>
+To pass the value by reference, argument pointers are passed to the functions just like any other value. So accordingly you need to declare the function parameters as pointer
+types as in the following function swap().</p></dd>
+<div class="code">
+    <pre>
+            #include <stdio.h>
+            /* function definition to swap the values */
+            void swap(int *x, int *y)
+            {
+             int temp;
+             temp = *x; /* save the value at address x */
+             *x = *y; /* put y into x */
+             *y = temp; /* put x into y *
+             return;
+            }
+                
+            int main ()
+            {
+             /* local variable definition */
+             int a = 100;
+             int b = 200;
+             printf("Before swap, value of a : %d\n", a );
+             printf("Before swap, value of b : %d\n", b );
+             /* calling a function to swap the values.
+             * &a indicates pointer to a ie. address of variable a and
+             * &b indicates pointer to b ie. address of variable b.
+             */
+             swap(&a, &b);
+             printf("After swap, value of a : %d\n", a );
+             printf("After swap, value of b : %d\n", b );
+             return 0;
+             }
+
+    </pre>
+<p>Output:</p>
+<pre>
+    Before swap, value of a :100
+    Before swap, value of b :200
+    After swap, value of a :100
+    After swap, value of b :200</pre>
+</div>
+</dd>
+</dl>
+<footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <div class="row">
+        <div class="col-md-5 " >
+          <img src="../../../Log.png" alt="footer-img" id="footer-img">
+          
+          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
+          <p id="footercontent">
+           Derek Content HERE.................................................
+          </p>
+        </div>
+      
+        <div class="col-md-2" id="footert">
+          <h4 class="text-uppercase  ">Projects</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Articles</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+            <li><a href="#">########</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase ">Language Guides</h4>
+          <ul class="list-unstyled text-center">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+
+
+    <div class="footer-copyright text-center">
+      © 2020 Copyright:
+      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+ 
+  </footer>
+  <!--Footer-->
+</body>
+
+</html>
+
