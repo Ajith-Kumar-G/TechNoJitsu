@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
      <link rel="stylesheet" href="../../../css/Layout.css" />
+     <link rel="stylesheet" href="../../../css/projectIds.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -22,52 +23,46 @@
 
   <body>
     <!-- horizontal navbar -->
-    <nav class="navbar navbar-default navbar-fixed">
+    <nav class="navbar navbar-default" id="mNavbar">
       <div class="container-fluid" id="navtop">
         <div class="navbar-header">
-          <a id="txtdeco" href="#">
+          <a id="txtdeco" href="../../../TechNoJitsu.html">
             <img
               class="img img-rounded imgstat"
-              src="../../../img/icon/Logo.png"
+              alt="Navbar_logo"
+              src="../../../img/icon/Log.png"
               width="50"
               height="50"
               class="d-inline-block align-top"
             />
           </a>
-          <span><a id="head" href="# ">TechnoJitsu</a></span>
+          <span><a id="head" href="../../../TechNoJitsu.html ">TechnoJitsu</a></span>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#"
+          <li class="vline">
+            <a href="../../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../../html/FORMS/sign_up.html" class="LoGup" 
               ><span class="glyphicon glyphicon-user"></span> Sign Up</a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="glyphicon glyphicon-log-in"></span> Login</a
+            <a href="../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
             >
-          </li>
-          <li class="vline"><a href="#">PROJECTS</a></li>
-          <li><a href="#">ARTICLES</a></li>
-
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-              LANG-GUIDES</a
-            >
-            <ul class="dropdown-menu">
-              <li><a href="#">C++</a></li>
-              <li><a href="#">C</a></li>
-              <li><a href="#">Python</a></li>
-            </ul>
           </li>
         </ul>
       </div>
     </nav>
-    <!-- horizontal navbar -->
+     <!-- horizontal navbar -->
     <!--Continue here-->
+  <div class="container proCont" bottom-margin="25px">
     <header>
       <h1>LCD Display</h1>
-  </header>
+    </header>
   <div class="content">
     <p>
       This is an intermediate level project to demonstrate the usage of a 16x2 LCD display with an Arduino. The project is meant to display
@@ -93,7 +88,7 @@
     <p class="note" id="connections">
         To start off with, a 16x2 LCD display consists Vss, Vcc, VEE, RS, R/W, E, DB0, DB1, ..., DB7 pins. So our connection diagram for this project with an Arduino (UNO in particular)
         goes as follows:
-        <img src="../../../img/Projects/Arduino/interfacing-LCD-to-arduino.jpg" alt="../../../img/Projects/Arduino/JHD162A-LCD-module.png"> <br>
+        <img src="../../../img/Projects/Arduino/interfacing-LCD-to-arduino.png" alt="../../../img/Projects/Arduino/JHD162A-LCD-module.png"> <br>
         <em>The following connections can be made only if you have a breadboard.</em><br>
         The potentiometer is used to adjust the contrast of the display. We have experimented using a 10k Ohm potentiometer, but 5k Ohm and 1k Ohm also work fine. Just adjust the contrast according to your convenience based on what you use by simply turning the knob.
     </p>
@@ -106,8 +101,112 @@
     <p>
       Now that we have everything set up, we can start programming our Arduino. You can find the code in our developer's GitHub repository: <a target="_blank" href="https://github.com/vinsdragonis/LCD-Display/blob/main/HelloWorld.ino">LCD Module</a>
       Once entered, feel free to make any changes you wish while giving credits to the author for his contributions. After you made any / no changes to the code, save the file and keep in mind the file extension must be .imo as it is meant to be imported to your Arduino board.
-      After compiling and uploading the file to your Arduino, you can notice a message shown on your LCD display. And successfully completes this project.
+      After compiling and uploading the file to your Arduino, you can notice a message shown on your LCD display. And this successfully completes this project.
     </p>
+    </div>
   </div>
+  
+        
+   <script src="../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../css/Layout.css" />
+    <link rel="stylesheet" href="../../../../css/langGuide.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default" id="mNavbar">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="../../../../TechNoJitsu.html">
+            <img
+              class="img img-rounded imgstat"
+              alt="Navbar_logo"
+              src="../../../../img/icon/Log.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="vline">
+            <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <!-- horizontal navbar -->
+
+     <ul class="nav navbar-left flex-column sideLeft ">
+      <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+      <li class="vline"><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+    </ul>
+    <div class="container mainContLang" id="content">
+      <div class="modal-content container">
+        <h1 id="DATATYPES" class="hd1">DATA TYPES</h1>
+
+        <div class="cont">
+          <p>
+            While writing program in any language, you need to use various
+            variables to store various information. Variables are nothing but
+            reserved memory locations to store values. This means that when you
+            create a variable you reserve some space in memory.<br />
+            You may like to store information of various data types like
+            character, wide character, integer, floating point, double floating
+            point, boolean etc. Based on the data type of a variable, the
+            operating system allocates memory and decides what can be stored in
+            the reserved memory.
+          </p>
+        </div>
+        <h3 id="primitive">Primitive Built-in Types</h3>
+        <div class="cont">
+          <p>
+            C++ offers the programmer a rich assortment of built-in as well as
+            user defined data types. Following table lists down seven basic C++
+            data types:
+          </p>
+        </div>
+        <div class="tbl">
+          <table>
+            <tr>
+              <td><b>Type</b></td>
+              <td><b>Keywoed</b></td>
+            </tr>
+            <tr>
+              <td>Boolean</td>
+              <td>bool</td>
+            </tr>
+            <tr>
+              <td>Character</td>
+              <td>char</td>
+            </tr>
+            <tr>
+              <td>Integer</td>
+              <td>int</td>
+            </tr>
+            <tr>
+              <td>Floating point</td>
+              <td>float</td>
+            </tr>
+            <tr>
+              <td>Double floating point</td>
+              <td>double</td>
+            </tr>
+            <tr>
+              <td>Valueless</td>
+              <td>void</td>
+            </tr>
+            <tr>
+              <td>Wide character</td>
+              <td>wchar_t</td>
+            </tr>
+          </table>
+        </div>
+        <div class="cont">
+          <p>
+            Several of the basic types can be modified using one or more of
+            these type modifiers:
+          </p>
+        </div>
+        <div class="unl">
+          <ul>
+            <li>signed</li>
+            <li>unsigned</li>
+            <li>short</li>
+            <li>long</li>
+          </ul>
+        </div>
+        <div class="cont">
+          <p>
+            The following table shows the variable type, how much memory it
+            takes to store the value in memory, and what is maximum and minimum
+            value which can be stored in such type of variables.
+          </p>
+        </div>
+        <div class="tbl">
+          <table>
+            <tr>
+              <td><b>Type</b></td>
+              <td><b>Typical Bit Width</b></td>
+              <td><b>Typical Range</b></td>
+            </tr>
+            <tr>
+              <td>char</td>
+              <td>1 bytes</td>
+              <td>-127 to 127</td>
+            </tr>
+            <tr>
+              <td>unsigned char</td>
+              <td>1 bytes</td>
+              <td>0 to 255</td>
+            </tr>
+            <tr>
+              <td>signed char</td>
+              <td>1 bytes</td>
+              <td>-127 to 127</td>
+            </tr>
+            <tr>
+              <td>int</td>
+              <td>4 bytes</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>unsigned int</td>
+              <td>4 bytes</td>
+              <td>0 to 4294967295</td>
+            </tr>
+            <tr>
+              <td>signed int</td>
+              <td>4 bytes</td>
+              <td>-2147483648 to 2147483647</td>
+            </tr>
+            <tr>
+              <td>short int</td>
+              <td>2 bytes</td>
+              <td>-32768 to 32767</td>
+            </tr>
+            <tr>
+              <td>unsigned short int</td>
+              <td>range</td>
+              <td>0 to 65,535</td>
+            </tr>
+            <tr>
+              <td>short int</td>
+              <td>range</td>
+              <td>-32768 to 32767</td>
+            </tr>
+            <tr>
+              <td>long int</td>
+              <td>4 bytes</td>
+              <td>-2,147,483,647 to 2,147,483,647</td>
+            </tr>
+            <tr>
+              <td>unsigned long int</td>
+              <td>4 bytes</td>
+              <td>0 to 4,294,967,295</td>
+            </tr>
+            <tr>
+              <td>signed long int</td>
+              <td>4 bytes</td>
+              <td>-2,147,483,647 to 2,147,483,647</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td>4 bytes</td>
+              <td>+/- 3.4e +/- 38 (~7 digits)</td>
+            </tr>
+            <tr>
+              <td>double</td>
+              <td>8 bytes</td>
+              <td>+/- 1.7e +/- 308 (~15 digits)</td>
+            </tr>
+            <tr>
+              <td>long double</td>
+              <td>8 bytes</td>
+              <td>+/- 1.7e +/- 308 (~15 digits)</td>
+            </tr>
+            <tr>
+              <td>wchar_t</td>
+              <td>2 or 4 bytes</td>
+              <td>1 wide character</td>
+            </tr>
+          </table>
+        </div>
+        <div class="cont">
+          <p>
+            The size of variables might be different from those shown in the
+            above table, depending on the compiler and the computer you are
+            using.<br />
+            Following is the example, which will produce correct size of various
+            data types on your computer.
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    cout << "Size of char : " << sizeof(char) << endl;
+    cout << "Size of int : " << sizeof(int) << endl;
+    cout << "Size of short int : " << sizeof(short int) << endl;
+    cout << "Size of long int : " << sizeof(long int) << endl;
+    cout << "Size of float : " << sizeof(float) << endl;
+    cout << "Size of double : " << sizeof(double) << endl;
+    cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;
+    return 0;
+}
+</pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            This example uses <b>endl</b>, which inserts a new-line character
+            after every line and << operator is being used to pass multiple
+            values out to the screen. We are also using <b>sizeof()</b> function
+            to get size of various data types.
+          </p>
+        </div>
+        <h3 id="declaration">typedef Declarations</h3>
+        <div class="cont">
+          <p>
+            You can create a new name for an existing type using <b>typedef</b>.
+            Following is the simple syntax to define a new type using typedef:
+          </p>
+        </div>
+        <div class="code">
+          <pre>typedef type newname;</pre>
+        </div>
+        <div class="cont">
+          <p>
+            For example, the following tells the compiler that feet is another
+            name for int:
+          </p>
+        </div>
+        <div class="code">
+          <pre>typedef int feet;</pre>
+        </div>
+        <div class="cont">
+          <p>
+            Now, the following declaration is perfectly legal and creates an
+            integer variable called distance:
+          </p>
+        </div>
+        <div class="code">
+          <pre>feet distance;</pre>
+        </div>
+        <h3 id="enumerated">Enumerated Types</h3>
+        <div class="cont">
+          <p>
+            An enumerated type declares an optional type name and a set of zero
+            or more identifiers that can be used as values of the type. Each
+            enumerator is a constant whose type is the enumeration. Creating an
+            enumeration requires the use of the keyword <b>enum</b>. The general
+            form of an enumeration type is:
+          </p>
+        </div>
+        <div class="code">
+          <pre>enum enum-name { list of names } var-list;</pre>
+        </div>
+        <div class="cont">
+          <p>
+            Here, the enum-name is the enumeration's type name. The list of
+            names is comma separated.<br />
+            For example, the following code defines an enumeration of colors
+            called colors and the variable c of type color. Finally, c is
+            assigned the value "blue".
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+enum color { red, green, blue } c;
+c = blue;</pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            By default, the value of the first name is 0, the second name has
+            the value 1, and the third has the value 2, and so on. But you can
+            give a name, a specific value by adding an initializer. For example,
+            in the following enumeration, green will have the value 5.
+          </p>
+        </div>
+        <div class="code">
+          <pre>enum color { red, green=5, blue };</pre>
+        </div>
+        <div class="cont">
+          <p>
+            Here, blue will have a value of 6 because each name will be one
+            greater than the one that precedes it.
+          </p>
+        </div>
+        <h3 id="typedef">Defined data types (typedef)</h3>
+        <div class="cont">
+          <p>
+            C++ allows the definition of our own types based on other existing
+            data types. We can do this using the keyword typedef, whose format
+            is:
+          </p>
+        </div>
+        <div class="code">
+          <pre>typedef existing_type new_type_name ;</pre>
+        </div>
+        <div class="cont">
+          <p>
+            where existing_type is a C++ fundamental or compound type and
+            new_type_name is the name for the new type we are defining. For
+            example:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+typedef char C;
+typedef unsigned int WORD;
+typedef char * pChar;
+typedef char field [50];</pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            In this case we have defined four data types: C, WORD, pChar and
+            field as char, unsigned int, char* and char[50] respectively, that
+            we could perfectly use in declarations later as any other valid
+            type:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+C mychar, anotherchar, *ptc1;
+WORD myword;
+pChar ptc2;
+field name;</pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            typedef does not create different types. It only creates synonyms of
+            existing types. That means that the type of myword can be considered
+            to be either WORD or unsigned int, since both are in fact the same
+            type.<br />
+            typedef can be useful to define an alias for a type that is
+            frequently used within a program. It is also useful to define types
+            when it is possible that we will need to change the type in later
+            versions of our program, or if a type you want to use has a name
+            that is too long or confusing.
+          </p>
+        </div>
+        <h3 id="Unions">Unions</h3>
+        <div class="cont">
+          <p>
+            Unions allow one same portion of memory to be accessed as different
+            data types, since all of them are in fact the same location in
+            memory. Its declaration and use is similar to the one of structures
+            but its functionality is totally different:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+union union_name {
+member_type1 member_name1;
+member_type2 member_name2;
+member_type3 member_name3;
+.
+.
+} object_names; 
+   </pre
+          >
+        </div>
+        <h3 id="anonymous">Anonymous unions</h3>
+        <div class="cont">
+          <p>
+            In C++ we have the option to declare anonymous unions. If we declare
+            a union without any name, the union will be anonymous and we will be
+            able to access its members directly by their member names. For
+            example, look at the difference between these two structure
+            declarations:
+          </p>
+        </div>
+        <h3 id="regular">structure with regular union</h3>
+        <div class="code">
+          <pre>
+struct {
+char title[50];
+char author[50];
+union {
+float dollars;
+int yens;
+} price;
+} book;</pre
+          >
+        </div>
+        <h3 id="anonymousunion">structure with anonymous union</h3>
+        <div class="code">
+          <pre>
+struct {
+char title[50];
+char author[50];
+union {
+float dollars;
+int yens;
+};
+} book; 
+   </pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            The only difference between the two pieces of code is that in the
+            first one we have given a name to the union (price) and in the
+            second one we have not. The difference is seen when we access the
+            members dollars and yens of an object of this type. For an object of
+            the first type, it would be:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+book.price.dollars
+book.price.yens</pre
+          >
+        </div>
+        <div class="cont">
+          <p>whereas for an object of the second type, it would be:</p>
+        </div>
+        <div class="code">
+          <pre>
+book.dollars
+book.yens</pre
+          >
+        </div>
+        <h3 id="enum">Enumerations (enum)</h3>
+        <div class="cont">
+          <p>
+            Enumerations create new data types to contain something different
+            that is not limited to the values fundamental data types may take.
+            Its form is the following:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+enum enumeration_name {
+value1,
+value2,
+value3,
+.
+.
+} object_names;</pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            For example, we could create a new type of variable called color to
+            store colors with the following declaration:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+enum colors_t {black, blue, green, cyan, red, purple, yellow, white};</pre
+          >
+        </div>
+      </div>
+    </div>
+         
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  <div class="container mainContLang ">
+    <div class="modal-content  container" > <h1 class="hd1" id="BI/O">Basic I/O</h1 >
+        <div class="intro">
+            <p>Using the standard input and output library, we will be able to interact with the user by printing messages on the
+                screen and getting the user's input from the keyboard.<br>
+                C++ uses a convenient abstraction called streams to perform input and output operations in sequential media such
+                as the screen or the keyboard. A stream is an object where a program can either insert or extract characters
+                to/from it. We do not really need to care about many specifications about the physical media associated with the
+                stream - we only need to know it will accept or provide characters sequentially.<br>
+                The standard C++ library includes the header file iostream, where the standard input and output stream objects
+                are declared. </p>
+        </div>
+        <h3 id="cout">Standard Output (cout) </h3>
+        <div class="cont">
+            <p>By default, the standard output of a program is the screen, and the C++ stream object defined to access it is <i>cout</i>.<br>
+                <i>cout</i> is used in conjunction with the insertion operator, which is written as << (two "less than" signs). </p>
+        </div>
+        <div class="code">
+<pre>cout << "Output sentence"; <i>// prints Output sentence on screen</i>
+cout << 120;               <i>// prints number 120 on screen</i>
+cout << x;                 <i>// prints the content of x on screen</i> </pre>
+        </div>
+        <div class="cont">
+            <p>The << operator inserts the data that follows it into the stream preceding it. In the examples above it inserted the
+                constant string Output sentence, the numerical constant 120 and variable x into the standard output stream cout.
+                Notice that the sentence in the first instruction is enclosed between double quotes (") because it is a constant
+                string of characters. Whenever we want to use constant strings of characters we must enclose them between
+                double quotes (") so that they can be clearly distinguished from variable names. For example, these two sentences
+                have very different results:</p>
+            </div>
+            <div class="code">
+<pre>cout << "Hello"; <i>// prints Hello</i>
+cout << Hello;   <i>// prints the content of Hello variable</i> </pre>
+            </div>
+            <div class="cont">
+                <p>The insertion operator (<<) may be used more than once in a single statement: </p>
+            </div>
+            <div class="code">
+<pre>cout << "Hello, " << "I am " << "a C++ statement";</pre>
+            </div>
+            <div class="cont">
+                <p>This last statement would print the message Hello, I am a C++ statement on the screen. The utility of repeating
+                    the insertion operator (<<) is demonstrated when we want to print out a combination of variables and constants or
+                    more than one variable: </p>
+            </div>
+            <div class="code">
+                <Pre>cout << "Hello, I am " << age << " years old and my zipcode is " << zipcode;</i></pre>
+            </div>
+            <div class="cont">
+                <p>If we assume the age variable to contain the value 24 and the zipcode variable to contain 90064 the output of the
+                    previous statement would be:</p>
+            </div>
+            <div class="code">
+                <pre>Hello, I am 24 years old and my zipcode is 90064 </pre>
+            </div>
+            <div class="cont">
+                <p>It is important to notice that cout does not add a line break after its output unless we explicitly indicate it,
+                    therefore, the following statements:</p>
+            </div>
+            <div class="code">
+                <pre>cout << "This is a sentence.";
+cout << "This is another sentence."; </pre>
+            </div>
+            <div class="cont">
+                <p>will be shown on the screen one following the other without any line break between them:</p>
+            </div>
+            <div class="code">
+                <pre>This is a sentence.This is another sentence. </pre>
+            </div>
+            <div class="cont">
+                <p>even though we had written them in two different insertions into cout. In order to perform a line break on the
+                    output we must explicitly insert a new-line character into cout. In C++ a new-line character can be specified as \n
+                    (backslash, n):</p>
+            </div> 
+            <div class="code">
+<pre>cout << "First sentence.\n ";
+cout << "Second sentence.\nThird sentence."; </pre>
+            </div>
+            <div class="cont">
+                <p>This produces the following output:</p>
+            </div>
+            <div class="code">
+<pre>First sentence.
+Second sentence.
+Third sentence.
+</pre>
+            </div>
+            <div class="cont">
+                <p>Additionally, to add a new-line, you may also use the endl manipulator. For example:</p>
+            </div>
+            <div class="code">
+<pre>cout << "First sentence." << endl;
+cout << "Second sentence." << endl;</pre>                
+            </div>
+            <div class="cont">
+                <p>would print out:</p>
+            </div>
+            <div class="code">
+<pre>First sentence.
+Second sentence. 
+</pre> 
+            </div>
+            <div class="cont">
+                <p>The endl manipulator produces a newline character, exactly as the insertion of '\n' does, but it also has an additional behavior when it is used with buffered streams: the buffer is flushed. Anyway, cout will be an
+                    unbuffered stream in most cases, so you can generally use both the \n escape character and the endl manipulator
+                    in order to specify a new line without any difference in its behavior. </p>
+            </div>
+        <h3 id="cin">Standard Input (cin)</h3>
+        <div class="cont">
+            <p>The standard input device is usually the keyboard. Handling the standard input in C++ is done by applying the
+                overloaded operator of extraction (>>) on the cin stream. The operator must be followed by the variable that will
+                store the data that is going to be extracted from the stream. For example: </p>
+        </div>
+        <div class="code">
+<pre>int age;
+cin >> age; </pre>
+        </div>
+        <div class="cont">
+            <p>The first statement declares a variable of type int called age, and the second one waits for an input from cin (the
+                keyboard) in order to store it in this integer variable. <br>cin can only process the input from the keyboard once the RETURN key has been pressed. Therefore, even if you
+                request a single character, the extraction from cin will not process the input until the user presses RETURN after
+                the character has been introduced.<br>You must always consider the type of the variable that you are using as a container with cin extractions. If you
+                request an integer you will get an integer, if you request a character you will get a character and if you request a
+                string of characters you will get a string of characters.</p>
+        </div>
+        <div class="code">
+<pre><i>// i/o example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    int i;
+    cout << "Please enter an integer value: ";
+    cin >> i;
+    cout << "The value you entered is " << i;
+    cout << " and its double is " << i*2 << ".\n";
+    return 0;
+} </pre>
+        </div>
+        <div class="cont">
+            <p>You can also use cin to request more than one datum input from the user: <pre>cin >> a >> b;</pre>
+                is equivalent to: </p>
+        </div>
+        <div class="code">
+<pre>cin >> a;
+cin >> b;
+</pre> 
+        </div>
+    </div>
+</div>
+    <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+  <script>AOS.init();</script>
+</body>
+
+</html>

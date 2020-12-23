@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/Layout.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9ccb26cf81.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+<!-- horizontal navbar -->
+<nav class="navbar navbar-default" id="mNavbar">
+  <div class="container-fluid" id="navtop">
+    <div class="navbar-header">
+      <a id="txtdeco" href="../../TechNoJitsu.html">
+        <img
+          class="img img-rounded imgstat"
+          alt="Navbar_logo"
+          src="../../img/icon/Log.png"
+          width="50"
+          height="50"
+          class="d-inline-block align-top"
+        />
+      </a>
+      <span><a id="head" href="../../TechNoJitsu.html">TechnoJitsu</a></span>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="vline">
+        <a href="../../html/Projects/projectsMain.html">PROJECTS</a>
+      </li>
+      <li><a href="../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+      <li><a href="../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+      <li class="vline">
+        <a href="../../html/FORMS/sign_up.html" class="LoGup" 
+          ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+        >
+      </li>
+      <li>
+        <a href="../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+          ><span class="glyphicon glyphicon-log-in "></span> Login</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- horizontal navbar -->
+    <div class="container ArtMain">
+    <div class="container">
+      <h1  class="artTextCont">Penetration Testing:</h1>
+      <h3>What is this?!</h3>
+      <p id="description">
+        Pentesting or penetration testing is an ethical hacking process which involves assessing an application or an organization’s infrastructure for different types of vulnerabilities. This process of pen testing helps to exploit the various vulnerabilities within the system and the reasons for these vulnerabilities include certain misconfigurations, poorly designed architecture, insecure code, etc.
+        Thus, by performing pen testing, it eventually helps to identify vulnerabilities and the process delivers actionable reports that clearly explain each vulnerability, specifically how to exploit them along with how to fix them.
+      </p>
+      <h3>How does it help? Why even bother about it?!</h3>
+      <p id="benefits">
+        There are many ways an organization can benefit through the process of penetration testing like:
+        <ul>
+          <li>Identify vulnerabilities that would remain unidentified otherwise</li>
+          <li>Discover new threats by any possible attackers or intruders</li>
+          <li>Identify real-time vulnerabilities within systems and web applications</li>
+          <li>Test the effectiveness of web application firewalls</li>
+          <li>Test cyber-defence capability of the organization</li>
+          <li>Identify and showcase real-time risks and vulnerabilities</li>
+          <li>Find any possible insecurity within the system infrastructure network or an application</li>
+        </ul>
+      </p>
+      <h3>What types of penetration testing are there?</h3>
+      <p id="categories">
+        Penetration testing in whole being a process of <strong>testing security</strong> of an application or a system is categorized as:
+        <ul>
+          <li>
+            <h4>Network Penetration Testing</h4>
+            In this type of pen testing, the physical structure of the system is checked primarily to identify risks in the network of the organization. In this testing, the penetration tester performs tests in the organization’s network and tries to find out flaws in the design, operation, or implementation of the respective company’s network. Various components of the organization such as computers, modems, remote access devices are all checked by the tester to exploit the possible vulnerabilities.
+          </li>
+          <li>
+            <h4>Physical Penetration Testing</h4>
+            This method of physical penetration testing is done to simulate the real-world threats. The pen tester acts as a cyber-attacker and tries to break the physical barrier of security. This test is done to check for the vulnerabilities in physical controls like security cameras, lockers, barriers, sensors, etc.
+          </li>
+          <li>
+            <h4>Web Application Penetration Testing</h4>
+            This method of pen testing is done to check vulnerabilities or weaknesses within web-based applications. The web penetration testing looks out for any security issues that might occur due to insecure development due to design or code and identified potential vulnerabilities within websites and web apps. This type of testing is most needed for online shopping websites, banking apps, and other eCommerce websites which deal with online transactions.
+          </li>
+          <li>
+            <h4>Wireless Network Penetration Testing</h4>
+            This form of pen testing is done to examine the connection between all devices like laptops, computers, tablets, smart-phones, etc, that are connected to the organization’s Wifi. This form of pen testing is done to prevent any data leakage that can happen while sharing data from one device to another device through the Wi-Fi network.
+          </li>
+        </ul>
+      </p>
+      <h3>What are my roles and responsibilities if I chose to become a pentester?</h3>
+      <p id="roles-1">
+        The penetration testing is conducted by pen testers who design and plan simulations and security assessments that are designed to probe any potential weaknesses within the system or IT infrastructure or web apps.
+        They are also responsible to document all the findings and deliver them to the clients or employees or to the organization. These pen testers perform the process of this testing either manually or by using certset of automated tools.
+      </p>
+      <h3>How are manual pentesters different from automated pentesters?</h3>
+      <p id="roles-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Manual Pentester</th>
+              <th>Automated Pentester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Manual efforts are more needed to get better results for testing business logic vulnerabilities</td>
+              <td>Automated tools can be used with very little human intervention, while manual testing cannot be performed for everything</td>
+            </tr>
+            <tr>
+              <td>Manual penetration testing takes longer time</td>
+              <td>Automated tools work faster and comparatively requires less time and perform the process with high speed</td>
+            </tr>
+            <tr>
+              <td>When there is new vulnerability or exploit released, most of the automated tools will have to wait for next update while humans can learn new technique and implement it quickly</td>
+              <td>This method of pen testing is best suited for testing targets with large number of pay loads</td>
+            </tr>
+            <tr>
+              <td>With manual testing the false positives are less when compared to automated testing</td>
+              <td>With automated pen testing, the false positives are comparatively more</td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+      <h3>Ok cool, but how do I actually do all this? How do I go about with this process?</h3>
+      <p id="phases">
+        This entire process is comprised of multiple stages. They go <strong>sequentially</strong> as follows:
+      </p>
+      <ol>
+        <li>Pre-engagement activities</li>
+        <li>Reconnaissance phase</li>
+        <li>Threat modelling & vulnerability identification</li>
+        <li>Exploitation phase & post exploitation</li>
+        <li>Comprehensive reporting</li>
+        <li>Resolution phase</li>
+        <li>Re-testing phase</li>
+      </ol>
+      <h3>Now how do tackle this problem? What are the approaches I can follow?</h3>
+      <p id="approaches">
+        There are 3 usual approaches that any pentester would follow:
+      </p>
+      <ol>
+        <li>
+          <h4>Black box</h4>
+          <p>
+            Black box pen testing is also commonly known as external penetration testing. In this approach, the pen tester has no information about the IT infrastructure of the organization. This process appears to be more like simulation of real-world cyber-attack to check the vulnerabilities in the system.
+            Specifically, in this method, the pen testers act as cyber-attackers and try to exploit the vulnerabilities that exist in the system. This process usually takes a lot of time and can take even up to six weeks to complete.
+          </p>
+        </li>
+        <li>
+          <h4>White box</h4>
+          <p>
+            White box penetration testing is also known as internal penetration testing, clear box, or even known as glass box penetration testing. In this approach of pen testing, the pen tester is provided with the complete information of the IT Infrastructure, source code, and environment.
+            It is a much detailed and in-depth type of pen test done wherein every area is checked such as the quality of code and the basic design of the application. Moreover, this type of pen testing approach usually takes two to three weeks to get completed.
+          </p>
+        </li>
+        <li>
+          <h4>Gray box</h4>
+          <p>
+            In this approach of penetration testing, the pen tester is provided with partial information of IT infrastructure, and code structure. It is a more focused approach as the pen tester has partial knowledge or access to internal network or web application and can focus some effort on exploiting the possible vulnerabilities which typically saves a lot of time and cost.
+          </p>
+        </li>
+      </ol>
+      <h3>Alright, what should I use in order to perform the required operations?</h3>
+      <p id="tools">
+        There are many popular tools meant for pentesting out there, but here are some of the most widely used ones:
+        <ul>
+          <li>
+            <h4>SQLMap</h4>
+            <p>
+              It is an open-source tool used in penetration testing to detect flaws with an SQL Injection into an application. It automates the process of penetration testing and this tool supports many platforms like Windows, Linux, Mac, etc.
+            </p>
+          </li>
+          <li>
+            <h4>W3af</h4>
+            <p>
+              The web application attack and audit framework (W3af) is used to find any weaknesses or vulnerabilities in web-based applications. It is used to remove threats such as DNS, cache poisoning, cookie handling, proxy support, etc.
+            </p>
+          </li>
+          <li>
+            <h4>Wireshark</h4>
+            <p>
+              This is an open source tool and is available for many operating systems such as Windows, Solaris, Linux, etc. With this tool, the pen tester one can easily capture and interpret network packets. This tool provides both offline analysis and live-capture options.
+            </p>
+          </li>
+          <li>
+            <h4>Metasploit</h4>
+            <p>
+              It is one of the most commonly used penetration testing tools in the world. It is an open source tool that allows the user to verify and manage security assessments, helps in identifying flaws, setting up a defence, etc.
+            </p>
+          </li>
+          <li>
+            <h4>NMAP</h4>
+            <p>
+              It is also called network mapper and is used to find the gaps or issues in the network environment of the organization. This tool is also used for auditing purposes.
+            </p>
+          </li>
+          <li>
+            <h4>Nessus</h4>
+            <p>
+              It is one of the most trusted pen testing tools by many companies across the world. It helps in scanning IP addresses, websites, and completing sensitive data searches.
+            </p>
+          </li>
+          <li>
+            <h4>John the Ripper</h4>
+            <p>
+              It is an open-source software which is used to detect vulnerabilities in passwords. This tool automatically identifies different password hashes and finds issues with the passwords within the database. Its pro version is available for Mac, Linux, Hash Suite, and Hash Suite Droid.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <h3>Great! Now to summarize all of this.</h3>
+      <p>
+        To conclude this documentation, we can say that Penetration testing is an effective testing process that helps to uncover the critical security issues of your system to check for exploitable vulnerabilities to their IT Infrastructure, or web applications. As cyber threats continue to increase, it has become essential for companies to keep their IT infrastructure, web apps and systems safe and secure from any possible threats and vulnerabilities. Therefore, penetration testing has become so important in today’s digital world with rampant cyber-attacks on the go.
+      </p>
+    </div>
+  </div>
+<!--Footer-->
+    <footer class="footer-content">
+      <div class="jumbotron text-md-left">
+        <span class="ribbonfootz"
+          ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+        >
+        <div class="row">
+          <div class="col-md-5">
+            <img src="../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+            <h3 class="footer-text text-left">TechNoJitsu:</h3>
+            <p id="footercontent">
+              Technojitsu is an interactive, ever growing platform to design and
+              develop projects, to acquire new and essential tech aspects
+              without leaving behind the essential building blocks i.e.
+              languages . All in all a tech pill to enhance and channel your
+              creative & reasoning mind in the right output stream.
+            </p>
+          </div>
+
+          <div class="col-md-2 " id="footert">
+            <h4 class="text-uppercase text-left  footCol">Projects</h4>
+            <ul class="list-unstyled text-left">
+              <li>
+                <a href="../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+              </li>
+              <li>
+                <a
+                  href="../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+                  >Input Keypad with Led Matrix display
+                </a>
+              </li>
+              <li>
+                <a href="../../html/Projects/Arduino/Joystick module.html"
+                  >Joystick module</a
+                >
+              </li>
+              <li>
+                <a href="../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 ">
+            <h4 class="text-uppercase text-left  footCol">Articles</h4>
+            <ul class="list-unstyled text-left">
+              <li><a href="../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+              <li><a href="../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+              <li><div style="color: #337ab7;">Coming Soon!</div></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+            <ul class="list-unstyled text-left">
+              <li><a href="../../html/Languages/C/intro/historyofc.html">C</a></li>
+              <li><a href="../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+              <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" id="footerLinksTxt">
+          <div class="col-md-7" id="footerLinksTxt">
+            <p class="footer-text">Share your thoughts, and leave a Like</p>
+          </div>
+          <div class="col-md-5" id="footerLinks">
+            <p class="text-left">
+              <a
+                href="https://facebook.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://twitter.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright text-center" id="cpyrgt">
+        © 2020 Copyright:
+        <a href="../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+      </div>
+    </footer>
+    <!--Footer-->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

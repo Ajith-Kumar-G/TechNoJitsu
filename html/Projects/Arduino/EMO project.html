@@ -1,126 +1,238 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../../css/Layout.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <link rel="icon" href="../../../img/icon/log2.png" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
-      rel="stylesheet"
-    />
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<html lang="en">
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>TechnoJitsu</title>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../css/projectIds.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body>
-    <!-- horizontal navbar -->
-    <nav class="navbar navbar-default navbar-fixed">
-      <div class="container-fluid" id="navtop">
-        <div class="navbar-header">
-          <a id="txtdeco" href="#">
-            <img
-              class="img img-rounded imgstat"
-              src="../../../img/icon/Log.png"
-              width="50"
-              height="50"
-              class="d-inline-block align-top"
-            />
-          </a>
-          <span><a id="head" href="# ">TechnoJitsu</a></span>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+    <!--Continue here-->
+    <div class="container proCont" bottom-margin="25px">
+      <header>
+        <h1>EMO project</h1>
+      </header>
+
+      <div class="content">
+      <p>
+        This is a simple project meant to demonstrate the usage of 8x8 matrix display with an Arduino. The project simply changes the image/pattern
+        displayed after a certain delay measured in milliseconds.
+      </p>
+      <p class="note" id="componentsList">
+        For this project, you will need :
+        <ul>
+          <li><a target="_blank" href="https://www.amazon.in/Robodo-Electronics-Max7219-Control-Rasberry/dp/B00QVFDHHG/ref=sr_1_4?crid=JDXQG9BF1137&dchild=1&keywords=MAX7219+matrix+display&qid=1600739932&sprefix=32x8+%2Caps%2C273&sr=8-4">MAX7219 matrix display</a></li>
+          <li><a target="_blank" href="https://www.amazon.in/Jumper-Wires-Male-female-Pieces/dp/B00ZYFX6A2/ref=sr_1_1?crid=36VGPLP1T49V9&dchild=1&keywords=jumper+cable+arduino&qid=1600740077&sprefix=jumper+cable+a%2Caps%2C270&sr=8-1">Jumper cables</a></li>
+          <li><a target="_blank" href="https://store.arduino.cc/usa/arduino-uno-smd-rev3">Arduino UNO R3</a></li>
+        </ul>
+        <p>
+          Please note that we have only recomended the above components based on reviews and pricing and we do not expect you to stick to these components strictly.
+        </p>
+      </p>
+      <p class="note">
+        To demonstrate this project our team has experimented using an an MAX7219 8x8 matrix display. You can find other matrix displays as well, though this program
+        focuses on an MAX7219 8x8 matrix display in particular.
+      </p>
+      <p class="note" id="connections">
+        <p>
+          To start off with, an MAX7219 8x8 matrix display consists Vcc, GND, DIN, CS, and CLK pins. So our connection diagram for this project with an Arduino (UNO in particular)
+          goes as follows :
+          <table class="table" border="2">
+            <thead>
+              <tr>
+                <th scope="col">ARDUINO BOARD</th>
+                <th scope="col">MAX7219</th>
+              </tr>
+            </thead>
+            <tr><td>9</td><td>DIN</td></tr>
+            <tr><td>10</td><td>CS</td></tr>
+            <tr><td>11</td><td>CLOCK</td></tr>
+            <tr><td>GND</td><td>GND</td></tr>
+            <tr><td>5V</td><td>VCC</td></tr>
+          </table>
+        </p>
+        <p>
+          The connections made between ports 8, 9 and 10 to DIN, CS, CLK respectively can also be altered based on the requirements of your projects and isn't a fixed connection. As always, GND on any component is connected to GND on your Arduino board.
+          Vcc is always connected to either 5V or 3.3V based on which component you use, and in this case it is connected to 5V.
+        </p>
+      </p>
+      <p class="note" id="startersGuide">
+        In order to program this board after making the necessary connections, you will need the <a target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>. If this is your first time using the IDE, then you will need to set up your board on the IDE.
+        Please follow this link to set up your board if it is your first time using an Arduino : <a target="_blank" href="https://www.arduino.cc/en/main/howto">How to set up Arduino board</a>.
+        Once you have set up your Arduino board, you must include the necessary libraries for that particular project. In this case, you need <a target="_blank" href="https://github.com/wayoda/LedControl">LedControl</a> library for this project. Download the file and extract it to the same
+        directory as your Arduino directory (By default C:\Users\usr\Documents\Arduino\libraries).
+      </p>
+      <p>
+        Now that we have everything set up, we can start programming our Arduino. You can find the code in our developer's GitHub repository : <a target="_blank" href="https://github.com/vinsdragonis/Arduino-8x8-matrix/blob/master/EMO%20Project/MatrixDisplayEMO.ino">EMO project</a>
+        Once entered, feel free to make any changes you wish while giving credits to the author for his contributions. After you made any / no changes to the code, save the file and keep in mind the file extension must be .imo as it is meant to be imported to your Arduino board.
+        After compiling and uploading the file to your Arduino, you can notice a number of images or patterns after a certain delay that show up on your matrix display. And successfully completes this project.
+      </p>
+    </div>
+  </div>
+
+
+
+        
+   <script src="../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
           <li>
-            <a href="#"
-              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            <a href="../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="glyphicon glyphicon-log-in"></span> Login</a
-            >
-          </li>
-          <li class="vline"><a href="#">PROJECTS</a></li>
-          <li><a href="#">ARTICLES</a></li>
-
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-              LANG-GUIDES</a
-            >
-            <ul class="dropdown-menu">
-              <li><a href="#">C++</a></li>
-              <li><a href="#">C</a></li>
-              <li><a href="#">Python</a></li>
-            </ul>
+            <a href="../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
           </li>
         </ul>
       </div>
-    </nav>
-    <!-- horizontal navbar -->
-    
-    
-    
-    <!--Continue here-->
-    <header>
-      <h1>EMO project</h1>
-  </header>
-
-  <div class="content">
-    <p>
-      This is a simple project meant to demonstrate the usage of 8x8 matrix display with an Arduino. The project simply changes the image/pattern
-      displayed after a certain delay measured in milliseconds.
-    </p>
-    <p class="note" id="componentsList">
-      For this project, you will need :
-      <ul>
-        <li><a target="_blank" href="https://www.amazon.in/Robodo-Electronics-Max7219-Control-Rasberry/dp/B00QVFDHHG/ref=sr_1_4?crid=JDXQG9BF1137&dchild=1&keywords=MAX7219+matrix+display&qid=1600739932&sprefix=32x8+%2Caps%2C273&sr=8-4">MAX7219 matrix display</a></li>
-        <li><a target="_blank" href="https://www.amazon.in/Jumper-Wires-Male-female-Pieces/dp/B00ZYFX6A2/ref=sr_1_1?crid=36VGPLP1T49V9&dchild=1&keywords=jumper+cable+arduino&qid=1600740077&sprefix=jumper+cable+a%2Caps%2C270&sr=8-1">Jumper cables</a></li>
-        <li><a target="_blank" href="https://store.arduino.cc/usa/arduino-uno-smd-rev3">Arduino UNO R3</a></li>
-      </ul>
-      <p>
-        Please note that we have only recomended the above components based on reviews and pricing and we do not expect you to stick to these components strictly.
-      </p>
-    </p>
-    <p class="note">
-      To demonstrate this project our team has experimented using an an MAX7219 8x8 matrix display. You can find other matrix displays as well, though this program
-      focuses on an MAX7219 8x8 matrix display in particular.
-    </p>
-    <p class="note" id="connections">
-      <p>
-        To start off with, an MAX7219 8x8 matrix display consists Vcc, GND, DIN, CS, and CLK pins. So our connection diagram for this project with an Arduino (UNO in particular)
-        goes as follows :
-        <table border="2">
-          <tr><th>ARDUINO BOARD</th><th>MAX7219</th></tr>
-          <tr><td>9</td><td>DIN</td></tr>
-          <tr><td>10</td><td>CS</td></tr>
-          <tr><td>11</td><td>CLOCK</td></tr>
-          <tr><td>GND</td><td>GND</td></tr>
-          <tr><td>5V</td><td>VCC</td></tr>
-        </table>
-      </p>
-      <p>
-        The connections made between ports 8, 9 and 10 to DIN, CS, CLK respectively can also be altered based on the requirements of your projects and isn't a fixed connection. As always, GND on any component is connected to GND on your Arduino board.
-        Vcc is always connected to either 5V or 3.3V based on which component you use, and in this case it is connected to 5V.
-      </p>
-    </p>
-    <p class="note" id="startersGuide">
-      In order to program this board after making the necessary connections, you will need the <a target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a>. If this is your first time using the IDE, then you will need to set up your board on the IDE.
-      Please follow this link to set up your board if it is your first time using an Arduino : <a target="_blank" href="https://www.arduino.cc/en/main/howto">How to set up Arduino board</a>.
-      Once you have set up your Arduino board, you must include the necessary libraries for that particular project. In this case, you need <a target="_blank" href="https://github.com/wayoda/LedControl">LedControl</a> library for this project. Download the file and extract it to the same
-      directory as your Arduino directory (By default C:\Users\usr\Documents\Arduino\libraries).
-    </p>
-    <p>
-      Now that we have everything set up, we can start programming our Arduino. You can find the code in our developer's GitHub repository : <a target="_blank" href="https://github.com/vinsdragonis/Arduino-8x8-matrix/blob/master/EMO%20Project/MatrixDisplayEMO.ino">EMO project</a>
-      Once entered, feel free to make any changes you wish while giving credits to the author for his contributions. After you made any / no changes to the code, save the file and keep in mind the file extension must be .imo as it is meant to be imported to your Arduino board.
-      After compiling and uploading the file to your Arduino, you can notice a number of images or patterns after a certain delay that show up on your matrix display. And successfully completes this project.
-    </p>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

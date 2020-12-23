@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  
+  <div class="container mainContLang" id="content">
+    <div class="modal-content  container " ><h2 class="hd2" id="constants">CONSTANTS</h2>
+        <div class="cont">
+            <p>Constants refer to fixed values that the program may not alter and they are called literals.<br>
+                Constants can be of any of the basic data types and can be divided into Integer Numerals,
+                Floating-Point Numerals, Characters, Strings and Boolean Values.
+            </p>
+        </div>
+        <h3 id="integer">Integer Literals</h3>
+        <div class="cont">
+            <p>An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base
+                or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.<br>
+                An integer literal can also have a suffix that is a combination of U and L, for unsigned and
+                long, respectively. The suffix can be uppercase or lowercase and can be in any order.<br>
+                Here are some examples of integer literals:</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>212 // Legal</li>
+                <li>215u // Legal</li>
+                <li>0xFeeL // Legal</li>
+                <li>078 // Illegal: 8 is not an octal digit</li>
+                <li>032UU // Illegal: cannot repeat a suffix</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <p>Following are other examples of various types of Integer literals:</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>85 // decimal</li>
+                <li>0213 // octal</li>
+                <li>0x4b // hexadecimal</li>
+                <li>30 // int</li>
+                <li>30u // unsigned int</li>
+                <li>30l // long</li>
+                <li>30ul // unsigned long</li>
+            </ul>
+        </div>
+        <h3 id="float">Floating-point Literals</h3>
+        <div class="cont">
+            <p>A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent
+                part. You can represent floating point literals either in decimal form or exponential form.<br>
+                While representing using decimal form, you must include the decimal point, the exponent, or
+                both and while representing using exponential form, you must include the integer part, the
+                fractional part, or both. The signed exponent is introduced by e or E.<br>
+                Here are some examples of floating-point literals:
+                </p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>3.14159 // Legal</li>
+                <li>314159E-5L // Legal</li>
+                <li>510E // Illegal: incomplete exponent</li>
+                <li>210f // Illegal: no decimal or exponent</li>
+                <li>.e55 // Illegal: missing integer or fraction</li>
+            </ul>
+        </div>
+        <h3 id="bool">Boolean Literals</h3>
+        <div class="cont">
+            <p>There are two Boolean literals and they are part of standard C++ keywords:</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>A value of true representing true</li>
+                <li>A value of false representing false.</li>
+            </ul>
+        </div>
+        <h3 id="char">character Literals</h3>
+        <div class="cont">
+            <p>Character literals are enclosed in single quotes. If the literal begins with L (uppercase only),
+                it is a wide character literal (e.g., L'x') and should be stored in wchar_t type of variable.
+                Otherwise, it is a narrow character literal (e.g., 'x') and can be stored in a simple variable of
+                char type.<br>
+                A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g., '\t'), or a
+                universal character (e.g., '\u02C0').<br>
+                There are certain characters in C++ when they are preceded by a backslash they will have
+                special meaning and they are used to represent like newline (\n) or tab (\t). Here, you have
+                a list of some of such escape sequence codes:
+            </p>
+        </div>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>Escape sequence</b></td> <td><b>Meaning</b></td>
+                </tr>
+                <tr>
+                    <td>\\</td> <td>\character</td>
+                </tr>
+                <tr>
+                    <td>\'</td> <td>'character</td>
+                </tr>
+                <tr>
+                    <td>\"</td> <td>"character</td>
+                </tr>
+                <tr>
+                    <td>\?</td> <td>?character</td>
+                </tr>
+                <tr>
+                    <td>\a</td> <td>Alert</td>
+                </tr>
+                <tr>
+                    <td>\b</td> <td>Backspace</td>
+                </tr>
+                <tr>
+                    <td>\f</td> <td>Form feed</td>
+                </tr>
+                <tr>
+                    <td>\n</td> <td>newline</td>
+                </tr>
+                <tr>
+                    <td>\r</td> <td>Carriage return</td>
+                </tr>
+                <tr>
+                    <td>\t</td> <td>Horizontal tab</td>
+                </tr>
+                <tr>
+                    <td>\v</td> <td>Vertical tab</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cont">
+            <p>Following is the example to show a few escape sequence characters:<br>example:</p>
+        </div>
+        <div class="code">
+            <pre>#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    cout << "Hello\tWorld\n\n";
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>When the above code is compiled and executed, it produces the following result:</p>
+        </div>
+        <div class="code">
+            <pre>Hello World</pre>
+        </div>
+        <h3 id="string">String Literals</h3>
+        <div class="cont">
+            <p>String literals are enclosed in double quotes. A string contains characters that are similar to
+                character literals: plain characters, escape sequences, and universal characters.<br>
+                You can break a long line into multiple lines using string literals and separate them using
+                whitespaces.<br>
+                Here are some examples of string literals. All the three forms are identical strings.</p>
+        </div>
+        <div class="code">
+<pre>"hello, dear"
+"hello, \
+dear"
+"hello," "d" "ear"</pre>
+        </div>
+        <h3 id="defining">Defining Constants</h3>
+        <div class="cont">
+            <p>There are two simple ways in C++ to define constants:</p>
+        </div>
+        <div class="unl">
+            <li>Using <b>#define</b> preprocessor.</li>
+            <li>Using <b>const</b> keyword.</li>
+        </div>
+        <h3 id="#define">The #define Preprocessor</h3>
+        <div class="cont">
+            <p>Following is the form to use #define preprocessor to define a constant:<pre>#define identifier value</pre>Following example explains it in detail:</p>
+        </div>
+        <div class="code">
+            <pre>#include &lt;iostream&gt;
+using namespace std;
+#define LENGTH 10
+#define WIDTH 5
+#define NEWLINE '\n'
+int main()
+{
+    int area;
+
+    area = LENGTH * WIDTH;
+    cout << area;
+    cout << NEWLINE;
+    return 0;
+}           </pre>
+        </div>
+        <div class="cont">
+            <p>When the above code is compiled and executed, it produces the following result:</p>
+        </div>
+        <div class="code">
+            <pre>50</pre>
+        </div>
+        <h3 id="const">The const Keyword</h3>
+        <div class="cont">
+            <p>You can use const prefix to declare constants with a specific type as follows:<pre>const type variable = value;</pre>Following example explains it in detail:</p>
+        </div>
+        <div class="code">
+            <pre>#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    const int LENGTH = 10;
+    const int WIDTH = 5;
+    const char NEWLINE = '\n';
+    int area;
+    area = LENGTH * WIDTH;
+    cout << area;
+    cout << NEWLINE;
+    return 0;
+}
+            </pre>
+        </div>
+        <div class="cont">
+            <p>When the above code is compiled and executed, it produces the following result:<pre>50</pre>Note that it is a good programming practice to define constants in CAPITALS.</p>
+        </div>
+    </div>
+</div>
+         
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+  <script>AOS.init();</script>
+</body>
+
+</html>

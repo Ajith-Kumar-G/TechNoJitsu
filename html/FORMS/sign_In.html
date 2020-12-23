@@ -3,10 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/Layout.css" />
-  <link rel="stylesheet" href="/signIn.css" />
+  <link rel="stylesheet" href="../../css/Layout.css" />
+  <link rel="stylesheet" href="../../css/FORMS/signIn.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <link rel="icon" href="../../../img/icon/log2.png" type="image/x-icon" />
+  <link rel="icon" href="../../img/icon/log2.png" type="image/x-icon" />
   <!--FONTS-->
   <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -29,34 +29,37 @@
 
 <body>
   <!-- horizontal navbar -->
-  <nav class="navbar navbar-default navbar-fixed">
+  <nav class="navbar navbar-default" id="mNavbar">
     <div class="container-fluid" id="navtop">
       <div class="navbar-header">
-        <a id="txtdeco" href="#">
-          <img class="img img-rounded imgstat" alt="Navbar_logo" src="/img/icon/Log.png" width="50" height="50" class="d-inline-block align-top" />
+        <a id="txtdeco" href="../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
         </a>
-        <span><a id="head" href="/html/TechNoJitsu.html">TechnoJitsu</a></span>
+        <span><a id="head" href="../../TechNoJitsu.html ">TechnoJitsu</a></span>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li class="vline"><a href="#">PROJECTS</a></li>
-        <li><a href="#">ARTICLES</a></li>
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            LANG-GUIDES</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">C++</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">Python</a></li>
-          </ul>
-        </li>
         <li class="vline">
-          <a href="/html/FORMS/sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+          <a href="../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
         </li>
         <li>
-          <a href="/html/FORMS/sign_in.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <a href="../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
         </li>
-        
       </ul>
     </div>
   </nav>
@@ -67,25 +70,26 @@
   
     <div class="modal-content form-cont">
       <div class="col-12 user-img">
-        <img src="/img/icon/Logo.png" alt="Form_logo">
+        <img src="../../img/icon/Logo.png" alt="Form_logo">
       </div>
       <div class="col-12 form-input">
-        <form class="horizontal">
-          <div class="form outline" id="name">
-            <input type="text/email" class="form-control"  placeholder="Enter Username/Email" required>
+
+        <form class="horizontal>
+          <div class="form outline name" name="user" >
+            <input type="text/email" class="form-control" id="name" placeholder="Enter Username/Email" required>
             <span class="glyphicon glyphicon-user" id="icon"></span>
           </div>
-          <div class="form outline" id="password">
-            <input type="password" class="form-control validate"  placeholder="Enter password here" minlength="8"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <div class="form outline password" name="pass">
+            <input type="password" class="form-control validate"  id="password" placeholder="Enter password here" minlength="8"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
             <span class="glyphicon glyphicon-eye-open" id="iconeye" onclick="passDisplay()"></span>
             
           </div>
           <div class="row">
-            <div class="form-group col-md-5">
-              <a class="btn btn-primary btn-block "  id="signUp" title="Dont have an account?" href="/html/FORMS/sign_up.html">Sign up</a>
+            <div class="form-group col-md-4">
+              <a class="btn btn-primary btn-block btncss "  id="signUp" title="Dont have an account?" href="../../../../html/FORMS/sign_up.html">Sign up</a>
             </div>
             <div class=" form-group col-md-5">
-             <button type="submit" id="login" class="btn btn-success btn-block  ">Login</button>
+             <button type="submit" value="Submit" id="login" onclick="checkPassword()" class="btn btn-success btn-block btncss" >Login</button>
             </div>
             
           </div>
@@ -103,60 +107,108 @@
  
 
   <canvas class="background"></canvas>
-  <script src="/jscripts/Form-Login/form.js"></script>
+  <script src="../../jscripts/Form-Login/form.js"></script>
+  <script src="../../jscripts/Form-Login/sigIn.js"></script>
+  <script src="../../jscripts/Loginlogic.js"></script>
   <!--Continue here-->
    <!--Lower Contents END-->
-  <!--Footer-->
+<!--Footer-->
+    <footer class="footer-content">
+      <div class="jumbotron text-md-left">
+        <span class="ribbonfootz"
+          ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+        >
+        <div class="row">
+          <div class="col-md-5">
+            <img src="../../img/icon/Log.png" alt="footer-img" id="footer-img" />
 
-  <footer class="footer-content ">
-    <div class="jumbotron text-left">
-       <span class="ribbonfootz"><span class="ribbonfoot footer-text">Get In Touch!</span></span>
-      <div class="row">
-        <div class="col-md-5 " >
-          <img src="/img/icon/Log.png" alt="footer-img" id="footer-img">
-          
-          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
-          <p id="footercontent">
-          Technojitsu is an interactive, ever growing platform to design and develop projects, to acquire new and essential tech aspects without leaving behind the essential building blocks i.e. languages . All in all a tech pill to enhance and channel your creative & reasoning mind in the right output stream.
-          </p>
+            <h3 class="footer-text text-left">TechNoJitsu:</h3>
+            <p id="footercontent">
+              Technojitsu is an interactive, ever growing platform to design and
+              develop projects, to acquire new and essential tech aspects
+              without leaving behind the essential building blocks i.e.
+              languages . All in all a tech pill to enhance and channel your
+              creative & reasoning mind in the right output stream.
+            </p>
+          </div>
+
+          <div class="col-md-2 " id="footert">
+            <h4 class="text-uppercase text-left  footCol">Projects</h4>
+            <ul class="list-unstyled text-left">
+              <li>
+                <a href="../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+              </li>
+              <li>
+                <a
+                  href="../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+                  >Input Keypad with Led Matrix display
+                </a>
+              </li>
+              <li>
+                <a href="../../html/Projects/Arduino/Joystick module.html"
+                  >Joystick module</a
+                >
+              </li>
+              <li>
+                <a href="../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 ">
+            <h4 class="text-uppercase text-left  footCol">Articles</h4>
+            <ul class="list-unstyled text-left">
+              <li><a href="../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+              <li><a href="../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+              <li><div style="color: #337ab7;">Coming Soon!</div></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+            <ul class="list-unstyled text-left">
+              <li><a href="../../html/Languages/C/intro/historyofc.html">C</a></li>
+              <li><a href="../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+              <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+            </ul>
+          </div>
         </div>
-      
-        <div class="col-md-2" id="footert">
-          <h4 class="text-uppercase  ">Projects</h4>
-          <ul class="list-unstyled text-center"id="footer-div" >
-            <li><a href="#">EMO Display</a></li>
-            <li><a href="#">Input Keypad with Led Matrix display </a></li>
-            <li><a href="#">Joystick module</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Articles</h4>
-          <ul class="list-unstyled text-center" id="footetr-div">
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Language Guides</h4>
-          <ul class="list-unstyled text-center" id="footetr-div">
-            <li><a href="#">C</a></li>
-            <li><a href="#">C++</a></li>
-            <li><a href="#">Java</a></li>
-          </ul>
+        <div class="row" id="footerLinksTxt">
+          <div class="col-md-7" id="footerLinksTxt">
+            <p class="footer-text">Share your thoughts, and leave a Like</p>
+          </div>
+          <div class="col-md-5" id="footerLinks">
+            <p class="text-left">
+              <a
+                href="https://facebook.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://twitter.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                class="social-round-icon orange-round-icon fa-icon"
+                title=""
+              >
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
- 
 
-
-    <div class="footer-copyright text-center"  id="cpyrgt">
-      © 2020 Copyright:
-      <a href="/html/TechNoJitsu.html"> TechNoJitsu.com</a>
-    </div>
- 
-  </footer>
-  <!--Footer-->
+      <div class="footer-copyright text-center" id="cpyrgt">
+        © 2020 Copyright:
+        <a href="../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+      </div>
+    </footer>
+    <!--Footer-->
 </body>
 
 </html>

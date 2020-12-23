@@ -1,10 +1,16 @@
 
-window.onload = function() {
+window.onload = function () {
   Particles.init({
-    selector: '.header__background',
-    color: '#ec5966',
-    speed:.1,
-    maxParticles: 100,
+    _selector: '.header__background',
+    get selector() {
+      return this._selector;
+    },
+    set selector(value) {
+      this._selector = value;
+    },
+    color: '#289F07',
+    speed: .125,
+    maxParticles: 110,
     connectParticles: true,
     responsive: [
       {

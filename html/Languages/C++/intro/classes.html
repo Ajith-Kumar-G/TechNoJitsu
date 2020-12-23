@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  
+  <div class="container mainContLang ">
+    <div class="modal-content  container" > <h2 id="classes" class="hd1">classes</h2>
+  
+        
+        <div class="cont">
+            <p>A class is an expanded concept of a data structure: instead of holding only data, it can hold both data and
+                functions.<br>
+                An object is an instantiation of a class. In terms of variables, a class would be the type, and an object would be the
+                variable.<br>
+                Classes are generally declared using the keyword class, with the following format:
+            </p>
+        </div>
+        <div class="code">
+<pre>class class_name {
+access_specifier_1:
+member1;
+access_specifier_2:
+member2;
+...
+} object_names;</pre>
+        </div>
+        <div class="cont">
+            <p>Where class_name is a valid identifier for the class, object_names is an optional list of names for objects of this
+                class. The body of the declaration can contain members, that can be either data or function declarations, and
+                optionally access specifiers.<br>All is very similar to the declaration on data structures, except that we can now include also functions and
+                members, but also this new thing called access specifier. An access specifier is one of the following three
+                keywords: private, public or protected. These specifiers modify the access rights that the members following
+                them acquire: 
+            </p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>private members of a class are accessible only from within other members of the same class or from
+                    their friends.</li>
+                <li>protected members are accessible from members of their same class and from their friends, but also
+                        from members of their derived classes.</li>
+                <li>Finally, public members are accessible from anywhere where the object is visible. </li>   
+            </ul>
+        </div>
+        <div class="cont">
+            <p>For example: 
+            </p>
+        </div>
+        <div class="code">
+<pre>class CRectangle {
+int x, y;
+public:
+void set_values (int,int);
+int area (void);
+} rect;</pre>
+        </div>
+        <div class="cont">
+            <p>complete example of class CRectangle:
+            </p>
+        </div>
+        <div class="code">
+<pre><i>// classes example</i>
+#include &lt;iostream&gt;
+using namespace std;
+class CRectangle {
+    int x, y;
+    public:
+    void set_values (int,int);
+    int area () {return (x*y);}
+};
+void CRectangle::set_values (int a, int b) {
+    x = a;
+    y = b;
+}
+int main () {
+    CRectangle rect;
+    rect.set_values (3,4);
+    cout << "area: " << rect.area();
+    return 0;
+} 
+    </pre>
+        </div>
+        <div class="cont">
+            <p>output:
+            </p>
+        </div>
+        <div class="code">
+            <pre>area: 12</pre>
+        </div>
+        <div class="cont">
+            <p>One of the greater advantages of a class is that, as any other type, we can declare several objects of it. For
+                example, following with the previous example of class CRectangle, we could have declared the object rectb in
+                addition to the object rect: 
+            </p>
+        </div>
+        <div class="code">
+<pre><i>// example: one class, two objects</i>
+#include &lt;iostream&gt;
+using namespace std;
+class CRectangle {
+    int x, y;
+    public:
+    void set_values (int,int);
+    int area () {return (x*y);}
+};
+void CRectangle::set_values (int a, int b) {
+    x = a;
+    y = b;
+}
+int main () {
+    CRectangle rect, rectb;
+    rect.set_values (3,4);
+    rectb.set_values (5,6);
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area() << endl;
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>output:
+            </p>
+        </div>
+        <div class="code">
+<pre>rect area: 12
+rectb area: 30</pre>
+        </div>
+        <h3 id="constructors">Constructors and destructors </h3>
+        <div class="cont">
+            <p>Objects generally need to initialize variables or assign dynamic memory during their process of creation to become
+                operative and to avoid returning unexpected values during their execution.<br> to implement CRectangle including a constructor:
+            </p>
+        </div>
+        <div class="code">
+<pre><i>// example: class constructor</i>
+#include &lt;iostream&gt;
+using namespace std;
+class CRectangle {
+    int width, height;
+    public:
+    CRectangle (int,int);
+    int area () {return (width*height);}
+};
+CRectangle::CRectangle (int a, int b) {
+    width = a;
+    height = b;
+}
+int main () {
+    CRectangle rect (3,4);
+    CRectangle rectb (5,6);
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area() << endl;
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>output:
+            </p>
+        </div>
+        <div class="code">
+<pre>rect area: 12
+rectb area: 30</pre>
+        </div>
+        <h3 id="ovreloadingconst">Overloading Constructors </h3>
+        <div class="cont">
+            <p>Like any other function, a constructor can also be overloaded with more than one function that have the same
+                name but different types or number of parameters. Remember that for overloaded functions the compiler will call
+                the one whose parameters match the arguments used in the function call. In the case of constructors, which are
+                automatically called when an object is created, the one executed is the one that matches the arguments passed on
+                the object declaration:
+            </p>
+        </div>
+        <div class="code">
+<pre><i>// overloading class constructors</i>
+#include &lt;iostream&gt;
+using namespace std;
+class CRectangle {
+    int width, height;
+    public:
+    CRectangle ();
+    CRectangle (int,int);
+    int area (void) {return (width*height);}
+};
+CRectangle::CRectangle () {
+    width = 5;
+    height = 5;
+}
+CRectangle::CRectangle (int a, int b) {
+    width = a;
+    height = b;
+}
+int main () {
+    CRectangle rect (3,4);
+    CRectangle rectb;
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area() << endl;
+    return 0;
+} 
+</pre>
+        </div>
+        <div class="cont">
+            <p>output:
+            </p>
+        </div>
+        <div class="code">
+<pre>rect area: 12
+rectb area: 25</pre>
+        </div>
+        <div class="cont">
+            <p> Notice how if we declare a new object and we want to use its default constructor (the one without
+                parameters), we do not include parentheses ():
+            </p>
+        </div>
+        <div class="code">
+<pre>CRectangle rectb;      <i>// right</i>
+CRectangle rectb();    <i>// wrong!</i></pre>
+        </div>
+        <h3 id="defaultconst">Default constructor </h3>
+        <div class="cont">
+            <p>If you do not declare any constructors in a class definition, the compiler assumes the class to have a default
+                constructor with no arguments. Therefore, after declaring a class like this one:
+            </p>
+        </div>
+        <div class="code">
+<pre>class CExample {
+    public:
+        int a,b,c;
+        void multiply (int n, int m) { a=n; b=m; c=a*b; };
+    }; 
+   </pre>
+        </div>
+        <div class="cont">
+            <p>The compiler assumes that <em>CExample</em> has a default constructor, so you can declare objects of this class by simply
+                declaring them without any arguments:
+            </p>
+        </div>
+        <div class="code">
+            <pre>CExample ex;</pre>
+        </div>
+        <div class="cont">
+            <p>But as soon as you declare your own constructor for a class, the compiler no longer provides an implicit default
+                constructor. So you have to declare all objects of that class according to the constructor prototypes you defined for
+                the class:
+            </p>
+        </div>
+        <div class="code">
+<pre>class CExample {
+    public:
+        int a,b,c;
+        CExample (int n, int m) { a=n; b=m; };
+        void multiply () { c=a*b; };
+    }; </pre>
+        </div>
+        <div class="cont">
+            <p>Here we have declared a constructor that takes two parameters of type int. Therefore the following object
+                declaration would be correct:
+            </p>
+        </div>
+        <div class="code">
+            <pre>CExample ex (2,3);</pre>
+        </div>
+        <div class="cont">
+            <p>But,
+            </p>
+        </div>
+        <div class="code">
+            <pre>CExample ex;</pre>
+        </div>
+        <div class="cont">
+            <p>Would not be correct, since we have declared the class to have an explicit constructor, thus replacing the default
+                constructor.<br>
+                But the compiler not only creates a default constructor for you if you do not specify your own. It provides three
+                special member functions in total that are implicitly declared if you do not declare your own. These are the copy
+                constructor, the copy assignment operator, and the default destructor.<br>
+                The copy constructor and the copy assignment operator copy all the data contained in another object to the data
+                members of the current object. For <em>CExample</em>, the copy constructor implicitly declared by the compiler would be
+                something similar to:
+            </p>
+        </div>
+        <div class="code">
+<pre>CExample::CExample (const CExample& rv) {
+    a=rv.a; b=rv.b; c=rv.c;
+    } 
+   </pre>
+        </div>
+        <div class="cont">
+            <p>Therefore, the two following object declarations would be correct:
+            </p>
+        </div>
+        <div class="code">
+<pre>CExample ex (2,3);
+CExample ex2 (ex); <i>// copy constructor (data copied from ex)</i>
+</pre>
+        </div>
+        <h3 id="pointer">Pointers to classes </h3>
+        <div class="cont">
+            <p>It is perfectly valid to create pointers that point to classes. We simply have to consider that once declared, a class
+                becomes a valid type, so we can use the class name as the type for the pointer. For example: 
+            </p>
+        </div>
+        <div class="code">
+            <pre>CRectangle * prect;</pre>
+        </div>
+        <div class="cont">
+            <p>is a pointer to an object of class <em>CRectangle</em>.<br>
+                As it happened with data structures, in order to refer directly to a member of an object pointed by a pointer we can
+                use the arrow operator (->) of indirection. Here is an example with some possible combinations: 
+            </p>
+        </div>
+        <div class="code">
+<pre><i>// pointer to classes example</i>
+#include &lt;iostream&gt;
+using namespace std;
+class CRectangle {
+    int width, height;
+    public:
+    void set_values (int, int);
+    int area (void) {return (width * height);}
+};
+void CRectangle::set_values (int a, int b) {
+    width = a;
+    height = b;
+}
+int main () {
+    CRectangle a, *b, *c;
+    CRectangle * d = new CRectangle[2];
+    b= new CRectangle;
+    c= &a;
+    a.set_values (1,2);
+    b->set_values (3,4);
+    d->set_values (5,6);
+    d[1].set_values (7,8);
+    cout << "a area: " << a.area() << endl;
+    cout << "*b area: " << b->area() << endl;
+    cout << "*c area: " << c->area() << endl;
+    cout << "d[0] area: " << d[0].area() << endl;
+    cout << "d[1] area: " << d[1].area() << endl;
+    delete[] d;
+    delete b;
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>output:
+            </p>
+        </div>
+        <div class="code">
+<pre>a area: 2
+*b area: 12
+*c area: 2
+d[0] area: 30
+d[1] area: 56</pre>
+        </div>
+        <h3 id="classwith">Classes defined with struct and union </h3>
+        <div class="cont">
+            <p>Classes can be defined not only with keyword <em>class</em>, but also with keywords <em>struct</em> and <em>union</em>.<br>
+                The concepts of class and data structure are so similar that both keywords (<em>struct</em> and <em>class</em>) can be used in C++
+                to declare classes (i.e. <em>structs</em> can also have function members in C++, not only data members). The only
+                difference between both is that members of classes declared with the keyword <em>struct</em> have public access by
+                default, while members of classes declared with the keyword <em>class</em> have private access. For all other purposes
+                both keywords are equivalent. <br>The concept of unions is different from that of classes declared with <em>struct</em> and <em>class</em>, since unions only store one
+                data member at a time, but nevertheless they are also classes and can thus also hold function members. The
+                default access in union classes is public.
+            </p>
+        </div>
+        <h3 id="class">Overloading operators </h3> 
+        <div class="cont">
+         <p>C++ incorporates the option to use standard operators to perform operations with classes in addition to with
+             fundamental types. For example:             
+         </p>
+        </div>
+        <div class="code">
+ <pre>int a, b, c;
+ a = b + c;</pre>
+        </div>
+        <div class="cont">
+         <p>This is obviously valid code in C++, since the different variables of the addition are all fundamental types.
+             Nevertheless, it is not so obvious that we could perform an operation similar to the following one:
+         </p>
+        </div>
+        <div class="code">
+ <pre>struct {
+     string product;
+     float price;
+ } a, b, c;
+ a = b + c;</pre>
+        </div>
+        <div class="cont">
+         <p>In fact, this will cause a compilation error, since we have not defined the behavior our class should have with
+             addition operations. <br> Here is a list of all the operators that can be overloaded:
+         </p>
+        </div>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td>+</td> <td>-</td> <td>*</td> <td>/</td> <td><</td> <td>></td> <td>~</td> <td>&=</td>
+                </tr>
+                <tr>
+                    <td>+=</td> <td>-=</td> <td>*=</td> <td>/=</td> <td><<</td> <td>>></td> <td>^=</td> <td>|=</td>
+                </tr>
+                <tr>
+                    <td>++</td> <td>--</td> <td><=</td> <td>>=</td> <td><<=</td> <td>>>=</td> <td>&&</td> <td>||</td>
+                </tr>
+                <tr>
+                    <td>new</td> <td>delete</td> <td>new[]</td> <td>delete[]</td> <td>[]</td> <td>()</td> <td>%=</td> <td>,</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cont">
+            <p>To overload an operator in order to use it with classes we declare operator functions, which are regular functions
+             whose names are the <i>operator</i> keyword followed by the operator sign that we want to overload. The format is:
+            </p>
+        </div>
+        <div class="code">
+            <pre>type operator sign (parameters) { /*...*/ }</pre>
+        </div>
+        <div class="cont">
+            <p>Here you have an example that overloads the addition operator (+).</p>
+        </div>
+        <div class="code">
+ <pre><i>// vectors: overloading operators example</i>
+ #include &lt;iostream&gt;
+ using namespace std;
+ class CVector {
+     public:
+     int x,y;
+     CVector () {};
+     CVector (int,int);
+     CVector operator + (CVector);
+ };
+ CVector::CVector (int a, int b) {
+     x = a;
+     y = b;
+ }
+ CVector CVector::operator+ (CVector param) {
+     CVector temp;
+     temp.x = x + param.x;
+     temp.y = y + param.y;
+     return (temp);
+ }
+ int main () {
+     CVector a (3,1);
+     CVector b (1,2);
+     CVector c;
+     c = a + b;
+     cout << c.x << "," << c.y;
+     return 0;
+ } </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+            <pre>4,3</pre>
+        </div>
+        <div class="cont">
+            <p>It may be a little confusing to see so many times the <i>CVector</i> identifier. But, consider that some of them refer to
+             the class name (type) <i>CVector</i> and some others are functions with that name (constructors must have the same
+             name as the class). Do not confuse them:
+            </p>
+        </div>
+        <div class="code">
+ <pre>CVector (int, int);          <i>// function name CVector (constructor)</i>
+ CVector operator+ (CVector); <i>// function returns a CVector</i></pre>
+        </div>
+        <h3 id="this">The keyword this </h3>
+        <div class="cont">
+            <p>The keyword <em>this</em> represents a pointer to the object whose member function is being executed. It is a pointer to
+            the object itself. <br>One of its uses can be to check if a parameter passed to a member function is the object itself. For example, </p>
+        </div>
+        <div class="code">
+ <pre><i>// this</i>
+ #include &lt;iostream&gt;
+ using namespace std;
+ class CDummy {
+     public:
+     int isitme (CDummy& param);
+ };
+ int CDummy::isitme (CDummy& param)
+ {
+     if (&param == this) return true;
+     else return false;
+ }
+ int main () {
+     CDummy a;
+     CDummy* b = &a;
+     if ( b->isitme(a) )
+     cout << "yes, &a is b";
+     return 0;
+ }</pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+            <pre>yes, &a is b</pre>
+        </div>
+        <h3 id="static">Static members</h3>
+        <div class="cont">
+            <p>A class can contain <em>static</em> members, either data or functions.<br>
+             Static data members of a class are also known as "class variables", because there is only one unique value for all
+             the objects of that same class. Their content is not different from one object of this class to another.<br>
+             For example, it may be used for a variable within a class that can contain a counter with the number of objects of
+             that class that are currently allocated, as in the following example: 
+            </p>
+        </div>
+        <div class="code">
+ <pre><i>// static members in classes</i>
+ #include &lt;iostream&gt;
+ using namespace std;
+ class CDummy {
+     public:
+     static int n;
+     CDummy () { n++; };
+     ~CDummy () { n--; };
+ };
+ int CDummy::n=0;
+ int main () {
+     CDummy a;
+     CDummy b[5];
+     CDummy * c = new CDummy;
+     cout << a.n << endl;
+     delete c;
+     cout << CDummy::n << endl;
+     return 0;
+ } </pre>
+        </div>
+        <div class="cont">
+            <p>output:
+         </p>
+        </div>
+        <div class="code">
+ <pre>7
+6</pre>
+        </div> 
+    </div>
+</div>
+        
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <span class="ribbonfootz"
+        ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+      >
+      <div class="row">
+        <div class="col-md-5">
+          <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+  
+          <h3 class="footer-text text-left">TechNoJitsu:</h3>
+          <p id="footercontent">
+            Technojitsu is an interactive, ever growing platform to design and
+            develop projects, to acquire new and essential tech aspects
+            without leaving behind the essential building blocks i.e.
+            languages . All in all a tech pill to enhance and channel your
+            creative & reasoning mind in the right output stream.
+          </p>
+        </div>
+  
+        <div class="col-md-2 " id="footert">
+          <h4 class="text-uppercase text-left  footCol">Projects</h4>
+          <ul class="list-unstyled text-left">
+            <li>
+              <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+            </li>
+            <li>
+              <a
+                href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+                >Input Keypad with Led Matrix display
+              </a>
+            </li>
+            <li>
+              <a href="../../../../html/Projects/Arduino/Joystick module.html"
+                >Joystick module</a
+              >
+            </li>
+            <li>
+              <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 ">
+          <h4 class="text-uppercase text-left  footCol">Articles</h4>
+          <ul class="list-unstyled text-left">
+            <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+            <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+            <li><div style="color: #337ab7;">Coming Soon!</div></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+          <ul class="list-unstyled text-left">
+            <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+            <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+            <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="footerLinksTxt">
+        <div class="col-md-7" id="footerLinksTxt">
+          <p class="footer-text">Share your thoughts, and leave a Like</p>
+        </div>
+        <div class="col-md-5" id="footerLinks">
+          <p class="text-left">
+            <a
+              href="https://facebook.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-copyright text-center" id="cpyrgt">
+      © 2020 Copyright:
+      <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+  </footer>
+  <!--Footer-->
+  
+<script>AOS.init();</script>
+</body>
+
+</html>
+
+
+

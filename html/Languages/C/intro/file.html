@@ -3,67 +3,87 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../../../../css/Main.css" />
   <link rel="stylesheet" href="../../../../css/Layout.css" />
-  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <link rel="icon" href="../../../log2.png" type="image/x-icon" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
   <!--Fonts-->
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script
-    src =
-      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";>
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
-    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>TechnoJitsu</title>
 </head>
 
 <body>
   <!-- horizontal navbar -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" id="mNavbar">
     <div class="container-fluid" id="navtop">
       <div class="navbar-header">
-        <a id="txtdeco" href="#">
-          <img class="img img-rounded imgstat" alt="Navbar_logo" src="../../../Log.png" width="50" height="50"
-            class="d-inline-block align-top" />
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
         </a>
-        <span><a id="head" href="# ">TechnoJitsu</a></span>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li class="vline"><a href="#">PROJECTS</a></li>
-        <li><a href="#">ARTICLES</a></li>
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            LANG-GUIDES</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">C++</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">Java</a></li>
-          </ul>
-        </li>
-
         <li class="vline">
-          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
         </li>
         <li>
-          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
         </li>
       </ul>
     </div>
   </nav>
-<h1 class="hd1" id="file">File</h1 class="hd1">
+  <!-- horizontal navbar -->
+  <ul class="nav navbar-left flex-column sideLeft">
+    <li><a href="../../../../html/Languages/C/intro/historyofc.html">C History</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/partsofc.html">Parts of C</a></li>
+    <li><a href="../../../../html/Languages/C/intro/datatypes.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C/intro/variableandconstants.html">Variable & Constants</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/operator.html">Operator</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/decisionmaking.html">Decision Making</a></li>
+    <li><a href="../../../../html/Languages/C/intro/loop.html">Looping</a></li>
+    <li><a href="../../../../html/Languages/C/intro/functions.html">Functions</a></li>
+    <li><a href="../../../../html/Languages/C/intro/scope.html">Variable Scope</a></li>
+    <li><a href="../../../../html/Languages/C/intro/array.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C/intro/union.html">Structures</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C/intro/file.html">Files</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/preprocessors.html">Preprocessor</a></li>
+  </ul>
+  <div class="container mainContLang ">
+    <div class="modal-content  container" ><h1 class="hd1" id="file">File</h1>
+    
+
 <div class="cont"><p>Last session we explained about standard input and output devices handled by C programming language. 
 This chapter we will see how C programmers can create, open, close text or binary files for their data storage.file represents a 
 sequence of bytes, does not matter if it is a text file or binary file. C programming language provides access on high level functions
@@ -71,8 +91,8 @@ as well as low level (OS level) calls to handle file on your storage devices. Th
 file management.</p></div>
 <h3 class="fiopen">Opening files</h3>
 <div class="cont"><p>You can use the fopen( ) function to create a new file or to open an existing file, this call will initialize an object of the type FILE, which contains all the information necessary to control the stream. Following is the prototype of this function call:<br><pre>FILE *fopen( const char * filename, const char * mode );</pre></p></div>
-<div class="tbl"><table>
-<tr><th>Mode</th> <th>Description</th></tr>
+<div class="tbl"><table  class="table" border="2">
+<tr><th scope="col">Mode</th> <th scope="col">Description</th></tr>
 <tr><td>r</td> <td>Opens an existing text file for reading purpose.</td></tr>
 <tr><td>w</td> <td>Opens a text file for writing, if it does not exist then a new file is created. Here your program will start writing 
     content from the beginning of the file.</td></tr>
@@ -88,7 +108,7 @@ will start from the beginning but writing can only be appended.
 <div class="cont"><p>To close a file, use the fclose( ) function. The prototype of this function is:<br><pre>int fclose( FILE *fp );</pre><br>The fclose( ) function returns zero on success, or EOF if there is an error in closing the file. This function actually, flushes any data still pending in the buffer to the file, closes the file, and releases any memory used for the file. The EOF is a constant defined in the header file stdio.h.</p></div>
 <h2 class="hd2" class="fiwrite">Writing a File</h2>
 <div class="cont"><p>Following is the simplest function to write individual characters to a stream:<br><pre>int fputc( int c, FILE *fp );</pre><br>The function fputc() writes the character value of the argument c to the output stream referenced by fp. It returns the written character written on success otherwise EOF if there is an error. You can use the following functions to write a null-terminated string to a stream:<br><pre>int fputs( const char *s, FILE *fp ); </pre>The function fputs() writes the string s to the output stream referenced by fp. It returns a non-negative value on success, otherwise EOF is returned in case of any error.</p></div>
-<b>Example:</b>
+<strong>Example:</strong>
 <div class="code"><pre>
 #include <stdio.h>
 main()
@@ -135,7 +155,7 @@ size_t fwrite(const void *ptr, size_t size_of_elements, size_t number_of_element
 <div class="cont"><p>When we are saying Input that means to feed some data into program. This can be given in the form of file or from command line. C programming language provides a set of uilt-in functions to read given input and feed it to the program as per requirement.then we are saying Output that means to display some data on screen, printer or in any file. C programming language povides a set of built-in functions to output the data on the computer screen as well as you can save that data in text or binary files.</p></div>
 <h3 class="stdf">The Standard Files</h3>
 <div class="cont"><p>C programming language treats all the devices as files. So devices such as the display are addressed in the same way as files and following three file are automatically opened when a program executes to provide access to the keyboard and screen.</p>
-<table>
+<table  class="table" border="2">
 <tr><th>Standard File</th> <th>File Pointer</th> <th>Device</th></tr>	
 <tr><td>standard input</td> <td>stdin</td> <td>keyboard</td></tr>	
 <tr><td>standard output</td> <td>stdout</td> <td>screen</td></tr>	
@@ -158,7 +178,7 @@ int main( )
     return 0;
 }	
 </pre></div>
-<h3 id="gets&puts">The gets() & puts() functions</h2>
+<h3 id="gets&puts">The gets() & puts() functions</h3>
 <div class="cont"><p>The char *gets(char *s) function reads a line from stdin into the buffer pointed to by s until either a terminating newline or EOF.
 The int puts(const char *s) function writes the string s and a trailing newline to stdout.
 </p>
@@ -196,54 +216,107 @@ int main( )
 }
 	
 </pre></div>	
+</div>
+</div>
+  <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
 <footer class="footer-content">
-    <div class="jumbotron text-md-left">
-      <div class="row">
-        <div class="col-md-5 " >
-          <img src="../../../Log.png" alt="footer-img" id="footer-img">
-          
-          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
-          <p id="footercontent">
-           Derek Content HERE.................................................
-          </p>
-        </div>
-      
-        <div class="col-md-2" id="footert">
-          <h4 class="text-uppercase  ">Projects</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Articles</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Language Guides</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">C</a></li>
-            <li><a href="#">C++</a></li>
-            <li><a href="#">Java</a></li>
-          </ul>
-        </div>
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
       </div>
     </div>
- 
-
-
-    <div class="footer-copyright text-center">
-      © 2020 Copyright:
-      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
     </div>
- 
-  </footer>
-  <!--Footer-->
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+<script>AOS.init();</script>
 </body>
 
 </html>

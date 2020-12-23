@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+
+  <div class="container mainContLang" id="content">
+    <div class="modal-content  container " ><h2 class="hd2" id="dynamicmemory">FUNCTION</h2>
+        
+        <div class="cont">
+            <p>Using functions we can structure our programs in a more modular way, accessing all the potential that structured
+                programming can offer to us in C++.<br>A function is a group of statements that is executed when it is called from some point of the program. The
+                following is its format:  </p>
+        </div>
+        <div class="code">
+            <pre>type name ( parameter1, parameter2, ...) { statements }</pre>
+        </div>
+        <div class="cont">
+            <p>where: </p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>type is the data type specifier of the data returned by the function. </li>
+                <li>name is the identifier by which it will be possible to call the function. </li>
+                <li>parameters (as many as needed): Each parameter consists of a data type specifier followed by an
+                    identifier, like any regular variable declaration (for example: int x) and which acts within the function as
+                    a regular local variable. They allow to pass arguments to the function when it is called. The different
+                    parameters are separated by commas. </li>
+                <li>statements is the function's body. It is a block of statements surrounded by braces { }. </li>
+            </ul>
+        </div>
+        <div class="cont">
+            <p>Here you have the first function example: </p>
+        </div>
+        <div class="code">
+<pre><i>// function example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int addition (int a, int b)
+{
+    int r;
+    r=a+b;
+    return (r);
+}
+int main ()
+{
+    int z;
+    z = addition (5,3);
+    cout&lt;&lt;"The result is "&lt;&lt;z;
+    return 0;
+}</pre> </div>
+        <div class="cont">
+            <p>example:</p>
+        </div>
+        <div class="code">
+            <pre>The result is 8 </pre>
+        </div>
+        <div class="cont">
+            <p>In order to examine this code, first of all remember something said at the beginning of this tutorial: a C++
+                program always begins its execution by the main function. So we will begin there.<br>
+                We can see how the main function begins by declaring the variable z of type int. Right after that, we see a call to
+                a function called addition. Paying attention we will be able to see the similarity between the structure of the call
+                to the function and the declaration of the function itself some code lines above:<br>
+            <b>int addition(int a,int b)<br>z=addition(5,3);</b><br>The parameters and arguments have a clear correspondence. Within the main function we called to addition
+            passing two values: 5 and 3, that correspond to the int a and int b parameters declared for function addition. <br>At the point at which the function is called from within main, the control is lost by main and passed to function
+            addition. The value of both arguments passed in the call (5 and 3) are copied to the local variables int a and int
+            b within the function.<br>Function addition declares another local variable (int r), and by means of the expression r=a+b, it assigns to r
+            the result of a plus b. Because the actual parameters passed for a and b are 5 and 3 respectively, the result is 8.<br>The following line of code:   </p>
+        </div>
+        <div class="code">
+            <pre>return (r);</pre>
+        </div>
+        <div class="cont">
+            <p>finalizes function addition, and returns the control back to the function that called it in the first place (in this case,
+                main). At this moment the program follows it regular course from the same point at which it was interrupted by the
+                call to addition. But additionally, because the return statement in function addition specified a value: the
+                content of variable r (return (r);), which at that moment had a value of 8. This value becomes the value of
+                evaluating the function call. <br><b>int addition(int a,int b)<br>z=addition(5,3);</b></p>
+        </div>
+        <h3 id="scope">Scope of variables </h3>
+        <div class="cont">
+            <p>The scope of variables declared within a function or any other inner block is only their own function or their own
+                block and cannot be used outside of them. For example, in the previous example it would have been impossible to
+                use the variables a, b or r directly in function main since they were variables local to function addition. Also, it
+                would have been impossible to use the variable z directly within function addition, since this was a variable local
+                to the function main. </p>
+        </div>
+        <div class="code">
+<pre>#include &lt;iostream&gt;
+int Integer;      <i>//Global variable</i>
+char Character;   <i>//Global variable</i>
+char string[20];  <i>//Global variable</i>
+unsigned int NumberofSons;
+main()
+{
+    unsigned short Age;  <i>//Local variable</i>
+    float Number;        <i>//Local variable</i>
+    cout&lt;&lt;"Enter your age";
+    cin&gt;&gt;Age;      <i>//Instructions</i>
+}
+        </div>
+        <div class="cont">
+            <p>Therefore, the scope of local variables is limited to the same block level in which they are declared. Nevertheless,
+                we also have the possibility to declare global variables; These are visible from any point of the code, inside and
+                outside all functions. In order to declare global variables you simply have to declare the variable outside any
+                function or block; that means, directly in the body of the program.<br>And here is another example about functions:  </p>
+        </div>
+        <div class="code">
+<pre><i>// function example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int subtraction (int a, int b)
+{
+    int r;
+    r=a-b;
+    return (r);
+}
+int main ()
+{
+    int x=5, y=3, z;
+    z = subtraction (7,2);
+    cout&lt;&lt;"The first result is "&lt;&lt;z&lt;&lt;'\n';
+    cout&lt;&lt;"The second result is "&lt;&lt;subtraction (7,2)&lt;&lt;'\n';
+    cout&lt;&lt;"The third result is "&lt;&lt;subtraction (x,y)&lt;&lt;'\n';
+    z= 4 + subtraction (x,y);
+    cout&lt;&lt;"The fourth result is "&lt;&lt;z&lt;&lt;'\n';
+    return 0;
+} 
+</pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+<pre>first result is 5
+The second result is 5
+The third result is 2
+The fourth result is 6</pre>
+        </div>
+        <div class="cont"><p>In this case we have created a function called subtraction. The only thing that this function does is to subtract
+            both passed parameters and to return the result.<br>
+            Nevertheless, if we examine function main we will see that we have made several calls to function subtraction.
+            We have used some different calling methods so that you see other ways or moments when a function can be
+            called. <br>In order to fully understand these examples you must consider once again that a call to a function could be
+            replaced by the value that the function call itself is going to return. For example, the first case (that you should
+            already know because it is the same pattern that we have used in previous examples): 
+            </p></div>
+            <div class="code">
+                <pre>z = subtraction (7,2);
+cout&lt;&lt;"The first result is "&lt;&lt;z;</pre>
+            </div>
+            <div class="cont">
+                <p>If we replace the function call by the value it returns (i.e., 5), we would have:</p>
+            </div>
+            <div class="code">
+                <pre>z=5;
+cout&lt;&lt;"The first result is "&lt;&lt;z;</pre>
+            </div>
+            <div class="cont">
+                <p>As well as</p>
+            </div>
+            <div class="code">
+                <pre>cout&lt;&lt;"The second result is "&lt;&lt;subtraction (7,2);</pre>
+            </div>
+            <div class="cont">
+                <p>has the same result as the previous call, but in this case we made the call to subtraction directly as an insertion
+                    parameter for cout. Simply consider that the result is the same as if we had written: </p>
+            </div>
+            <div class="code">
+                <pre>cout&lt;&lt;"The second result is "&lt;&lt;5;</pre>
+            </div>
+            <div class="cont">
+                <p>since 5 is the value returned by subtraction (7,2).<br>
+                    In the case of: </p>
+            </div>
+            <div class="code">
+                <pre>cout&lt;&lt;"The third result is "&lt;&lt;subtraction (x,y);</pre>
+            </div>
+            <div class="cont">
+                <p>The only new thing that we introduced is that the parameters of subtraction are variables instead of constants.
+                    That is perfectly valid. In this case the values passed to function subtraction are the values of x and y, that are 5
+                    and 3 respectively, giving 2 as result.<br>
+                    The fourth case is more of the same. Simply note that instead of: 
+                    </p>
+            </div>
+            <div class="code">
+                <pre>z = 4 + subtraction (x,y);</pre>
+            </div>
+            <div class="cont">
+                <p>we could have written: </p>
+            </div>
+            <div class="code">
+                <pre>z = subtraction (x,y) + 4;</pre>
+            </div>
+            <div class="cont">
+                <p>with exactly the same result. I have switched places so you can see that the semicolon sign (;) goes at the end of
+                    the whole statement. It does not necessarily have to go right after the function call. The explanation might be once
+                    again that you imagine that a function can be replaced by its returned value: </p>
+            </div>
+            <div class="code">
+                <pre>z = 4 + 2;
+z = 2 + 4;                    
+                </pre>
+            </div>
+            <h3 id="void">Functions with no type. The use of void. </h3>
+            <div class="cont">
+                <p>syntax of a function declaration: </p>
+            </div>
+            <div class="code">
+                <pre>type name ( argument1, argument2 ...) statement</pre>
+            </div>
+            <div class="cont">
+                <p>you will see that the declaration begins with a type, that is the type of the function itself (i.e., the type of the
+                    datum that will be returned by the function with the return statement). But what if we want to return no value?<br>
+                    Imagine that we want to make a function just to show a message on the screen. We do not need it to return any
+                    value. In this case we should use the void type specifier for the function. This is a special specifier that indicates
+                    absence of type. </p>
+            </div>
+            <div class="code">
+<pre><i>// void function example</i>
+#include&lt;iostream&gt;
+using namespace std;
+void printmessage ()
+{
+    cout&lt;&lt;"I'm a function!";
+}
+int main ()
+{
+    printmessage ();
+    return 0;
+}</pre>
+            </div>
+            <div class="cont">
+                <p>output:</p>
+            </div>
+            <div class="code">
+                <pre>I'm a function! </pre>
+            </div>
+            <div class="cont">
+                <p>void can also be used in the function's parameter list to explicitly specify that we want the function to take no
+                    actual parameters when it is called. For example, function printmessage could have been declared as: </p>
+            </div>
+            <div clas="code">
+<pre>void printmessage (void)
+{
+    cout&lt;&lt;"I'm a function!";
+}</pre>
+            </div>
+            <div class="cont">
+                <p>Although it is optional to specify void in the parameter list. In C++, a parameter list can simply be left blank if we
+                    want a function with no parameters.<br>What you must always remember is that the format for calling a function includes specifying its name and
+                    enclosing its parameters between parentheses. The non-existence of parameters does not exempt us from the
+                    obligation to write the parentheses. For that reason the call to printmessage is:  </p>
+            </div>
+            <div class="code">
+                <pre>printmessage ();</pre>
+            </div>
+            <div class="cont">
+                <p>The parentheses clearly indicate that this is a call to a function and not the name of a variable or some other C++
+                    statement. The following call would have been incorrect:</p>
+            </div>
+            <div class="code">
+                <pre>printmessage;</pre>
+            </div>
+        </div>
+    </div>
+            
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+      <script>AOS.init();</script>
+    </body>
+    
+    </html>

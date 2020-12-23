@@ -1,9 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>ARRAY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
 </head>
+
 <body>
-    <h2 id="arrays">ARRAYS</h2>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- horizontal navbar -->
+
+  <ul class="nav navbar-left flex-column sideLeft">
+    <li><a href="../../../../html/Languages/C/intro/historyofc.html">C History</a></li>
+    <li><a href="../../../../html/Languages/C/intro/partsofc.html">Parts of C</a></li>
+    <li><a href="../../../../html/Languages/C/intro/datatypes.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C/intro/variableandconstants.html">Variable & Constants</a></li>
+    <li><a href="../../../../html/Languages/C/intro/operator.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C/intro/decisionmaking.html">Decision Making</a></li>
+    <li><a href="../../../../html/Languages/C/intro/loop.html">Looping</a></li>
+    <li><a href="../../../../html/Languages/C/intro/functions.html">Functions</a></li>
+    <li><a href="../../../../html/Languages/C/intro/scope.html">Variable Scope</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C/intro/array.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C/intro/union.html">Structures</a></li>
+    <li><a href="../../../../html/Languages/C/intro/file.html">Files</a></li>
+    <li><a href="../../../../html/Languages/C/intro/preprocessors.html">Preprocessor</a></li>
+  </ul>
+  <div class="container  mainContLang" id="cLangContent">
+    <div class="modal-content  container" > <h1 class="hd1" id="arrays">ARRAYS</h1 >
+    
 <div class="cont">
    <p> Cprogramming language provides a data structure called the array, which can store
     a fixed-size sequential collection of elements of the same type. An array is used to store a
@@ -18,30 +98,30 @@
 <h3 id="adeclaration">ARRAY DECLARATION</h3>
 <p>To declare an array in C, a programmer specifies the type of the elements and the number
     of elements required by an array as follows:</p>
-<div class="code">type arrayName [ arraySize ];</div>
-T<p>his is called a single-dimensional array. The arraySize must be an integer constant
+<div class="code"><pre>type arrayName [ arraySize ];</pre></div>
+<p>This is called a single-dimensional array. The arraySize must be an integer constant
     greater than zero and type can be any valid C data type. For example, to declare a 10-
     element array called balance of type double, use this statement:</p>
-<div class="code">double balance[10];</div>
+<div class="code"><pre>double balance[10];</pre></div>
 Now balance is a variable array which is sufficient to hold up-to 10 double numbers.
 </div>
 <h3 id="ainitialising">Initializing Arrays</h3>
 <div class="cont">
 You can initialize array in C either one by one or using a single statement as follows:
-<div class="code">double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</div>
+<div class="code"><pre>double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</pre></div>
 The number of values between braces { } can not be larger than the number of elements
 that we declare for the array between square brackets [ ](The number inside [] is also called index). Following is an example to
 assign a single element of the array:<br>
 If you omit the size of the array, an array just big enough to hold the initialization is
 created. Therefore, if you write:
-<div class="code">double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</div>
+<div class="code"><pre>double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</pre></div>
 You will create exactly the same array as you did in the previous example.
-<div class="code">balance[4] = 50.0;</div>
+<div class="code"><pre>balance[4] = 50.0;</pre></div>
 </div>
-<table>
-    <tr><th>INDEX</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-    <tr><th>ELEMENT</th><td>1000.0</td><td>2.0</td><td>3.4</td><td>17.0</td><td>50.0</td></tr>
-    <tr><th>POSITION</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<table  class="table" border="2">
+    <tr><th scope="row">INDEX</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th scope="row">ELEMENT</th><td>1000.0</td><td>2.0</td><td>3.4</td><td>17.0</td><td>50.0</td></tr>
+    <tr><th scope="row">POSITION</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
 </table>
 <h3 id="aaccessing">Accessing Array Elements</h3>
 <div class="cont">An element is accessed by indexing the array name. This is done by placing the index of
@@ -74,6 +154,7 @@ int main ()
 </div>
 <div class="cont">
 Output:
+<pre>
 Element[0] = 100
 Element[1] = 101
 Element[2] = 102
@@ -84,19 +165,20 @@ Element[6] = 106
 Element[7] = 107
 Element[8] = 108
 Element[9] = 109
+</pre>
 </div>
 <h3 id="marray">Multi-dimensional Arrays</h3>
 <div class="cont">
 C programming language allows multidimensional arrays. Here is the general form of a
 multidimensional array declaration:
-<div class="code">type name[size1][size2]...[sizeN];</div>
+<div class="code"><pre>type name[size1][size2]...[sizeN];</pre></div>
 For example, the following declaration creates a three dimensional 5 . 10 . 4 integer array:
-<div class="code">int threedim[5][10][4];</div>
+<div class="code"><pre>int threedim[5][10][4];</pre></div>
 </div>
 <h4 id="2darray">Two-Dimensional Arrays</h4>
 <div class="cont">
 The simplest form of the multidimensional array is the two-dimensional array. A twodimensional array is, in essence, a list of one-dimensional arrays. To declare a twodimensional integer array of size x, y you would write something as follows:
-<div class="code">type arrayName [ x ][ y ];</div>
+<div class="code"><pre>type arrayName [ x ][ y ];</pre></div>
 Where type can be any valid C data type and arrayName will be a valid C identifier. A twodimensional array can be think as a table which will have x number of rows and y number
 of columns.<br>
 Every element in array a is identified by an element name of the form a[ i ][ j ], where a is the name of the array, 
@@ -116,13 +198,13 @@ int a[3][4] = {
 </div>
 The nested braces, which indicate the intended row, are optional. The following initialization
 is equivalent to previous example:
-<div class="code">int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};</div>
+<div class="code"><pre>int a[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};</pre></div>
 </div>
 <h4 id="2daaccessing">Accessing Two-Dimensional Array Elements</h4>
 <div class="cont">
 An element in 2-dimensional array is accessed by using the subscripts, i.e., row index and
 column index of the array. For example:
-<div class="code">int val = a[2][3];</div>
+<div class="code"><pre>int val = a[2][3];</pre></div>
 The above statement will take 4th element from the 3rd row of the array. You can verify it
 in the above diagram. Let us check below program where we have used nested loop to
 handle a two dimensional array:
@@ -192,5 +274,108 @@ function returning a pointer as in the following example:
  <div class="cont">
 int * myFunction()
  </div>
+</div>
+</div>
+  <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+<script>AOS.init();</script>
 </body>
+
 </html>
+

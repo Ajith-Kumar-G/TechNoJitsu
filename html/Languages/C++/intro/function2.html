@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../css/Layout.css" />
+    <link rel="stylesheet" href="../../../../css/langGuide.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default" id="mNavbar">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="../../../../TechNoJitsu.html">
+            <img
+              class="img img-rounded imgstat"
+              alt="Navbar_logo"
+              src="../../../../img/icon/Log.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="vline">
+            <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <!-- horizontal navbar -->
+
+     <ul class="nav navbar-left flex-column sideLeft ">
+      <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+      <li class="vline"><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+      <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+    </ul>
+    <div class="container mainContLang" id="content">
+      <div class="modal-content container">
+        <h2 class="hd2" id="dynamicmemory">FUNCTION</h2>
+
+        <h3 id="args">Arguments passed by value and by reference.</h3>
+        <div class="cont">
+          <p>
+            Until now, in all the functions we have seen, the arguments passed
+            to the functions have been passed by value. This means that when
+            calling a function with parameters, what we have passed to the
+            function were copies of their values but never the variables
+            themselves. For example, suppose that we called our first function
+            addition using the following code:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+int x=5, y=3, z;
+z = addition ( x , y ); </pre
+          >
+        </div>
+        <div class="cont">
+          <p>
+            What we did in this case was to call to function addition passing
+            the values of x and y, i.e. 5 and 3 respectively, but not the
+            variables x and y themselves. <br /><b
+              >int addition(int a,int b)<br />z=addition(5,3);<br /> </b
+            >This way, when the function addition is called, the value of its
+            local variables a and b become 5 and 3 respectively, but any
+            modification to either a or b within the function addition will not
+            have any effect in the values of x and y outside it, because
+            variables x and y were not themselves passed to the function, but
+            only copies of their values at the moment the function was
+            called.<br />But there might be some cases where you need to
+            manipulate from inside a function the value of an external variable.
+            For that purpose we can use arguments passed by reference, as in the
+            function duplicate of the following example:
+          </p>
+        </div>
+        <div class="code">
+          <pre><i>// passing parameters by reference</i>
+#include &lt;iostream&gt;
+using namespace std;
+void duplicate (int& a, int& b, int& c)
+{
+    a*=2;
+    b*=2;
+    c*=2;
+}
+int main ()
+{
+    int x=1, y=3, z=7;
+    duplicate (x, y, z);
+    cout&lt;&lt;"x="&lt;&lt;x&lt;&lt;", y="&lt;&lt;y&lt;&lt;", z="&lt;&lt;z;
+    return 0;
+} </pre>
+        </div>
+        <div class="cont">
+          <p>output:</p>
+        </div>
+        <div class="code">
+          <pre>x=2, y=6, z=14</pre>
+        </div>
+        <div class="cont">
+          <p>
+            The first thing that should call your attention is that in the
+            declaration of duplicate the type of each parameter was followed by
+            an ampersand sign (&). This ampersand is what specifies that their
+            corresponding arguments are to be passed by reference instead of by
+            value. <br />When a variable is passed by reference we are not
+            passing a copy of its value, but we are somehow passing the variable
+            itself to the function and any modification that we do to the local
+            variables will have an effect in their counterpart variables passed
+            as arguments in the call to the function. <br /><b
+              >void duplicate(int& a,int& b,int& c)<br />duplicate(x,y,z);</b
+            ><br />To explain it in another way, we associate a, b and c with
+            the arguments passed on the function call (x, y and z) and any
+            change that we do on a within the function will affect the value of
+            x outside it. Any change that we do on b will affect y, and the same
+            with c and z.<br />
+            That is why our program's output, that shows the values stored in x,
+            y and z after the call to duplicate, shows the values of all the
+            three variables of main doubled.<br />
+            If when declaring the following function:
+          </p>
+        </div>
+        <div class="code">
+          <pre>void duplicate (int& a, int& b, int& c)</pre>
+        </div>
+        <div class="cont">
+          <p>we had declared it this way:</p>
+        </div>
+        <div class="code">
+          <pre>void duplicate (int a, int b, int c)</pre>
+        </div>
+        <div class="cont">
+          <p>
+            i.e., without the ampersand signs (&), we would have not passed the
+            variables by reference, but a copy of their values instead, and
+            therefore, the output on screen of our program would have been the
+            values of x, y and z without having been modified.<br />
+            Passing by reference is also an effective way to allow a function to
+            return more than one value. For example, here is a function that
+            returns the previous and next numbers of the first parameter passed.
+            <br />example:
+          </p>
+        </div>
+        <div class="code">
+          <pre><i>// more than one returning value</i>
+#include &lt;iostream&gt;
+using namespace std;
+void prevnext (int x, int& prev, int& next)
+{
+    prev = x-1;
+    next = x+1;
+}
+int main ()
+{
+    int x=100, y, z;
+    prevnext (x, y, z);
+    cout&lt;&lt;"Previous="&lt;&lt; y&lt;&lt;", Next="&lt;&lt;z;
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+          <p>output:</p>
+        </div>
+        <div class="code">
+          <pre>Previous=99, Next=101 </pre>
+        </div>
+        <h3 id="default">Default values in parameters.</h3>
+        <div clas="cont">
+          <p>
+            When declaring a function we can specify a default value for each of
+            the last parameters. This value will be used if the corresponding
+            argument is left blank when calling to the function. To do that, we
+            simply have to use the assignment operator and a value for the
+            arguments in the function declaration. If a value for that parameter
+            is not passed when the function is called, the default value is
+            used, but if a value is specified this default value is ignored and
+            the passed value is used instead. For example:
+          </p>
+        </div>
+        <div class="code">
+          <pre><i>// default values in functions</i>
+#include &lt;iostream&gt;
+using namespace std;
+int divide (int a, int b=2)
+{
+    int r;
+    r=a/b;
+    return (r);
+}
+int main ()
+{
+    cout&lt;&lt;divide (12);
+    cout&lt;&lt;endl;
+    cout&lt;&lt;divide (20,4);
+    return 0;
+} </pre>
+        </div>
+        <div class="cont">
+          <p>output:</p>
+        </div>
+        <div class="code">
+          <pre>
+6
+5
+</pre
+          >
+        </div>
+        <h3 id="overload">Overloaded functions.</h3>
+        <div class="cont">
+          <p>
+            In C++ two different functions can have the same name if their
+            parameter types or number are different. That means that you can
+            give the same name to more than one function if they have either a
+            different number of parameters or different types in their
+            parameters. For example:
+          </p>
+        </div>
+        <div class="code">
+          <pre><i>// overloaded function</i>
+#include &lt;iostream&gt;
+using namespace std;
+int operate (int a, int b)
+{
+    return (a*b);
+}
+float operate (float a, float b)
+{
+    return (a/b);
+}
+int main ()
+{
+    int x=5,y=2;
+    float n=5.0,m=2.0;
+    cout&lt;&lt;operate (x,y);
+    cout&lt;&lt;"\n";
+    cout&lt;&lt;operate (n,m);
+    cout&lt;&lt;"\n";
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+          <p>output:</p>
+        </div>
+        <div class="code">
+          <pre>
+10
+2.5
+</pre
+          >
+        </div>
+        <h3 id="inline">inline functions.</h3>
+        <div class="cont">
+          <p>
+            The inline specifier indicates the compiler that inline substitution
+            is preferred to the usual function call mechanism for a specific
+            function. This does not change the behavior of a function itself,
+            but is used to suggest to the compiler that the code generated by
+            the function body is inserted at each point the function is called,
+            instead of being inserted only once and perform a regular call to
+            it, which generally involves some additional overhead in running
+            time. <br />The format for its declaration is:
+          </p>
+        </div>
+        <div class="code">
+          <pre>
+inline type name ( arguments ... ) { instructions ... }
+            </pre
+          >
+        </div>
+      </div>
+    </div>
+           
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

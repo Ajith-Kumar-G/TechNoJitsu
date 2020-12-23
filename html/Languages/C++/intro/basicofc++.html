@@ -1,9 +1,90 @@
-<html>
-    <head>
-        <title>basic of c++</title>
-    </head>
-    <body>
-        <div class="intro">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  <div class="container mainContLang ">
+    <div class="modal-content  container" > <h1 class="hd1" id="basicc++">C++</h1 >
+        <div class="cont">
             <p>When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class,
                 object, methods, and instant variables mean.</p>
         </div>
@@ -21,13 +102,13 @@
                 state is created by the values assigned to these instant variables</li></ul>           
         </div>
  
-            <h2 id="program">C++ Program Structure</h2>
+            <h2 id="progstr">C++ Program Structure</h2>
         <div class="cont">
             <p>Let us look at a simple code that would print the words <i>Hello World.</i></p>
         </div>
         <div class="code">
             <pre>
-#include < iostream.h >
+#include&lt;iostream&gt;
 using namespace std;
 // main() is where program execution begins.
 int main()
@@ -60,8 +141,7 @@ int main()
         <div class="cont">
             <p>Let's look at how to save the file, compile and run the program. Please follow the steps given
                 below:</p>
-        </div>
-        <div class="unl">
+            <div class="unl">
             <ul>
             <li>Open a text editor and add the code as above.</li>
             <li>Save the file as: hello.cpp</li>
@@ -71,6 +151,7 @@ int main()
                 executable file.</li>
             <li>Now, type 'a.out' to run your program.</li>
                 <li>You will be able to see ' Hello World ' printed on the window</li></ul>
+            </div> 
         </div>
         <div class="code">
             <pre>
@@ -82,28 +163,36 @@ Hello World
         <h2 id="blocks">Semicolons & Blocks in C++</h2>
         <div class="cont">
             <p>In C++, the semicolon is a statement terminator. That is, each individual statement must be
-                ended with a semicolon. It indicates the end of one logical entity.<br>For example, following are three different statements:
+                ended with a semicolon. It indicates the end of one logical entity.<br>For example, following are three different statements:</p>
+<div class="code">
 <pre>
 x = y;
 y = y+1;
 add(x, y);    
-</pre>A block is a set of logically connected statements that are surrounded by opening and closing
+</pre></div>
+A block is a set of logically connected statements that are surrounded by opening and closing
 braces. For example:
+<div class="code">
 <pre>
 {
     cout << "Hello World"; // prints Hello World
     return 0;
 }
-</pre>C++ does not recognize the end of the line as a terminator. For this reason, it does not matter
+</pre></div>C++ does not recognize the end of the line as a terminator. For this reason, it does not matter
 where you put a statement in a line. For example:
+<div class="code">
 <pre>
 x = y;
 y = y+1;
 add(x, y);    
-</pre>is the same as
-<pre>
+</pre></div>
+is the same as
+<div class="code">
+ <pre>
 x = y; y = y+1; add(x, y);
-</pre></p>
+</pre>
+</div>
+
         </div>
         <h2 id="C++ Identifiers">C++ Identifiers</h2>
         <div class="cont">
@@ -119,31 +208,34 @@ myname50  _temp j   a23b9      retVal
         <h2 id="C++Keywords">C++ Keywords</h2>
         <div class="cont">
             <p>The following list shows the reserved words in C++. These reserved words may not be used
-                as constant or variable or any other identifier names.
-<pre>
-asm          else      new              this
-auto         enum      operator         throw
-bool         explicit  private          true
-break        export    protected        try
-case         extern    public           typedef
-catch        false     register         typeid
-char         float     reinterpret_cast typename
-class        for       return           union
-const        friend    short            unsigned
-const_cast   goto      signed           using
-continue     if        sizeof           virtual
-default      inline    static           void
-delete       int       static_cast      volatile
-do           long      struct           wchar_t
-double       mutable   switch           while
-dynamic_cast namespace template
-</pre></p>
+                as constant or variable or any other identifier names.</p>
+
+<table class="tbl">
+<tr><td>asm</td><td>else</td><td>new</td><td>this</td></tr>
+<tr><td>auto</td><td>enum</td><td>operator</td><td>throw</td></tr>
+<tr><td>bool</td><td>explicit</td><td>private</td><td>true</td></tr>
+<tr><td>break</td><td>export</td><td>protected</td><td>try</td></tr>
+<tr><td>case</td><td>extern</td><td>public</td><td>typedef</td></tr>
+<tr><td>catch</td><td>false</td><td>register</td><td>typeid</td></tr>
+<tr><td>char</td><td>float</td><td>reinterpret_cast</td><td>typename</td></tr>
+<tr><td>Class</td><td>for</td><td>return</td><td>union</td></tr>
+<tr><td>const</td><td>friend</td><td>short</td><td>unsigned</td></tr>
+<tr><td>const_cast</td><td>goto</td><td>signed</td><td>using</td></tr>
+<tr><td>continue</td><td>if</td><td>sizeof</td><td>virtual</td></tr>
+<tr><td>default</td><td>inline</td><td>static</td><td>void</td></tr>
+<tr><td>delete</td><td>int</td><td>static_cast</td><td>volatile</td></tr>
+<tr><td>do</td><td>long</td><td>struct</td><td>wchar_t</td></tr>
+<tr><td>double</td><td>mutable</td><td>switch</td><td>while</td></tr>
+<tr><td>dynamic_cast</td><td>namespace</td><td>template</td></tr>
+</table>
         </div>
         <h2 id="Trigraphs">Trigraphs</h2>
         <div class="cont">
             <p>A few characters have an alternative representation, called a trigraph sequence. A trigraph is
                 a three-character sequence that represents a single character and the sequence always starts
                 with two question marks.</p>
+            <p>Trigraphs are expanded anywhere they appear, including within string literals and character literals, in comments, 
+                and in preprocessor directives.</p>
         </div>
         <div class="tbl">
             <table>
@@ -206,7 +298,7 @@ purpose.</p>
 */    
 </pre>A comment can also start with //, extending to the end of the line. For example:
 <pre>
-#include < iostream.h >
+#include &lt;iostream&gt;
 using namespace std;
 main()
 {
@@ -226,5 +318,113 @@ cout << "Hello World"; // prints Hello World
 */
 </pre>      </p>   
         </div>
-    </body>
-</html>
+        </div>
+        </div>
+        
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+  <script>AOS.init();</script>
+  </body>
+  
+  </html>
+  
+  
+  
+  

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../css/Layout.css" />
+
+    <link rel="stylesheet" href="../../../../css/langGuide.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default" id="mNavbar">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="../../../../TechNoJitsu.html">
+            <img
+              class="img img-rounded imgstat"
+              alt="Navbar_logo"
+              src="../../../../img/icon/Log.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="vline">
+            <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <!-- horizontal navbar -->
+
+     <ul class="nav navbar-left flex-column sideLeft ">
+      <li class="vline"><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+      <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+      <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+    </ul>
+    <div class="container mainContLang">
+      <div class="modal-content container">
+        <h2 id="history" class="hd2">History of C++</h2>
+
+        <div class="cont">
+          <p>
+            The C++ language is an object-oriented programming language & is a
+            combination of both low-level & high-level language – a Middle-Level
+            Language. The programming language was created, designed & developed
+            by a Danish Computer Scientist – Bjarne Stroustrup at Bell Telephone
+            Laboratories (now known as Nokia Bell Labs) in Murray Hill, New
+            Jersey. As he wanted a flexible & a dynamic language which was
+            similar to C with all its features, but with additionality of active
+            type checking, basic inheritance, default functioning argument,
+            classes, inlining, etc. and hence C with Classes (C++) was launched.
+          </p>
+        </div>
+        <h2 id="vers" class="hd2">VERSION OF C++ LANGUAGE</h2>
+        <div class="tbl">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">VERSION</th>
+                <th scope="col">released date</th>
+                <th scope="col">MAJOR CHANGES</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>C++98 (ISO/IEC 14882:1998)</td>
+                <td>October 1998/a</td>
+                <td>The first version</td>
+              </tr>
+              <tr>
+                <td>C++03 (ISO/IEC 14882:2003)</td>
+                <td>February 2003</td>
+                <td>Introduction of value initialization.</td>
+              </tr>
+              <tr>
+                <td>C++11</td>
+                <td>August 2011</td>
+                <td>
+                  Introduction of Lambda Expressions, Delegating Constructors,
+                  Uniform Initialization Syntax, nullptr, Automatic Type
+                  Deduction and decltype, Rvalue References etc.
+                </td>
+              </tr>
+              <tr>
+                <td>C++14</td>
+                <td>August 2014</td>
+                <td>
+                  Introduction of polymorphic lambdas, digit separators,
+                  generalized lambda capture, variable templates, binary integer
+                  literals, quoted strings etc.
+                </td>
+              </tr>
+              <tr>
+                <td>C++17</td>
+                <td>December 2017</td>
+                <td>
+                  Introduction of fold expressions, hexadecimal floating point
+                  literals, a u8 character literal, selection statements with
+                  initializer, inline variables etc.
+                </td>
+              </tr>
+              <tr>
+                <td>C++20</td>
+                <td>2020-2021</td>
+                <td>Upcoming release</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="unl">
+          <ul>
+            <li>
+              The trace of the programming language C++ can be done back to 1979
+              when<b> Bjarne Stroustrup</b> was doing some development for this
+              thesis for PhD. One in all the words Stroustrup had the chance to
+              figure with, was a language referred to as <b>Simula</b>, that
+              because the name implies, could be a language primarily designed
+              for simulations. The Simula sixty-seven language – that was the
+              variant that Stroustrup worked with is considered the primary
+              language to support the object-oriented programming paradigm.
+              Stroustrup found that this paradigm was helpful for package
+              development; but, the Simula language was way too slow for
+              practice & practical use.
+            </li>
+            <li>
+              Shortly subsequently, he began work on “<b>C with Classes</b>“,
+              because what the name implies was meant to be a superset of the C
+              language. His main dream was to get his advanced object-oriented
+              programming, created by him, into the C language, which was during
+              his era was still the programming language that was widely
+              respected for its movability, portability & compactness, by not
+              sacrificing the speed or the low-level practicality. His
+              programming-language enclosed inlining, basic inheritance, default
+              function arguments, categories, and reliable sort was checking
+              additionally to all or any the options of the C language.
+            </li>
+            <li>
+              The first C with categories compiler was referred to as
+              <b>Cfront</b>, that got derived from a C compiler referred to as<b>
+                CPre</b
+              >. It had been a program designed to translate C with categories
+              code to universal C. A rather attention-grabbing purpose value
+              noting is that Cfront was written mostly in C with classes,
+              creating it a self-hosting compiler (a compiler which will compile
+              itself). Cfront would later be abandoned in 1993 when it became
+              troublesome to integrate new options into it, mainly C++
+              exceptions. Even so, Cfront created a significant impact on the
+              implementations of future compilers and also the operating system
+              UNIX.
+            </li>
+            <li>
+              In 1983, the name of the language got modified from C with
+              categories to C++. The ++ operator within the C language is the
+              associate operator for incrementing a variable, which provides
+              some insight into however Stroustrup regarded the programing
+              language. Several new options got additional around this point,
+              the foremost notable of that area unit virtual functions, perform
+              overloading, references with the const keyword, and single-line
+              comments by using the two forward slashes (which may be a feature
+              taken from the language<b> BCPL</b>).
+            </li>
+            <li>
+              In 1985, Stroustrup’s relation to the language entitled The
+              <b>C++ programing language</b> was printed and got released. That
+              very same year, C++ got enforced as an advertisement product and
+              hence starting of it as a commercial element. The programing
+              language wasn’t formally standardized, nevertheless creating the
+              book an essential reference. The programing language was updated
+              once more in 1989 to incorporate protected and static members,
+              still as an associate inheritance from many categories & classes.
+            </li>
+            <li>
+              In 1990, <b>The Annotated C++ manual</b>, which was a reference
+              got released all over. In 1990 only, in the same & identical year,
+              Borland’s <b>Turbo C++ compiler</b> would also be commercially
+              discharged as an advertisement product. Turbo C++ additional an
+              excessiveness of other libraries which might have a substantial
+              impact on C++’s development. Though Turbo C++’s last stable
+              unharness was in 2006, the compiler continues to get widely used.
+            </li>
+            <li>
+              In 1998, the C++ customary advisory & standards committee printed
+              the first international standard for
+              <b>C++ ISO/IEC 14882:1998</b>, which might be informally called
+              C++98. The Annotated C++ manual was aforementioned to be a
+              significant influence within the development of the quality. The
+              quality template library (also known as the Standard Template
+              Library) that began its intellectual construction in 1979 got
+              additionally enclosed in it. In 2003, the committee well-versed
+              multiple issues that were according with their 1998 customary and
+              revised it consequently. The modified language got dubbed as
+              <b>C++03</b>.
+            </li>
+            <li>
+              In 2005, the same committee of C++ discharged a technical report
+              (called as <b>TR1</b>) particularization varied options they were
+              aiming to boost the newest C++ standard. The new rule was
+              informally dubbed <b>C++0x</b> because it was expected to be
+              discharged someday before the tip of the first decade. Ironically,
+              however, the new customary wasn’t fulfilled until mid-2011. Many
+              technical reports were discharged up till then, and a few
+              compilers began adding experimental support for the new options
+              and features.
+            </li>
+            <li>
+              In mid-2011, the new C++ customary (dubbed <b>C++11</b>) got
+              finished. The Boost library project created a substantial impact
+              on the new rule, and a few of the new modules were derived
+              directly from the corresponding Boost libraries. A number of the
+              new options that got included were:
+              <div class="orl">
+                <ol>
+                  <li>
+                    New for loop syntax providing practicality just like foreach
+                    loops in specific different languages
+                  </li>
+                  <li>
+                    Customary threading library (which up till 2011 each C and
+                    C++ were lacking)
+                  </li>
+                  <li>Variadic templates</li>
+                  <li>Automotive vehicle (AUTO) keyword</li>
+                  <li>New instrumentation categories & classes</li>
+                  <li>New C++ time library, atomics support</li>
+                  <li>Comprehensive organization library</li>
+                  <li>Regular expression support</li>
+                  <li>
+                    Higher support for unions and array-initialization lists
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <li>
+              <b>C++17</b> is the latest version of C++. A newer & advanced
+              version of C++ is being released, i.e. C++20.
+            </li>
+            <li>
+              <b
+                >C++ is still the third most popular programming language
+                according to the TIOBE Index’s latest study of 2019</b
+              >, behind Java & C, by knocking out Python. All credits for this
+              go to the newly released C++11 version, which according to the
+              users made it much robust, safer, easier simpler, and more
+              expressive.
+            </li>
+          </ul>
+        </div>
+        <h2 id="feature" class="hd2">Features of C++:</h2>
+        <div class="cont">
+          <p>The five best features of C++ are:</p>
+        </div>
+        <div class="unl">
+          <ul>
+            <li>
+              It is the most primarily used language in competitive programming
+              as far as facts go. Most of the extremely rated coders typically
+              use C++ for cryptography. You’ll see it on any online websites.
+            </li>
+            <li>
+              STL (standard guide library): Its an extremely time-saver for
+              people who recognize C and still writing code for bubble type.
+            </li>
+            <li>Operator overloading</li>
+            <li>
+              Multiple inheritances. Voluminous languages don’t have this
+              facility.
+            </li>
+            <li>
+              Ability to modularize code, encapsulation, and polymorphism after
+              all.
+            </li>
+          </ul>
+          <h2 id="featuresc++" class="hd2">Features of C++</h2>
+
+          <p>C++ is an upgraded version of C programming. The main idea behind creating C++ programming was to add object orientation to the 
+              C programming language. The major upgradations are object-oriented programming methodology, namespace feature, operator overloading, 
+              error & exception handling. The motivation behind object-oriented programming is to try to see the whole world in the form of classes
+              & objects.</p> 
+          
+          <p>There are various features of C++ such as,
+             <ul>
+              <li>Object Oriented</li>
+              <li>Simple</li>
+              <li>Platform Dependent</li>
+              <li>Mid-level programming language</li>
+              <li>Structured programming language</li>
+              <li>Rich Library</li>
+              <li>Memory Management</li>
+              <li>Powerful & Fast </li>
+              <li>Pointers</li>
+              <li>basedCompiler</li>
+              <li>Syntax based language</li>
+             </ul>
+             Let’s discuss each one of them one by one.
+              </p>
+             
+          <h3 id="OOP" class="hd3">Object Oriented Programming language</h3>
+          <p>The main upgradation from C to C++ is object-oriented programming. It follows concept of oops like polymorphism, inheritance, 
+              encapsulation, abstraction. This makes development and maintenance easier. 
+          </p>
+          Let’s briefly understand the concepts of object-oriented programming.
+          <dl>
+          <dt>Class:</dt> 
+          <dd>A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
+          </dd>
+          <dt>Object:</dt> 
+          <dd>It is a basic unit of Object-Oriented Programming and represents the real-life entities. A C++ program creates many objects which interact by invoking methods.
+          </dd>
+          <dt>Polymorphism:</dt> 
+          <dd>Polymorphism refers to the ability of OOPs programming languages to differentiate between entities with the same name efficiently.
+          </dd>
+          <dt>Inheritance:</dt> 
+          <dd>Inheritance is the mechanism in which one class is allowed to inherit the features (fields and methods) of another class.
+          </dd>
+          <dt>Encapsulation:</dt> 
+          <dd>Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.
+          </dd>
+          <dt>Abstraction:</dt> 
+          <dd>Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or the non-essentials units are not displayed to the user.
+          </dd>
+          </dl>
+          
+          <h3 class="hd3">Simple</h3>
+          <p>C++ provides a structured approach wherein you can break the problem into parts and design the solution modularly. It provides you a rich set of library functions that you can use while implementing the solution.
+              If you have worked with C language, then moving to C++ would be a very smooth transitioning. The syntax is almost similar with minute changes. 
+              </p>
+          
+          <h3 class="hd3">Platform Dependent</h3>
+          <p>Platform dependent language means the language in which programs can be executed only on that operating system where it is developed & compiled. It cannot run or execute it on any other operating system. 
+          </p>
+          <p>C++ is a platform-dependent language. Having said that, C++ programs can be executed in many machines with little bit or no change.
+          </p>
+          
+          <h3 class="hd3">Mid-level programming language</h3>
+          <p>C++ has the ability to do both low-level & high-level programming. This is the reason why C++ is known as a mid-level programming 
+              language. When we talk about low-level programming, C++ is used to develop system applications such as the kernel, driver, etc. 
+              </p>
+          
+          <h3 class="hd3">Structured programming language</h3>
+          <p>In C++ programming, the code is modular with the help of functions, classes & objects, and the modules are loosely coupled. 
+              Modular code is easy to understand & modify. This makes C++ a structured programming language. 
+              </p>
+          <h3 class="hd3">Rich Library</h3>
+          <p>Developers have access to lots of in-built functions provided by C++ language. This saves time & makes development fast. 
+              Let’s look at some of the C++ header files & functionalities provided by it.
+              </p>
+          <ul>
+          <li>&lt;iostream&gt; : Contains C++ standard input and output functions</li>
+          <li>&lt;iomanip&gt;  : Contains stream manipulators that format streams of data</li>
+          <li>&lt;cmath&gt;    : Contains math library functions</li>
+          <li>&lt;cstdlib&gt;  : Contains function for conversions of numbers to text and vise versa, memory allocation, random numbers
+               and various other utility functions. </li>
+          <li>&lt;ctime&gt;    : Contains function for manipulating the time and date</li>
+          <li>&lt;fstream&gt;  : Contains function for functions that perform input from files on disk and output to files on disk</li>
+          <li>&lt;memory&gt;   : Contains classes and functions used by the C++ Standard Library to allocate memory to the C++ Standard 
+              Library containers</li>
+          <li>&lt;iterator&gt; : Contains classes for accessing data in the C++ Standard Library containers</li>
+          <li>&lt;algorithm&gt;: Contains functions for manipulating data in C++ Standard Library containers</li>
+          </ul>
+          <h3 class="hd3">Memory Management</h3>
+          C++ supports dynamic memory allocation. You can free the allocated memory at any time. Not only this C++ also provides dynamic memory 
+          management techniques. 
+          
+          
+          <h3 class="hd3">Powerful & Fast</h3>
+          C++ is a fast language as compilation and execution time is less. Also, it has a wide variety of data types, functions & operators.
+          
+          <h3 class="hd3">Pointers</h3>
+          Pointers are variables that store the address of another variable. Pointer points to the memory location of a variable. C++ supports pointer and provides solutions to lots of problems that demand access to memory location.
+          
+          <h3 class="hd3">Compiler based</h3>
+          C++ is a compiler-based programming language.  Without compilation, no C++ program can be executed. The compiler first compiles the C++ program and then it is executed.
+          
+          <h3 class="hd3">Syntax based language</h3>
+          
+          <p>C++ is a language that complies strongly with syntax. Language following rules and regulations very strictly is known as tight 
+              syntax-based language. C, C++, Java, .net are some of the examples. 
+          </p>
+          <p>Now I hope you would have understood different features provided by C++. I hope this blog is informative and added value to you.
+          </p>
+          <p>Thus we have come to an end of this article on ‘Features of C++’. If you wish to learn more, check out the Java Training by Edureka, a trusted online learning company. Edureka’s Java J2EE and SOA training and certification course is designed to train you for both core and advanced Java concepts along with various Java frameworks like Hibernate & Spring.
+          </p>
+          <p>Got a question for us? Please mention it in the comments section of this blog “C++ features” and we will get back to you as soon as possible.
+          </p>
+                
+        </div>
+      </div>
+    </div>
+
+          
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

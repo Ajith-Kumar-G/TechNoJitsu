@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li ><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  <div class="container mainContLang" id="content">
+    <div class="modal-content  container " ><h2 class="hd2" id="modifier">MODIFIER TYPES</h2>
+        <div class="intro">
+            <p>C++ allows the char, int, and double data types to have modifiers preceding them. A
+                modifier is used to alter the meaning of the base type so that it more precisely fits the needs
+                of various situations.<br>
+                The data type modifiers are listed here:</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>signed</li>
+                <li>unsigned</li>
+                <li>long</li>
+                <li>short</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <p>The modifiers signed, unsigned, long, and short can be applied to integer base types. In
+                addition, signed and unsigned can be applied to char, and long can be applied to double.<br>
+                The modifiers signed and unsigned can also be used as prefix to long or short modifiers.
+                For example, unsigned long int.<br>
+                C++ allows a shorthand notation for declaring unsigned, short, or long integers. You can
+                simply use the word unsigned, short, or long.</p>
+        </div>
+        <div class="code">
+            <pre>unsigned x;
+unsigned int y;</pre>
+        </div>
+        <div class="cont">
+            <p>To understand the difference between the way signed and unsigned integer modifiers are
+interpreted by C++, you should run the following short program:<br>example:</p>
+        </div>
+        <div class="code">
+            <pre>#include < iostream >
+using namespace std;
+<i>/* This program shows the difference between
+* signed and unsigned integers.
+*/</i>
+int main()
+{
+    short int i;          <i>// a signed short integer</i>
+    short unsigned int j;<i> // an unsigned short integer</i>
+    j = 50000;
+    i = j;
+    cout << i << " " << j;
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>When this program is run, following is the output:<pre>-15536 50000</pre>The above result is because the bit pattern that represents 50,000 as a short unsigned integer
+                is interpreted as -15,536 by a short.</p>
+        </div>
+        <h3 id="type">Type Qualifiers in C++</h3>
+        <div class="cont">
+            <p>The type qualifiers provide additional information about the variables they precede.</p>
+        </div>
+        <div class="tbl">
+            <table>
+                <tr>
+                    <td><b>Qualifier</b></td> <td><b>meaning</b></td>
+                </tr>
+                <tr>
+                    <td>const</td> <td>Objects of type <b>const</b> cannot be changed by your program during execution</td>
+                </tr>
+                <tr>
+                    <td>volatile</td> <td>The modifier <b>volatile</b> tells the compiler that a variable's value may be
+                        changed in ways not explicitly specified by the program.</td>
+                </tr>
+                <tr>
+                    <td>restrict</td> <td>A pointer qualified by <b>restrict</b> is initially the only means by which the object
+                        it points to can be accessed. Only C99 adds a new type qualifier called
+                        restrict.</td>
+                </tr>
+            </table>
+        </div>
+        <h2 id="storage">STORAGE CLASSES</h2>
+        <div class="cont">
+            <p>A storage class defines the scope (visibility) and life-time of variables and/or functions within
+                a C++ Program. These specifiers precede the type that they modify. There are following
+                storage classes, which can be used in a C++ Program</p>
+        </div>
+        <div class="unl">
+            <ul>
+                <li>auto</li>
+                <li>register</li>
+                <li>static</li>
+                <li>extern</li>
+                <li>mutable</li>
+            </ul>
+        </div>
+        <h3 id="auto">The auto Storage Class</h3>
+        <div class="cont">
+            <p>The auto storage class is the default storage class for all local variables</p>
+        </div>
+        <div class="code">    
+            <pre>
+{
+    int mount;
+    auto int month;
+}
+            </pre>
+        </div>
+        <h3 id="register">The register Storage Class</h3>
+        <div class="cont">
+            <p>The register storage class is used to define local variables that should be stored in a register
+                instead of RAM. This means that the variable has a maximum size equal to the register size
+                (usually one word) and can't have the unary '&' operator applied to it (as it does not have a
+                memory location).</p>
+        </div>
+        <div class="code">
+            <pre>
+{
+    register int miles;
+}           </pre>
+        </div>
+        <div class="cont">
+                <p>The register should only be used for variables that require quick access such as counters. It should also be noted that defining 'register' does not mean that the variable will be stored in a register. It means that it MIGHT be stored in a register depending on hardware and implementation restrictions.</p>
+        </div>
+        <h3 id="static">The static Storage Class</h3>
+        <div class="cont">
+            <p>The static storage class instructs the compiler to keep a local variable in existence during the
+                life-time of the program instead of creating and destroying it each time it comes into and
+                goes out of scope. Therefore, making local variables static allows them to maintain their
+                values between function calls.<br>
+                The static modifier may also be applied to global variables. When this is done, it causes that
+                variable's scope to be restricted to the file in which it is declared.<br>
+                In C++, when static is used on a class data member, it causes only one copy of that member
+                to be shared by all objects of its class.
+        </div>
+        <div class="cont">
+            <p>example:</p>
+        </div>
+        <div class="code">
+            <pre>
+#include < iostream.h >
+<i>// Function declaration</i>
+void func(void);
+static int count = 10; /* Global variable */
+main()
+{
+    while(count--)
+    {
+        func();
+    }
+    return 0;
+}
+<i>// Function definition</i>
+void func( void )
+{
+    static int i = 5; // local static variable
+    i++;
+    std::cout << "i is " << i ;
+    std::cout << " and count is " << count << std::endl;
+}           </pre>
+        </div>
+        <div class="cont">
+            <p>When the above code is compiled and executed, it produces the following result:</p>
+        </div>
+        <div class="code">
+<pre>
+i is 6 and count is 9
+i is 7 and count is 8
+i is 8 and count is 7
+i is 9 and count is 6
+i is 10 and count is 5
+i is 11 and count is 4
+i is 12 and count is 3
+i is 13 and count is 2
+i is 14 and count is 1
+i is 15 and count is 0
+</pre>
+        </div>
+        <h3 id="extern">The extern Storage Class</h3>
+        <div class="cont">
+            <p>The extern storage class is used to give a reference of a global variable that is visible to ALL
+                the program files. When you use 'extern' the variable cannot be initialized as all it does is
+                point the variable name at a storage location that has been previously defined.<br>
+                When you have multiple files and you define a global variable or function, which will be used
+                in other files also, then extern will be used in another file to give reference of defined variable
+                or function. Just for understanding extern is used to declare a global variable or function in
+                another file.<br>
+                The extern modifier is most commonly used when there are two or more files sharing the
+                same global variables or functions as explained below.
+            </p>
+        </div>
+        <h3 id="main.cpp">First File: main.cpp</h3>
+        <div class="cont">
+            <p>example:</p>
+        </div>
+            <div class="code">
+<pre>#include < iostream >
+int count ;
+extern void write_extern();
+main()
+{
+    count = 5;
+    write_extern();
+}
+</pre>
+        </div>
+        <h3 id="support.cpp">Second File: support.cpp</h3>
+        <div class="cont">
+            <p>example:</p>
+        </div>
+        <div class="code">
+<pre>#include <iostream>
+extern int count;
+void write_extern(void)
+{
+    std::cout << "Count is " << count << std::endl;
+}</pre>
+        </div>
+        <h3 id="mutable">The mutable Storage Class</h3>
+        <div class="cont">
+            <p>The <b>mutable</b> specifier applies only to class objects, which are discussed later in this tutorial.
+                It allows a member of an object to override const member function. That is, a mutable
+                member can be modified by a const member function.</p>
+        </div>
+    </div>
+</div>
+         
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+  <script>AOS.init();</script>
+</body>
+
+</html>

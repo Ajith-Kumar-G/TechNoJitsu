@@ -1,0 +1,76 @@
+.artMain {
+    margin: auto;
+    width: 100% !important;
+    height: 500px !important;
+    padding-top: 20px;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+footer {
+    transform: translateY(250px);
+}
+
+.item {
+    height: 600px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.item active {
+    border-radius: 20px;
+}
+
+.artMainCont {
+    color: rgb(249, 253, 252) !important;
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+.artMaintitle {
+    mix-blend-mode: multiply;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+.ArtMain {
+    background-color: aliceblue;
+    border-radius: 18px;
+    transform: translateY(34px);
+    margin-bottom: -85px;
+}
+
+.right,
+.left {
+    border-radius: 20px;
+}
+
+.artTextCont {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+}

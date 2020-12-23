@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+  
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+  <div class="container mainContLang" id="content">
+    <div class="modal-content  container " ><h2 class="hd2" id="control">CONTROL STATEMENTS</h2>
+  
+        <h2 id="control">Control Structures </h2>
+        <div class="cont">
+            <p>A program is usually not limited to a linear sequence of instructions. During its process it may bifurcate, repeat
+                code or take decisions. For that purpose, C++ provides control structures that serve to specify what has to be done
+                by our program, when and under which circumstances.<br>
+                With the introduction of control structures we are going to have to introduce a new concept: the compoundstatement or block. A block is a group of statements which are separated by semicolons (;) like all C++
+                statements, but grouped together in a block enclosed in braces: { }: 
+                </p>
+        </div>
+        <div class="code">
+            <pre>{ statement1; statement2; statement3; }</pre>
+        </div>
+        <h3 id="if">Conditional structure: if and else</h3>
+        <div class="cont"><p>The if keyword is used to execute a statement or block only if a condition is fulfilled. Its form is: </p></div>
+        <div class="code">
+            <pre>if (condition) statement</pre>
+        </div>
+        <div class="cont">
+            <p>Where condition is the expression that is being evaluated. If this condition is true, statement is executed. If it is
+                false, statement is ignored (not executed) and the program continues right after this conditional structure.<br>
+                For example, the following code fragment prints x is 100 only if the value stored in the x variable is indeed 100: </p>
+        </div>
+        <div class="code">
+            <pre>if (x == 100)
+cout << "x is 100";
+               </pre>
+        </div>
+        <div class="cont">
+            <p>If we want more than a single statement to be executed in case that the condition is true we can specify a block
+                using braces { }: </p>
+        </div>
+        <div class="code">
+<pre>if (x == 100)
+{
+    cout << "x is ";
+    cout << x;
+} </pre>
+        </div>
+        <div class="cont">
+            <p>We can additionally specify what we want to happen if the condition is not fulfilled by using the keyword else. Its
+                form used in conjunction with if is: </p>
+        </div>
+        <div class="code">
+<pre>if (condition) statement1 else statement2</pre>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre>if (x == 100)
+    cout << "x is 100";
+else
+    cout << "x is not 100";</pre>
+        </div>
+        <div class="cont">
+            <p>prints on the screen x is 100 if indeed x has a value of 100, but if it has not -and only if not- it prints out x is
+                not 100. </p>
+        </div>
+        <div class="cont">The if + else structures can be concatenated with the intention of verifying a range of values. The following
+            example shows its use telling if the value currently stored in x is positive, negative or none of them (i.e. zero): </div>
+        <div class="code">
+<pre>if (x > 0)
+    cout << "x is positive";
+else if (x < 0)
+    cout << "x is negative";
+else
+    cout << "x is 0"; </pre>
+        </div>
+        <div class="cont">
+            <p>Remember that in case that we want more than a single statement to be executed, we must group them in a block
+                by enclosing them in braces { }. </p>
+        </div>
+        <h3 id="loop">Iteration structures (loops) </h3>
+        <div class="cont">
+            <p>Loops have as purpose to repeat a statement a certain number of times or while a condition is fulfilled. </p>
+        </div>
+        <h3 id="while">The while loop</h3>
+        <div class="cont"><p>Its format is:</p></div>
+        <div class="code">
+            <pre>while (expression) 
+{statements}</pre>
+        </div>
+        <div class="cont">
+            <p>and its functionality is simply to repeat statement while the condition set in expression is true.
+                For example, we are going to make a program to countdown using a while-loop</p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// custom countdown using while</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    int n;
+    cout << "Enter the starting number > ";
+    cin >> n;
+    while (n>0) {
+        cout << n << ", ";
+        --n;
+    }
+    cout << "FIRE!\n";
+    return 0;
+} 
+</pre><p>output:</p>
+<pre>Enter the starting number > 8
+8, 7, 6, 5, 4, 3, 2, 1, FIRE! </pre>
+        </div>
+        <h3 id="dowhile">The do-while loop</h3>
+        <div class="cont">
+            <p>Its format is: 
+            </p>
+        </div>
+        <div class="code">
+            <pre>do 
+{statement}
+while(condition);</pre>
+        </div>
+        <div class="cont">
+            <p>Its functionality is exactly the same as the while loop, except that condition in the do-while loop is evaluated after
+                the execution of statement instead of before, granting at least one execution of statement even if condition is
+                never fulfilled. For example, the following example program echoes any number you enter until you enter 0. </p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// number echoer</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    unsigned long n;
+    do {
+        cout << "Enter number (0 to end): ";
+        cin >> n;
+        cout << "You entered: " << n << "\n";
+    } while (n != 0);
+    return 0;
+}</pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+<pre>Enter number (0 to end): 12345
+You entered: 12345
+Enter number (0 to end): 160277
+You entered: 160277
+Enter number (0 to end): 0
+You entered: 0 </pre>
+        </div>
+        <h3 id="for">The for loop</h3>
+        <div class="cont">
+            <p>Its format is: </p>
+        </div>
+        <div class="code">
+            <pre>for (initialization; condition; increase) statement;</pre>
+        </div>
+        <div class="cont">
+            <p>and its main function is to repeat statement while condition remains true, like the while loop. But in addition, the
+                for loop provides specific locations to contain an initialization statement and an increase statement. So this
+                loop is specially designed to perform a repetitive action with a counter which is initialized and increased on each
+                iteration.</p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// countdown using a for loop</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    for (int n=10; n>0; n--) {
+    cout << n << ", ";
+    }
+    cout << "FIRE!\n";
+    return 0;
+} </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+<pre>10, 9, 8, 7, 6, 5, 4, 3, 2, 1, FIRE! </pre>
+        </div>
+        <h3 id="jump">Jump statements. </h3>
+        <h3 id="break">The break statement </h3>
+        <div clss="cont">
+            <p>Using break we can leave a loop even if the condition for its end is not fulfilled. It can be used to end an infinite
+                loop, or to force it to end before its natural end. For example, we are going to stop the count down before its
+                natural end (maybe because of an engine check failure?): </p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// break loop example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    int n;
+    for (n=10; n>0; n--)
+    {
+        cont << n << ", ";
+        if (n==3)
+        {
+            cout << "countdown aborted!";
+            break;
+        }
+    }
+     return 0;
+} 
+    </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+    <pre>10, 9, 8, 7, 6, 5, 4, 3, countdown aborted! </pre>
+        </div>
+        <h3 id="continue">The continue statement </h3>
+        <div clss="cont">
+            <p>The continue statement causes the program to skip the rest of the loop in the current iteration as if the end of the
+                statement block had been reached, causing it to jump to the start of the following iteration. For example, we are
+                going to skip the number 5 in our countdown: </p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// continue loop example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    for (int n=10; n>0; n--) {
+        if (n==5) continue;
+        cout << n << ", ";
+    }
+    cout << "FIRE!\n";
+    return 0;
+} 
+    </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+    <pre>10, 9, 8, 7, 6, 4, 3, 2, 1, FIRE! </pre>
+        </div>
+        <h3 id="goto">The goto statement </h3>
+        <div clss="cont">
+            <p>goto allows to make an absolute jump to another point in the program. You should use this feature with caution
+                since its execution causes an unconditional jump ignoring any type of nesting limitations.
+                The destination point is identified by a label, which is then used as an argument for the goto statement. A label is
+                made of a valid identifier followed by a colon (:). 
+                </p>
+        </div>
+        <div class="cont">
+            <p> example: </p>
+        </div>
+        <div class="code">
+<pre><i>// goto loop example</i>
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+    int n=10;
+    loop:
+    cout << n << ", ";
+    n--;
+    if (n>0) goto loop;
+    cout << "FIRE!\n";
+    return 0;
+} 
+    </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+    <pre>10, 9, 8, 7, 6, 5, 4, 3, 2, 1, FIRE! </pre>
+        </div>
+        <h3 id="exit">the exit function</h3>
+        <div class="cont">
+            <p>exit is a function defined in the cstdlib library.
+                The purpose of exit is to terminate the current program with a specific exit code. Its prototype is: </p>
+        </div>
+        <div class="code">
+            <pre>void exit (int exitcode);</pre>
+        </div>
+        <h3 id="switch">The selective structure: switch.</h3>
+        <div class="cont">
+            <p>The syntax of the switch statement is a bit peculiar. Its objective is to check several possible constant values for an
+                expression. Something similar to what we did at the beginning of this section with the concatenation of several if
+                and else if instructions. Its form is the following: </p>
+        </div>
+        <div class="code">
+<pre>switch (expression)
+{
+    case constant1:
+        group of statements 1;
+        break;
+    case constant2:
+        group of statements 2;
+        break;
+     .
+     .
+     .
+    default:
+        default group of statements
+} </pre>
+        </div>
+        <div class="cont">
+            <p>It works in the following way: switch evaluates expression and checks if it is equivalent to constant1, if it is, it
+                executes group of statements 1 until it finds the break statement. When it finds this break statement the
+                program jumps to the end of the switch selective structure.<br>
+                If expression was not equal to constant1 it will be checked against constant2. If it is equal to this, it will execute
+                group of statements 2 until a break keyword is found, and then will jump to the end of the switch selective
+                structure.<br>
+                Finally, if the value of expression did not match any of the previously specified constants (you can include as
+                many case labels as values you want to check), the program will execute the statements included after the
+                default: label, if it exists (since it is optional).<br>Both of the following code fragments have the same behavior:  </p>
+        </div>
+
+<b>switch example</b>
+<div class="code">
+<pre>switch (x) {
+    case 1:
+        cout << "x is 1";
+        break;
+    case 2:
+        cout << "x is 2";
+        break;
+    default:
+        cout << "value of x unknown";
+    }</pre></div>
+
+<div class="code">
+<b>if-else equivalent </b>
+<pre>if (x == 1) {
+    cout << "x is 1";
+    }
+else if (x == 2) {
+    cout << "x is 2";
+    }
+else {
+    cout << "value of x unknown";
+    } </pre>
+  
+</div>
+        </div>
+    </div>
+</div>
+         
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+    <div class="jumbotron text-md-left">
+      <span class="ribbonfootz"
+        ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+      >
+      <div class="row">
+        <div class="col-md-5">
+          <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+  
+          <h3 class="footer-text text-left">TechNoJitsu:</h3>
+          <p id="footercontent">
+            Technojitsu is an interactive, ever growing platform to design and
+            develop projects, to acquire new and essential tech aspects
+            without leaving behind the essential building blocks i.e.
+            languages . All in all a tech pill to enhance and channel your
+            creative & reasoning mind in the right output stream.
+          </p>
+        </div>
+  
+        <div class="col-md-2 " id="footert">
+          <h4 class="text-uppercase text-left  footCol">Projects</h4>
+          <ul class="list-unstyled text-left">
+            <li>
+              <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+            </li>
+            <li>
+              <a
+                href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+                >Input Keypad with Led Matrix display
+              </a>
+            </li>
+            <li>
+              <a href="../../../../html/Projects/Arduino/Joystick module.html"
+                >Joystick module</a
+              >
+            </li>
+            <li>
+              <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 ">
+          <h4 class="text-uppercase text-left  footCol">Articles</h4>
+          <ul class="list-unstyled text-left">
+            <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+            <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+            <li><div style="color: #337ab7;">Coming Soon!</div></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+          <ul class="list-unstyled text-left">
+            <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+            <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+            <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" id="footerLinksTxt">
+        <div class="col-md-7" id="footerLinksTxt">
+          <p class="footer-text">Share your thoughts, and leave a Like</p>
+        </div>
+        <div class="col-md-5" id="footerLinks">
+          <p class="text-left">
+            <a
+              href="https://facebook.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              class="social-round-icon orange-round-icon fa-icon"
+              title=""
+            >
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-copyright text-center" id="cpyrgt">
+      © 2020 Copyright:
+      <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+    </div>
+  </footer>
+  <!--Footer-->
+  
+  <script>AOS.init();</script>
+</body>
+
+</html>

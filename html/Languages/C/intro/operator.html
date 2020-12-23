@@ -1,69 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../css/Layout.css" />
+  
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+    <!--Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../../../../css/Main.css" />
-  <link rel="stylesheet" href="../../../../css/Layout.css" />
-  <link rel="stylesheet" href="animations.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <link rel="icon" href="log2.png" type="image/x-icon" />
-  <!--Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
-  <!--Fonts-->
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+      integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script>
-    src =
-      "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js";
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
-    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-  <title>TechnoJitsu</title>
-</head>
-
-<body>
-  <!-- horizontal navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid" id="navtop">
-      <div class="navbar-header">
-        <a id="txtdeco" href="#">
-          <img class="img img-rounded imgstat" alt="Navbar_logo" src="Log.png" width="50" height="50"
-            class="d-inline-block align-top" />
-        </a>
-        <span><a id="head" href="# ">TechnoJitsu</a></span>
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default" id="mNavbar">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="../../../../TechNoJitsu.html">
+            <img
+              class="img img-rounded imgstat"
+              alt="Navbar_logo"
+              src="../../../../img/icon/Log.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="vline">
+            <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="vline"><a href="#">PROJECTS</a></li>
-        <li><a href="#">ARTICLES</a></li>
-
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            LANG-GUIDES</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">C++</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">Java</a></li>
-          </ul>
-        </li>
-
-        <li class="vline">
-          <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-        </li>
-        <li>
-          <a href="Form.html"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<h2 class="hd2" id="operator"> C OPERATOR</h2>
+    </nav>
+  <!-- horizontal navbar -->
+  <ul class="nav navbar-left flex-column sideLeft">
+    <li><a href="../../../../html/Languages/C/intro/historyofc.html">C History</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/partsofc.html">Parts of C</a></li>
+    <li><a href="../../../../html/Languages/C/intro/datatypes.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C/intro/variableandconstants.html">Variable & Constants</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C/intro/operator.html">Operator</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/decisionmaking.html">Decision Making</a></li>
+    <li><a href="../../../../html/Languages/C/intro/loop.html">Looping</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/functions.html">Functions</a></li>
+    <li><a href="../../../../html/Languages/C/intro/scope.html">Variable Scope</a></li>
+    <li><a href="../../../../html/Languages/C/intro/array.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C/intro/union.html">Structures</a></li>
+    <li><a href="../../../../html/Languages/C/intro/file.html">Files</a></li>
+    <li ><a href="../../../../html/Languages/C/intro/preprocessors.html">Preprocessor</a></li>
+  </ul>
+  <div class="container  mainContLang">
+    <div class="modal-content  container" ><h1 class="hd1" id="operator"> C OPERATOR</h1>
+    
 <div class="cont">	<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C language is rich in built-in operators and provides the following types of operators:</p></div>
 <div class="unl">
 <ul >
@@ -75,19 +109,20 @@
 <li>Misc Operators </li> 
 </ul>
 <p>This tutorial will explain the arithmetic, relational, logical, bitwise, assignment and other operators one by one. </p></div><br>
-<h3 class="Aoperator">Arithmetic Operators</h2>
+<h3 class="Aoperator">Arithmetic Operators</h3>
 <div class="cont">
 <p>Following table shows all the arithmetic operators supported by C language. Assume variable A holds 10 and variable B holds 20, then:</p></div>
-<div><table>
+<div><table  class="table" border="2">
 <tr>
-<td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
+<th scope="col"><strong>Operator</strong></th> <th scope="col"><strong>Description</strong></th> <th scope="col"><strong>Example</strong></th></tr>
 <tr><td>+</td> <td>Adds two operands</td> <td>A + B will give 30 </td></tr>
 <tr><td>-</td> <td>Subtracts second operand from the first</td> <td>A - B will give -10 </td></tr>
 <tr><td>*</td> <td>Multiplies both operands</td> <td>A * B will give 200 </td></tr>
 <tr><td>/</td> <td>Divides numerator by de-numerator </td> <td>B / A will give 2 </td></tr>
 <tr><td>%</td> <td>Modulus Operator and remainder of after an integer division</td> <td>B % A will give 0 
 CHAPTER</td></tr>
-<tr><td>%</td> <td>Decrements operator decreases integer value by one</td> <td>B % A will give 0 </td></tr></table></div>
+<tr><td>%</td> <td>Decrements operator decreases integer value by one</td> <td>B % A will give 0 </td></tr>
+</table></div>
 <div class="cont"><p>Try the following example to understand all the arithmetic operators available in C programming language: </p></div>
 <div class="code"><pre>
 #include <stdio.h> 
@@ -111,12 +146,19 @@ main()
     }
 </pre></div>
 <div class="cont" ><p>When you compile and execute the above program, it produces the following result:</p>
-<p>Line 1 - Value of c is 31<br>Line 2 - Value of c is 11 <br>Line 3 - Value of c is 210 <br>Line 4 - Value of c is 2 <br>Line 5 - Value of c is 1 
-    <br>Line 6 - Value of c is 21 <br>Line 7 - Value of c is 22</p><br></div> 
+<div class="code">
+<pre>Line 1 - Value of c is 31
+Line 2 - Value of c is 11 
+Line 3 - Value of c is 210 
+Line 4 - Value of c is 2 
+Line 5 - Value of c is 1 
+Line 6 - Value of c is 21 
+Line 7 - Value of c is 22</pre></div> 
+</div> 
 <h2 class="hd2" id="Roperator">Relational Operator</h2>
 <div class="cont">
 <p>Following table shows all the relational operators supported by C language. Assume variable A holds 10 and variable B holds 20, then:</p></div>
-<div><table>
+<div><table  class="table" border="2">
 <tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
 <td>==</td> <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td> <td>(A == B) is not true.</td></tr>
 <tr>
@@ -172,15 +214,25 @@ printf("Line 5 - b is either greater than  or equal to b\n");
 }</pre></div> 
 <div class="cont">
 <p>When you compile and execute the above program, it produces the following result:</p>
-<p> Line 1 - a is not equal to b <br>Line 2 - a is not less than b <br>Line 3 - a is greater than b <br>Line 4 - a is either less than or equal to  b <br>Line 5 - b is either greater than  or equal to b </p></div>
+<div class="code">
+<pre>
+Line 1 - a is not equal to b 
+Line 2 - a is not less than b 
+Line 3 - a is greater than b 
+Line 4 - a is either less than or equal to  b 
+Line 5 - b is either greater than  or equal to b 
+</pre>
+</div>
+</div>
 <h2 class="hd2" id="Loperator">Logical Operators </h2>
-<div class="cont"></div>
+<div class="cont">
 <p>Following table shows all the logical operators supported by C language. Assume variable A holds 1 and variable B holds 0, then: </p></div>
-<div></div><table>
+<table  class="table" border="2">
 <tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
 <tr><td>&&</td> <td>Called Logical AND operator. If both the operands are non-zero, then condition becomes true. </td> <td>(A && B) is false. </td></tr>
 <tr><td>||</td><td>Called Logical OR Operator. If any of the two operands is nonzero, then condition becomes true.</td><td>(A || B) is true</td></tr>
-<tr><td>!</td><td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false</td><td>!(A && B) is true.</td> </tr></table></div>
+<tr><td>!</td><td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then
+   Logical NOT operator will make false</td><td>!(A && B) is true.</td> </tr></table>
 <p>Try the following example to understand all the logical operators available in C programming language: </p>
 <div class="code"><pre>
 #include <stdio.h> 
@@ -215,15 +267,31 @@ printf("Line 4 - Condition is true\n");
 }
 </pre></div>
 <p>When you compile and execute the above program, it produces the following result:</p>
-<div class="cont"><p> Line 1 - Condition is true <br>Line 2 - Condition is true <br>Line 3 - Condition is not true <br>Line 4 - Condition is true</p></div>
+<div class="code">
+<pre>
+Line 1 - Condition is true 
+Line 2 - Condition is true 
+Line 3 - Condition is not true 
+Line 4 - Condition is true
+</pre>
+</div>
 
-</pre></div>
-<p>When you compile and execute the above program, it produces the following result: </p> 
-<div ><p>Line 1 - Value of c is 12<br>Line 2 - Value of c is 61 <br>Line 3 - Value of c is 49 <br>Line 4 - Value of c is -61 <br>Line 5 - Value of c is 240 <br>Line 6 - Value of c is 15</p> </div>
+
+<p>When you compile and execute the above program, it produces the following result: </p>
+<div class="code">
+<pre>
+Line 1 - Value of c is 12
+Line 2 - Value of c is 61 
+Line 3 - Value of c is 49 
+Line 4 - Value of c is -61 
+Line 5 - Value of c is 240 
+Line 6 - Value of c is 15
+</pre>
+</div>
 <h2 class="hd2" id="Assignoperator">Assignment Operators </h2>
-<div class="cont"></div>
+<div class="cont">
 <p>There are following assignment operators supported by C language: </p></div>
-<div><table >
+<div><table  class="table" border="2" >
 <tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
 <tr><td>=</td> <td>Simple assignment operator, Assigns values from right side operands to left side operand </td> <td>C = A + B will assign value of A + B into C </td></tr>
 <tr><td>+=</td> <td>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand </td> <td>C += A is equivalent to C = C + A </td></tr>
@@ -273,11 +341,25 @@ main()
 }
 </pre></div>
 <p>When you compile and execute the above program, it produces the following result:</p>
-<div ><p>Line 1 - =  Operator Example, Value of c = 21<br> Line 2 - += Operator Example, Value of c = 42<br> Line 3 - -= Operator Example, Value of c = 21<br> Line 4 - *= Operator Example, Value of c = 441<br> Line 5 - /= Operator Example, Value of c = 21<br> Line 6 - %= Operator Example, Value of c = 11<br> Line 7 - <<= Operator Example, Value of c = 44<br> Line 8 - >>= Operator Example, Value of c = 11<br>Line 9 - &= Operator Example, Value of c = 2<br> Line 10 - ^= Operator Example, Value of c = 0<br> Line 11 - |= Operator Example, Value of c = 2 </p></div>
+<div class="code">
+<pre>
+  Line 1 - =  Operator Example, Value of c = 21
+  Line 2 - += Operator Example, Value of c = 42
+  Line 3 - -= Operator Example, Value of c = 21
+  Line 4 - *= Operator Example, Value of c = 441
+  Line 5 - /= Operator Example, Value of c = 21
+  Line 6 - %= Operator Example, Value of c = 11
+  Line 7 - <<= Operator Example, Value of c = 44
+  Line 8 - >>= Operator Example, Value of c = 11
+  Line 9 - &= Operator Example, Value of c = 2
+  Line 10 - ^= Operator Example, Value of c = 0
+  Line 11 - |= Operator Example, Value of c = 2 
+</pre>
+</div>
 <h2 class="hd2" id="miscoperator">Misc Operators >> sizeof & ternary </h2>
 <div class="cont">
 <p>There are few other important operators including sizeof and ? : supported by C Language. </p></div>
-<div><table border="2">
+<div><table  class="table" border="2">
 <tr><td><strong>Operator</strong></td> <td><strong>Description</strong></td> <td><strong>Example</strong></td></tr>
 <tr><td>sizeof()</td> <td>Returns the size of an variable. </td> <td>sizeof(a), where a is integer, will return 4. </td></tr>
 <tr><td>&</td> <td>Returns the address of an variable. </td> <td>&a; will give actual address of the variable.</td></tr>
@@ -285,7 +367,7 @@ main()
 <tr><td>?:</td> <td>Conditional Expression</td> <td>If Condition is true ? Then value X : Otherwise value Y </td></tr></table></div>
 <h2 class="hd2" id="opprecedence">Operators Precedence in C</h2>
 <p>Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator.<br> For example, x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.<br> Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.</p>
-<div ><table>
+<div ><table  class="table" border="2">
 <tr><td><strong>category</strong></td> <td><strong>Operator</strong></td> <td><strong>associativity</strong></td></tr>
 <tr><td>postfix</td> <td>() [] -> ++ --</td> <td>Left to right</td></tr>
 <tr><td>unary</td> <td>+ - ! ~ ++ -- (type)*& sizeof</td> <td>right to left</td></tr>
@@ -326,58 +408,116 @@ main()
 }
 </pre></div>
 <p>When you compile and execute the above program, it produces the following result: </p>
-<div><p>Value of (a + b) * c / d is : 90<br> Value of ((a + b) * c) / d is  : 90<br> Value of (a + b) * (c / d) is  : 90<br> Value of a + (b * c) / d is  : 50 </p></div>
+<div class="code">
+<pre>
+Value of (a + b) * c / d is : 90
+Value of ((a + b) * c) / d is  : 90
+Value of (a + b) * (c / d) is  : 90
+Value of a + (b * c) / d is  : 50
+</pre></div>
+</div>
+</div>
+  <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
 
-  <!--Footer-->
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
 
-  <footer class="footer-content">
-    <div class="jumbotron text-md-left">
-      <div class="row">
-        <div class="col-md-5 " >
-          <img src="Log.png" alt="footer-img" id="footer-img">
-          
-          <h3 class="footer-text text-left ">TechNoJitsu:</h3>
-          <p id="footercontent">
-           Derek Content HERE.................................................
-          </p>
-        </div>
-      
-        <div class="col-md-2" id="footert">
-          <h4 class="text-uppercase  ">Projects</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Articles</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-            <li><a href="#">########</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h4 class="text-uppercase ">Language Guides</h4>
-          <ul class="list-unstyled text-center">
-            <li><a href="#">C</a></li>
-            <li><a href="#">C++</a></li>
-            <li><a href="#">Java</a></li>
-          </ul>
-        </div>
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
       </div>
     </div>
- 
-
-
-    <div class="footer-copyright text-center">
-      © 2020 Copyright:
-      <a href="TechNoJitsu.html"> TechNoJitsu.com</a>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
     </div>
- 
-  </footer>
-  <!--Footer-->
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+<script>AOS.init();</script>
 </body>
 
 </html>
+

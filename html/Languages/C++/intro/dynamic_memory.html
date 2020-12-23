@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../../css/langGuide.css" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+
+   <ul class="nav navbar-left flex-column sideLeft ">
+    <li ><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++ History</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basicofc++.html">Parts of C++</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/data_types.html">Data Types</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/variable.html">Variables</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/operator_cpp.html">Operator</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/control_structure.html">Control Structure</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function1.html">Functions Part 1</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/function2.html">Functions Part 2</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/friendfun_inheritance.html">Friend Functions</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/modifier.html">Modifiers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/arrays.html">Arrays</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/pointer.html">Pointers</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/classes.html">Classes</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/basic_input_output.html">Basic I/O</a></li>
+    <li class="vline"><a href="../../../../html/Languages/C++/intro/dynamic_memory.html">Dynamic Memory</a></li>
+    <li><a href="../../../../html/Languages/C++/intro/constants.html">Literals Preprocessor</a></li>
+  </ul>
+
+  <div class="container mainContLang" id="content">
+    <div class="modal-content  container " ><h2 class="hd2" id="dynamicmemory">DYNAMIC MEMORY</h2>
+        <div class="cont">
+            <p>Until now, in all our programs, we have only had as much memory available as we declared for our variables,
+                having the size of all of them to be determined in the source code, before the execution of the program. But, what
+                if we need a variable amount of memory that can only be determined during runtime? For example, in the case
+                that we need some user input to determine the necessary amount of memory space. <br>The answer is dynamic memory, for which C++ integrates the operators <em>new</em> and <em>delete</em>. 
+            </p>
+        </div>
+        <h3 id="new">Operators new and new[] </h3>
+        <div class="cont">
+            <p>In order to request dynamic memory we use the operator new. new is followed by a data type specifier and -if a
+                sequence of more than one element is required- the number of these within brackets []. It returns a pointer to the
+                beginning of the new block of memory allocated. Its form is:                 
+            </p>
+        </div>
+        <div class="code">
+            <pre>pointer = new type
+pointer = new type [number_of_elements]
+            </pre>
+        </div>
+        <div class="cont">
+            <p>The first expression is used to allocate memory to contain one single element of type type. The second one is used
+                to assign a block (an array) of elements of type type, where number_of_elements is an integer value representing
+                the amount of these. For example: 
+            </p>
+        </div>
+        <div class="code">
+            <pre>int * bobby;
+bobby = new int [5];
+            </pre>
+        </div>
+        <div class="cont">
+            <p>C++ provides two standard methods to check if the allocation was successful:<br>
+                One is by handling exceptions. Using this method an exception of type bad_alloc is thrown when the allocation
+                fails. Exceptions are a powerful C++ feature explained later in these tutorials. But for now you should know that if
+                this exception is thrown and it is not handled by a specific handler, the program execution is terminated. <br>This exception method is the default method used by new, and is the one used in a declaration like: 
+            </p>
+        </div>
+        <div class="code">
+            <pre>bobby = new int [5]; <i>// if it fails an exception is thrown</i>
+            </pre>
+        </div>
+        <div class="cont">
+            <p>The other method is known as <em>nothrow</em>, and what happens when it is used is that when a memory allocation fails,
+                instead of throwing a <em>bad_alloc</em> exception or terminating the program, the pointer returned by new is a null
+                pointer, and the program continues its execution.<br>This method can be specified by using a special object called <em>nothrow</em>, declared in header <em>< new ></new></em>, as argument for
+                    <em>new</em>: 
+            </p>
+        </div>
+        <div class="code">
+            <pre>bobby = new (nothrow) int [5]; 
+            </pre>
+        </div>
+        <h3 id="delete">Operators delete and delete[] </h3>
+        <div class="cont">
+            <p>Since the necessity of dynamic memory is usually limited to specific moments within a program, once it is no
+                longer needed it should be freed so that the memory becomes available again for other requests of dynamic
+                memory. This is the purpose of the operator delete, whose format is:
+            </p>
+        </div>
+        <div class="code">
+            <pre>delete pointer;
+delete [] pointer;
+            </pre>
+        </div>
+        <div class="code">
+<pre>
+#include &lt;iostream&gt;
+#include <new>
+using namespace std;
+int main ()
+{
+    int i,n;
+    int * p;
+    cout << "How many numbers would you like to type? ";
+    cin >> i;
+    p= new (nothrow) int[i];
+    if (p == 0)
+        cout << "Error: memory could not be allocated";
+    else
+    {
+        for (n=0; n<i; n++)
+        {
+            cout << "Enter number: ";
+            cin >> p[n];
+        }
+        cout << "You have entered: ";
+        for (n=0; n < i; n++)
+            cout << p[n] << ", ";
+        delete[] p;
+    }
+    return 0;
+} 
+    </pre>
+        </div>
+        <div class="cont">
+            <p>output:</p>
+        </div>
+        <div class="code">
+<pre>How many numbers would you like to type? 5
+Enter number : 75
+Enter number : 436
+Enter number : 1067
+Enter number : 8
+Enter number : 32
+You have entered: 75, 436, 1067, 8, 32,</pre>
+        </div>
+        <h3 id="ansi">Dynamic memory in ANSI-C </h3>
+        <div class="cont">
+            <p>Operators new and delete are exclusive of C++. They are not available in the C language. But using pure C
+                language and its library, dynamic memory can also be used through the functions malloc, calloc, realloc and free,
+                which are also available in C++ including the < cstdlib > header file (see cstdlib for more info).<br>
+                The memory blocks allocated by these functions are not necessarily compatible with those returned by new, so
+                each one should be manipulated with its own set of functions or operators. 
+            </p>
+        </div>
+    </div>
+</div>
+         
+   <script src="../../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+  <script>AOS.init();</script>
+</body>
+
+</html>

@@ -1,47 +1,61 @@
-body{
+body {
     overflow-x: hidden;
 }
-.outerSign{
+
+.outerSign {
     padding: 10%;
     position: absolute;
     transform: translateX(150px);
     vertical-align: middle;
-    padding-top: 30px!important;
+    padding-top: 30px !important;
 }
-.signUpHeader{
+
+.signUpHeader {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
     background: -webkit-gradient(linear, left top, right top, from(rgb(182, 245, 37)), to(rgb(240, 188, 46)));
-     border-radius: 68px 150px 68px 150px;
-   
+    border-radius: 68px 150px 68px 150px;
+
     position: relative;
     max-width: 300px;
     padding: 5px 40px;
 }
-.innerSign{
-    margin-top:20px;
+
+.innerSign {
+    margin-top: 20px;
     padding: 15px;
-    padding-top: 50px!important;
-    background:whitesmoke!important;
+    padding-top: 50px !important;
+    background: whitesmoke !important;
 
 }
-#profileUpload{
-  width: 100px;
-  height: 100px;
+
+#profileUpload {
+    width: 100px;
+    height: 100px;
 }
-.profileUpload{
+
+.profileUpload {
     margin-bottom: -34px;
 }
-#profilePic{
+
+#profilePic {
     font-size: small;
     margin: 10px 10px;
     padding-block-start: inherit;
-    transform: translate(106px,-60px); 
-   
-}
-fieldset{
-    border: 0px;
-    outline:none!important;
+    transform: translate(106px, -60px);
+
 }
 
-  
+fieldset {
+    border: 0px;
+    outline: none !important;
+}
+
+.modal-content {
+    border: none !important;
+}
+
+.required::after {
+    color: red;
+    content: " *";
+}

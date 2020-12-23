@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../../css/Layout.css" />
+  <link rel="stylesheet" href="../../../css/projectIds.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="icon" href="../../../img/icon/log2.png" type="image/x-icon" />
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya Sans SC" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ccb26cf81.js" crossorigin="anonymous"></script>
+
+  <!--Fonts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"
+    integrity="sha512-Jen3K+iRN4thSYDEyHwUGYFxNslAUCTV9P/g0k836eaoq/tplAUCzRPUyDxKUjBlKdJhamW7S3u7NWSGEEdIQw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>TechnoJitsu</title>
+</head>
+
+<body>
+  <!-- horizontal navbar -->
+  <nav class="navbar navbar-default" id="mNavbar">
+    <div class="container-fluid" id="navtop">
+      <div class="navbar-header">
+        <a id="txtdeco" href="../../../TechNoJitsu.html">
+          <img
+            class="img img-rounded imgstat"
+            alt="Navbar_logo"
+            src="../../../img/icon/Log.png"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <span><a id="head" href="../../../TechNoJitsu.html ">TechnoJitsu</a></span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="vline">
+          <a href="../../../html/Projects/projectsMain.html">PROJECTS</a>
+        </li>
+        <li><a href="../../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+        <li><a href="../../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+        <li class="vline">
+          <a href="../../../html/FORMS/sign_up.html" class="LoGup" 
+            ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+          >
+        </li>
+        <li>
+          <a href="../../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+            ><span class="glyphicon glyphicon-log-in "></span> Login</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!-- horizontal navbar -->
+    <!--Continue here-->
+    <div class="container proCont" bottom-margin="25px">
+      <header>
+        <h1>MAC Address Changer</h1>
+      </header>
+      <div class="content">
+        <p>
+          This is a novice level UNIX project that changes the MAC address of the specified network interface. This tool was developed by B V Vineeth.
+        </p>
+        <p class="note" id="requirements">
+          To run this tool, you will need a Linux distro / Mac OS, or any UNIX Operating System as this tool calls certain system subprocesses specific to UNIX systems.
+          Along with a UNIX system, you will also need python pakages to compile and execute commands.
+        </p>
+        <p class="note" id="source_code">
+          You can find this project here: <a target="_blank" href="https://github.com/vinsdragonis/MAC-Address-Changer">MAC address changer</a>.
+        </p>
+        <p class="note" id="basics">
+          The MAC address changer is a simple tool that calls certain system subroutines to change the MAC address of the given network interface. In order to use this tool, you need to know a few basic Linux shell commands.
+          Here's what you will need to know to use this tool:
+          <ul>
+            <li><strong>cd</strong> file_path / directory_path - <em>Used to navigte to different directories</em></li>
+            <li><strong>pwd</strong> - <em>Returns the presently working directory</em></li>
+            <li><strong>ls</strong> - <em>Lists all files and subdirectories in the present directory</em></li>
+            <li><strong>mkdir</strong> [option] dir_name - <em>Creates a new directory</em></li>
+            <li><strong>python3</strong> file_name.py - <em>Used to execute a python3/python file</em></li>
+            <li><strong>python</strong> file_name.py - <em>Used to execute a python file</em></li>
+          </ul>
+          Please note that the tool has support for both python and python3, so any of the 2 commands above can be used.
+        </p>
+        <p>
+          To use this tool, first navigate to the directory where the tool exists. Then run the script mac_changer.py in that directory. But before simply trying to run it, you must mention certain parameters to make the tool actually
+          change the MAC address. These parameters are <strong>-i</strong> for interface, and <strong>-m</strong> for the new MAC address.
+          <br><br>
+          Two sample scenarios are shown below:
+          <ul>
+            <li>python3 mac_changer.py <strong>-i eth0 -m <span title="MAC address will be set to this value">00:11:22:33:44:55</span></strong></li>
+            <li>python mac_changer.py <strong>-i wlan0 -m <span title="MAC address will be set to this value">0a:1b:2c:3d:4e:5f</span></strong></li>
+          </ul>
+          Note that eth0 is the interface name in the first case, and wlan0 is the interface in the second case.
+          The MAC addresses are mentioned after <strong>-m</strong>. They don't have to be the same as mentioned here, you can always modify it as you wish, but they must
+          always be <em>alphanumeric</em>, and should be of <em>12 characters</em> with every 2 characters seperated by a colon '<strong>:</strong>'.
+          Use <strong>-help</strong> for more details on commands.
+        </p>
+      </div>
+    </div>
+    
+        
+   <script src="../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+<footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

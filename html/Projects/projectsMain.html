@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/Layout.css" />
+    <link rel="stylesheet" href="../../css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="../../img/icon/log2.png" type="image/x-icon" />
+    <!--FONTS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya Sans SC"
+      rel="stylesheet"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.2/umd/popper.min.js"></script>
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+      integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/9ccb26cf81.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <title>TechnoJitsu</title>
+  </head>
+
+  <body>
+    <!-- horizontal navbar -->
+    <nav class="navbar navbar-default" id="mNavbar" style="z-index: 1;">
+      <div class="container-fluid" id="navtop">
+        <div class="navbar-header">
+          <a id="txtdeco" href="../../TechNoJitsu.html">
+            <img
+              class="img img-rounded imgstat"
+              alt="Navbar_logo"
+              src="../../img/icon/Log.png"
+              width="50"
+              height="50"
+              class="d-inline-block align-top"
+            />
+          </a>
+          <span><a id="head" href="../../TechNoJitsu.html ">TechnoJitsu</a></span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="vline">
+            <a href="../../html/Projects/projectsMain.html">PROJECTS</a>
+          </li>
+          <li><a href="../../html/Articles/ArticlesMain.html">ARTICLES</a></li>
+          <li><a href="../../html/Languages/LangGuide.html">LANG-GUIDES</a></li>
+          <li class="vline">
+            <a href="../../html/FORMS/sign_up.html" class="LoGup" 
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li>
+            <a href="../../html/FORMS/sign_in.html" class="LoGin" onclick="logCheck()"
+              ><span class="glyphicon glyphicon-log-in "></span> Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <!-- horizontal navbar -->
+    <!--Content here-->
+    <div class="projectcontOuter animate__animated animate__slideInDown">
+      <div class="modal-content text-center">
+        <h2>Welcome To Projects Section</h2>
+      </div>
+    </div>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="Section1 text-left">
+      <h2>Projects: </h2>
+    </div>
+    <div class="projectcont">
+      <a class="project_item animate__animated animate__fadeInUp" href="../../html/Projects/Arduino/EMO project.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1" >
+            <div class="hexagon-in2 projectIcon1" style="background-image: url('../../img/Projects/EMO.jpg')">
+            <div class="overHead">EMO Project</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="project_item animate__animated animate__fadeInDown"  href="../../html/Projects/Arduino/4x3 input keypad with matrix display.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1">
+            <div class="hexagon-in2 projectIcon2" style="background-image: url('../../img/Projects/keypad.png')">
+            <div class="overHead">4x3 Keypad </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="project_item animate__animated animate__fadeInUp"  href="../../html/Projects/Arduino/Joystick module.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1">
+            <div class="hexagon-in2 projectIcon3" style="background-image: url('../../img/Projects/Joystick.png')">
+            <div class="overHead">Joystick Module</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="project_item animate__animated animate__fadeInDown"  href="../../html/Projects/Arduino/LCD display.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1">
+            <div class="hexagon-in2 projectIcon4" style="background-image: url('../../img/Projects/LCD-Display.png')">
+              <div class="overHead">LCD Display</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="Section2 text-left">
+      <h2>Tools: </h2>
+    </div>
+    <div class="projectcont2">
+      <a class="project_item animate__animated animate__fadeInUp" href="../../html/Projects/tools/MAC address changer.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1" >
+            <div class="hexagon-in2 projectIcon5" style="background-image: url('../../img/Projects/mac.png')">
+            <div class="overHead">MAC Changer</div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="project_item animate__animated animate__fadeInDown"  href="../../html/Projects/tools/Network Scanner.html">
+        <div class="hexagon hexagon2">
+          <div class="hexagon-in1">
+            <div class="hexagon-in2 projectIcon2" style="background-image: url('../../img/Projects/Scanner.png')">
+            <div class="overHead">Net -Scanner </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!--Content here-->
+    <!--Continue here-->
+    <!--Lower Contents END-->
+         
+   <script src="../../../jscripts/Loginlogic.js"></script>
+   <!--Footer-->
+ <footer class="footer-content">
+  <div class="jumbotron text-md-left">
+    <span class="ribbonfootz"
+      ><span class="ribbonfoot footer-text">Get In Touch!</span></span
+    >
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../img/icon/Log.png" alt="footer-img" id="footer-img" />
+
+        <h3 class="footer-text text-left">TechNoJitsu:</h3>
+        <p id="footercontent">
+          Technojitsu is an interactive, ever growing platform to design and
+          develop projects, to acquire new and essential tech aspects
+          without leaving behind the essential building blocks i.e.
+          languages . All in all a tech pill to enhance and channel your
+          creative & reasoning mind in the right output stream.
+        </p>
+      </div>
+
+      <div class="col-md-2 " id="footert">
+        <h4 class="text-uppercase text-left  footCol">Projects</h4>
+        <ul class="list-unstyled text-left">
+          <li>
+            <a href="../../html/Projects/Arduino/EMO project.html">EMO Display</a>
+          </li>
+          <li>
+            <a
+              href="../../html/Projects/Arduino/4x3 input keypad with matrix display.html"
+              >Input Keypad with Led Matrix display
+            </a>
+          </li>
+          <li>
+            <a href="../../html/Projects/Arduino/Joystick module.html"
+              >Joystick module</a
+            >
+          </li>
+          <li>
+            <a href="../../html/Projects/Arduino/LCD display.html">LCD Display</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 ">
+        <h4 class="text-uppercase text-left  footCol">Articles</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../html/Articles/Penetration Testing.html">Penetration Testing</a></li>
+          <li><a href="../../html/Articles/Phishing Security.html">Phishing Security</a></li>
+          <li><div style="color: #337ab7;">Coming Soon!</div></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-uppercase text-left  footCol">Language Guides</h4>
+        <ul class="list-unstyled text-left">
+          <li><a href="../../html/Languages/C/intro/historyofc.html">C</a></li>
+          <li><a href="../../html/Languages/C++/intro/HistoryofC++.html">C++</a></li>
+          <li><div style="color: #337ab7;">Java(Coming Soon!)</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row" id="footerLinksTxt">
+      <div class="col-md-7" id="footerLinksTxt">
+        <p class="footer-text">Share your thoughts, and leave a Like</p>
+      </div>
+      <div class="col-md-5" id="footerLinks">
+        <p class="text-left">
+          <a
+            href="https://facebook.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            class="social-round-icon orange-round-icon fa-icon"
+            title=""
+          >
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center" id="cpyrgt">
+    © 2020 Copyright:
+    <a href="../../html/TechNoJitsu.html"> TechNoJitsu.com</a>
+  </div>
+</footer>
+<!--Footer-->
+  </body>
+</html>
